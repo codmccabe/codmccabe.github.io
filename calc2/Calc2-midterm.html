@@ -14347,6 +14347,250 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <p>Notice that $\sqrt3\sqrt{\tan^2(\theta)+1}=\sqrt3\sqrt{\sec^2(\theta)}=\sqrt3\sec(\theta)$. thus, by letting $x=\frac{\sqrt3}{5}\tan(\theta)$ we have $$\sqrt{3+25x^2}=\sqrt3\sec(\theta)$$</p>
 
 </div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-maxima"><pre><span></span>f3(x):=(7*x^2-3)^(5/2)$
+    f3((sqrt(3)/sqrt(7)*sec(theta)));
+    factor(f3((sqrt(3)/sqrt(7)*sec(theta))));
+    3^(5/2)*((tan(theta))^2)^(5/2);
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{12}$}\left(3\,\sec ^2\vartheta-3\right)^{\frac{5}{2}}\]
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{13}$}3^{\frac{5}{2}}\,\left(\sec ^2\vartheta-1\right)^{\frac{5}{2}}\]
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{14}$}3^{\frac{5}{2}}\,\tan ^4\vartheta\,\left| \tan \vartheta\right| \]
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Notice that $3^{5/2}\cdot (\sec^2(\theta)-1)^{5/2} = 3^{5/2}\cdot tan^5(\theta)$. Thus, by letting $x=\frac{\sqrt3}{\sqrt7}\sec(\theta)$ we have $$\left(7x^2-3\right)^{5/2}=3^{5/2}\tan^5(\theta)$$</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-maxima"><pre><span></span>f4(x):=sqrt((x+3)^2-100)$
+    f4(10*sec(theta)-3);
+    factor(f4(10*sec(theta)-3));
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{33}$}\sqrt{100\,\sec ^2\vartheta-100}\]
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{34}$}10\,\sqrt{\sec ^2\vartheta-1}\]
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Notice that $10\sqrt{\sec^2(\theta)-1}=10\tan(\theta)$. Thus, by letting $x=10\sec(\theta)-3$ we have $$\sqrt{(x+3)^2-100}=10\tan(\theta)$$</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-maxima"><pre><span></span>f5(x):=sqrt(4*(9*x-5)^2+1)$
+    solve((1/2)*tan(theta)=9*x-5,x);
+    f5((tan(theta)+10)/18);
+    factor(f5((tan(theta)+10)/18));
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{60}$}\left[ x=\frac{\tan \vartheta+10}{18} \right] \]
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{61}$}\sqrt{4\,\left(\frac{\tan \vartheta+10}{2}-5\right)^2+1}\]
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[27]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{62}$}\sqrt{\tan ^2\vartheta+1}\]
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>First, solve the equation: $$\frac12\tan(\theta)=9x-5$$ to get $x=\frac{\tan(\theta)+10}{18}$. Then we notice that $\sqrt{\tan^2(\theta)+1}=\sec(\theta)$. Thus, with $x=\frac{\tan(\theta)+10}{18}$, we have, $$\sqrt{4(9x-5)^2+1}=\sec(\theta)$$</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-maxima"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{64}$}-\left(2\,x^2+4\,x-1\right)\]
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
