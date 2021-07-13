@@ -14554,13 +14554,19 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <p>First, solve the equation: $$\frac12\tan(\theta)=9x-5$$ to get $x=\frac{\tan(\theta)+10}{18}$. Then we notice that $\sqrt{\tan^2(\theta)+1}=\sec(\theta)$. Thus, with $x=\frac{\tan(\theta)+10}{18}$, we have, $$\sqrt{4(9x-5)^2+1}=\sec(\theta)$$</p>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Use a trig substitution to evaluat ethe given integral. $$\int \frac{\sqrt{x^2+16}}{x^4}\, dx$$</p>
+
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span> 
+<div class=" highlight hl-maxima"><pre><span></span>integrate(sqrt(x^2+16)/x^4,x);
 </pre></div>
 
      </div>
@@ -14576,13 +14582,13 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[30]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[67]:</div>
 
 
 
 
 <div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
-\[\tag{${\it \%o}_{64}$}-\left(2\,x^2+4\,x-1\right)\]
+\[\tag{${\it \%o}_{129}$}-\frac{\left(x^2+16\right)^{\frac{3}{2}}}{48\,x^3}\]
 </div>
 
 </div>
@@ -14591,13 +14597,15 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span> 
+<div class=" highlight hl-maxima"><pre><span></span>Top(x):=sqrt(x^2+16)$
+    Top(4*tan(theta));
+    factor(Top(4*tan(theta)));
 </pre></div>
 
      </div>
@@ -14605,6 +14613,241 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{96}$}\sqrt{16\,\tan ^2\vartheta+16}\]
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{97}$}4\,\sqrt{\tan ^2\vartheta+1}\]
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Notice that when $x=4\tan(\theta)$, we have $$\sqrt{x^2+16}=4\sec(\theta)$$</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-maxima"><pre><span></span>(4*sec(theta))/((4*tan(theta))^4);
+trigreduce((4*sec(theta))/((4*tan(theta))^4));
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[60]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{121}$}\frac{\sec \vartheta}{64\,\tan ^4\vartheta}\]
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[60]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{122}$}\frac{\cot ^3\vartheta\,\csc \vartheta}{64}\]
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-maxima"><pre><span></span>trigreduce((cot(x))^2+1);
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[62]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{124}$}\csc ^2x\]
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>So we have:</p>
+$$\int \frac{\sqrt{x^2+16}}{x^4}\, dx= \int\frac{\sec(\theta)}{64\tan^4(\theta)}\,dx$$<p>Recall that $\csc^2(\xi)=\cot^2(\xi)+1$. That is,</p>
+$$\cot^3(\theta)\cdot \csc(\theta)=\left(\cot(\theta)\csc(\theta)\right)\cdot \cot^2(\theta)$$$$\left(\cot(\theta)\csc(\theta)\right)\cdot \cot^2(\theta) = \left(\cot(\theta)\csc(\theta)\right)\cdot \left(\csc^2(\theta)-1\right)$$$$\int\frac{\sec(\theta)}{64\tan^4(\theta)}\,dx = \frac{1}{64} \int \left(\cot(\theta)\csc(\theta)\right)\cdot \left(\csc^2(\theta)-1\right)\,d\theta$$<p>Let $u=\csc(\theta)$ and $du=\cot(\theta)\csc(\theta)$, then</p>
+$$\frac{1}{64} \int \left(\cot(\theta)\csc(\theta)\right)\cdot \left(\csc^2(\theta)-1\right)\,d\theta= \frac{1}{64}\int\left(u^2-1\right)\,du$$
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-maxima"><pre><span></span>IF9(u):=(u*(u^2-3)/192);
+IF9(csc(theta));
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[75]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{142}$}{\it IF}_{9}\left(u\right):=\frac{u\,\left(u^2-3\right)}{192}\]
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[75]:</div>
+
+
+
+
+<div class="jp-RenderedLatex jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/latex">
+\[\tag{${\it \%o}_{143}$}\frac{\csc \vartheta\,\left(\csc ^2\vartheta-3\right)}{192}\]
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Partial-Fractions">Partial Fractions<a class="anchor-link" href="#Partial-Fractions">&#182;</a></h2><table>
+<thead><tr>
+<th style="text-align:center">Factor in Denominator</th>
+<th style="text-align:center">Term in Partial Fraction Decomposition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$$ax+b$$</td>
+<td style="text-align:center">$$\dfrac{A}{ax+b}$$</td>
+</tr>
+<tr>
+<td style="text-align:center">$$(ax+b)^k$$</td>
+<td style="text-align:center">$$\dfrac{A_1}{ax+b}+\dfrac{A_2}{(ax+b)^2}+\cdots+\dfrac{A_k}{(ax+b)^k},\,k=1,2,3,...$$</td>
+</tr>
+<tr>
+<td style="text-align:center">$$(ax^2+bx+c)^k$$</td>
+<td style="text-align:center">$$\dfrac{A_1x+B_1}{ax^2+bx+c}+\dfrac{A_2x+B_2}{(ax^2+bx+c)^2}+\cdots+\dfrac{A_kx+B_k}{(ax^2+bx+c)^k},\,k=1,2,3,...$$</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Improper-Integrals">Improper Integrals<a class="anchor-link" href="#Improper-Integrals">&#182;</a></h2><ol>
+<li>If $\int_a ^tf(x)\,dx$ exists for every $t&gt;a$, then $$\int_a^{\infty}f(x)\,dx=\lim_{t\to\infty}\int_a^tf(x)\,dx$$ Provided the limit exists and is finite.</li>
+<li>If $\int_t ^bf(x)\,dx$ exists for every $b&gt;t$, then $$\int_{-\infty}^bf(x)\,dx=\lim_{t\to\infty}\int_t^bf(x)\,dx$$ Provided the limit exists and is finite.</li>
+<li>If $\int_{-\infty}^{c}f(x)\,dx$ and $\int_{c}^{\infty}f(x)\,dx$ are both convergent, then $$\int_{-\infty}^{\infty}f(x)\,dx=$\int_{-\infty}^{c}f(x)\,dx+\int_{c}^{\infty}f(x)\,dx$$ where $c$ is any number.</li>
+</ol>
+<p>Note for number 3: the integral $\int_{-\infty}^{\infty}f(x)\,dx$ is convergent if and only if $\int_{-\infty}^cf(x)\,dx$ and $\int_c^{\infty}f(x)\,dx$ are both convergent.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="L'Hospital's-Rule">L'Hospital's Rule<a class="anchor-link" href="#L'Hospital's-Rule">&#182;</a></h3><p>Let $a$ be any real number including</p>
+
+</div>
 </div>
 </body>
 
