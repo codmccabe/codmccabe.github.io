@@ -13988,7 +13988,7 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span>integrate((cos(2*t))^4,t);
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">integrate</span><span class="p">((</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="p">))</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span><span class="n">t</span><span class="p">);</span>
 </pre></div>
 
      </div>
@@ -14025,7 +14025,7 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span>integrate(cos(3*t)*sin(8*t),t);
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="n">t</span><span class="p">),</span><span class="n">t</span><span class="p">);</span>
 </pre></div>
 
      </div>
@@ -14062,7 +14062,7 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span>integrate(sin(8*x)*sin(x),x,1,3);
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
 </pre></div>
 
      </div>
@@ -14099,7 +14099,7 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span>float(integrate(sin(8*x)*sin(x),x,1,3));
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="n">integrate</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">));</span>
 </pre></div>
 
      </div>
@@ -14136,7 +14136,7 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span>integrate(cot(10*x)*(csc(10*x))^4,x);
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">cot</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">csc</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">x</span><span class="p">))</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
 </pre></div>
 
      </div>
@@ -14235,9 +14235,9 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span>f1(x):=sqrt(4-9*x^2)$
-    f1((2/3)*sec(theta));
-    factor(f1((2/3)*sec(theta)));
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f1</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:=</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">4</span><span class="o">-</span><span class="mi">9</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="err">$</span>
+    <span class="n">f1</span><span class="p">((</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">sec</span><span class="p">(</span><span class="n">theta</span><span class="p">));</span>
+    <span class="n">factor</span><span class="p">(</span><span class="n">f1</span><span class="p">((</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">sec</span><span class="p">(</span><span class="n">theta</span><span class="p">)));</span>
 </pre></div>
 
      </div>
@@ -14294,9 +14294,9 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span>f2(x):=sqrt(3+25*x^2)$
-    f2((sqrt(3)/5)*tan(theta));
-    factor(f2((sqrt(3)/5)*tan(theta)));
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f2</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:=</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mi">25</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="err">$</span>
+    <span class="n">f2</span><span class="p">((</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">theta</span><span class="p">));</span>
+    <span class="n">factor</span><span class="p">(</span><span class="n">f2</span><span class="p">((</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">theta</span><span class="p">)));</span>
 </pre></div>
 
      </div>
@@ -14353,10 +14353,10 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span>f3(x):=(7*x^2-3)^(5/2)$
-    f3((sqrt(3)/sqrt(7)*sec(theta)));
-    factor(f3((sqrt(3)/sqrt(7)*sec(theta))));
-    3^(5/2)*((tan(theta))^2)^(5/2);
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f3</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:=</span><span class="p">(</span><span class="mi">7</span><span class="o">*</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="err">$</span>
+    <span class="n">f3</span><span class="p">((</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="o">*</span><span class="n">sec</span><span class="p">(</span><span class="n">theta</span><span class="p">)));</span>
+    <span class="n">factor</span><span class="p">(</span><span class="n">f3</span><span class="p">((</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span><span class="o">*</span><span class="n">sec</span><span class="p">(</span><span class="n">theta</span><span class="p">))));</span>
+    <span class="mi">3</span><span class="o">^</span><span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">tan</span><span class="p">(</span><span class="n">theta</span><span class="p">))</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
 </pre></div>
 
      </div>
@@ -14427,9 +14427,9 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span>f4(x):=sqrt((x+3)^2-100)$
-    f4(10*sec(theta)-3);
-    factor(f4(10*sec(theta)-3));
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f4</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:=</span><span class="n">sqrt</span><span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="mi">3</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="mi">100</span><span class="p">)</span><span class="err">$</span>
+    <span class="n">f4</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">sec</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">-</span><span class="mi">3</span><span class="p">);</span>
+    <span class="n">factor</span><span class="p">(</span><span class="n">f4</span><span class="p">(</span><span class="mi">10</span><span class="o">*</span><span class="n">sec</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">-</span><span class="mi">3</span><span class="p">));</span>
 </pre></div>
 
      </div>
@@ -14486,10 +14486,10 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span>f5(x):=sqrt(4*(9*x-5)^2+1)$
-    solve((1/2)*tan(theta)=9*x-5,x);
-    f5((tan(theta)+10)/18);
-    factor(f5((tan(theta)+10)/18));
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f5</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:=</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="p">(</span><span class="mi">9</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="err">$</span>
+    <span class="n">solve</span><span class="p">((</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">=</span><span class="mi">9</span><span class="o">*</span><span class="n">x</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
+    <span class="n">f5</span><span class="p">((</span><span class="n">tan</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">+</span><span class="mi">10</span><span class="p">)</span><span class="o">/</span><span class="mi">18</span><span class="p">);</span>
+    <span class="n">factor</span><span class="p">(</span><span class="n">f5</span><span class="p">((</span><span class="n">tan</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="o">+</span><span class="mi">10</span><span class="p">)</span><span class="o">/</span><span class="mi">18</span><span class="p">));</span>
 </pre></div>
 
      </div>
@@ -14566,7 +14566,7 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span>integrate(sqrt(x^2+16)/x^4,x);
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">16</span><span class="p">)</span><span class="o">/</span><span class="n">x</span><span class="o">^</span><span class="mi">4</span><span class="p">,</span><span class="n">x</span><span class="p">);</span>
 </pre></div>
 
      </div>
@@ -14603,9 +14603,9 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span>Top(x):=sqrt(x^2+16)$
-    Top(4*tan(theta));
-    factor(Top(4*tan(theta)));
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Top</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">:=</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">16</span><span class="p">)</span><span class="err">$</span>
+    <span class="n">Top</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">theta</span><span class="p">));</span>
+    <span class="n">factor</span><span class="p">(</span><span class="n">Top</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">theta</span><span class="p">)));</span>
 </pre></div>
 
      </div>
@@ -14662,8 +14662,8 @@ $$\int \cos^4(2t)\,dt$$$$\int \cos(3t)\sin(8t)\,dt$$$$\int_1^3 \sin(8x)\sin(x)\,
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span>(4*sec(theta))/((4*tan(theta))^4);
-trigreduce((4*sec(theta))/((4*tan(theta))^4));
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">sec</span><span class="p">(</span><span class="n">theta</span><span class="p">))</span><span class="o">/</span><span class="p">((</span><span class="mi">4</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">theta</span><span class="p">))</span><span class="o">^</span><span class="mi">4</span><span class="p">);</span>
+<span class="n">trigreduce</span><span class="p">((</span><span class="mi">4</span><span class="o">*</span><span class="n">sec</span><span class="p">(</span><span class="n">theta</span><span class="p">))</span><span class="o">/</span><span class="p">((</span><span class="mi">4</span><span class="o">*</span><span class="n">tan</span><span class="p">(</span><span class="n">theta</span><span class="p">))</span><span class="o">^</span><span class="mi">4</span><span class="p">));</span>
 </pre></div>
 
      </div>
@@ -14714,7 +14714,7 @@ trigreduce((4*sec(theta))/((4*tan(theta))^4));
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span>trigreduce((cot(x))^2+1);
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">trigreduce</span><span class="p">((</span><span class="n">cot</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">^</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 
      </div>
@@ -14759,8 +14759,8 @@ $$\frac{1}{64} \int \left(\cot(\theta)\csc(\theta)\right)\cdot \left(\csc^2(\the
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[75]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-maxima"><pre><span></span>IF9(u):=(u*(u^2-3)/192);
-IF9(csc(theta));
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">IF9</span><span class="p">(</span><span class="n">u</span><span class="p">)</span><span class="o">:=</span><span class="p">(</span><span class="n">u</span><span class="o">*</span><span class="p">(</span><span class="n">u</span><span class="o">^</span><span class="mi">2</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">192</span><span class="p">);</span>
+<span class="n">IF9</span><span class="p">(</span><span class="n">csc</span><span class="p">(</span><span class="n">theta</span><span class="p">));</span>
 </pre></div>
 
      </div>
@@ -14838,6 +14838,10 @@ IF9(csc(theta));
 <li>If $\int_a ^tf(x)\,dx$ exists for every $t&gt;a$, then $$\int_a^{\infty}f(x)\,dx=\lim_{t\to\infty}\int_a^tf(x)\,dx$$ Provided the limit exists and is finite.</li>
 <li>If $\int_t ^bf(x)\,dx$ exists for every $b&gt;t$, then $$\int_{-\infty}^bf(x)\,dx=\lim_{t\to\infty}\int_t^bf(x)\,dx$$ Provided the limit exists and is finite.</li>
 <li>If $\int_{-\infty}^{c}f(x)\,dx$ and $\int_{c}^{\infty}f(x)\,dx$ are both convergent, then $$\int_{-\infty}^{\infty}f(x)\,dx=$\int_{-\infty}^{c}f(x)\,dx+\int_{c}^{\infty}f(x)\,dx$$ where $c$ is any number.</li>
+<li>If $f(x)$ is continuous on the interval $[a,b)$ and not continuous at $x=b$, then $$\int_a^bf(x)\,dx=\lim_{x\to b^-}\int_a^tf(x)\,dx$$ provied the limit exists and is finite.</li>
+<li>If $f(x)$ is continuous on the interval $(a,b]$ and not continuous at $x=a$, then $$\int_a^bf(x)\,dx=\lim_{t\to a^+}\int_t^bf(x)\,dx$$ provided the limit exists and is finite.</li>
+<li>If $f(x)$ is not continuous at $x=c$ where $a&lt;c&lt;b$ and $\int_a^cf(x)\,dx$ and $\int_c^bf(x)\,dx$ are both convergent, then $$\int_a^bf(x)\,dx=\int_a^cf(x)\,dx+\int_c^bf(x)\,dx$$</li>
+<li>If f(x) is not continuous at $x=a$ and $x=b$ and if $\int_a^cf(x)\,dx$ and $\int_c^bf(x)\,dx$ are both convergent, then $$\int_a^bf(x)\,dx=\int_a^cf(x)\,dx+\int_c^bf(x)\,dx$$ where $c$ is any number.</li>
 </ol>
 <p>Note for number 3: the integral $\int_{-\infty}^{\infty}f(x)\,dx$ is convergent if and only if $\int_{-\infty}^cf(x)\,dx$ and $\int_c^{\infty}f(x)\,dx$ are both convergent.</p>
 
@@ -14845,9 +14849,111 @@ IF9(csc(theta));
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="L'Hospital's-Rule">L'Hospital's Rule<a class="anchor-link" href="#L'Hospital's-Rule">&#182;</a></h3><p>Let $a$ be any real number including</p>
+<h3 id="Comparison-Test">Comparison Test<a class="anchor-link" href="#Comparison-Test">&#182;</a></h3><hr>
+<p>If $a&gt;0$ then $$\int_a^{\infty}\dfrac{1}{x^p}\,dx$$ is convergent if $p&gt;1$ and divergent if $p\le1$.</p>
+<hr>
+<p>If $f(x)\ge g(x)\ge 0$ on the interval $[a,\infty)$, then</p>
+<ol>
+<li>If $\int_a^{\infty}f(x)\,dx$ converges then so does $\int_a^{\infty}g(x)\,dx$.</li>
+<li>If $\int_a^{\infty}g(x)\,dx$ diverges then so does $\int_a^{\infty}f(x)\,dx$.</li>
+</ol>
 
 </div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="L'Hospital's-Rule">L'Hospital's Rule<a class="anchor-link" href="#L'Hospital's-Rule">&#182;</a></h3><p>Suppose ${\displaystyle \lim_{x\to a}|f(x)|=\lim_{x\to a}|g(x)|=\infty}$ or $\displaystyle \lim_{x\to a}f(x)=\lim_{x\to a}g(x)=0$.
+If ${\displaystyle \lim_{x\to a}\dfrac{f'(x)}{g'(x)}}$ exists in
+either the finite or infinite sense, then
+$$
+\lim_{x\to a}\dfrac{f(x)}{g(x)}=\lim_{x\to a}\dfrac{f'(x)}{g'(x)}.
+$$</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Average-Function-Value">Average Function Value<a class="anchor-link" href="#Average-Function-Value">&#182;</a></h3><p>The average value of a function $f(x)$ over the interval $[a,b]$ is given by $$f_{ave}=dfrac{1}{b-a}\int_a^bf(x)\,dx$$</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="The-Mean-Value-Theorem-for-Integrals">The Mean Value Theorem for Integrals<a class="anchor-link" href="#The-Mean-Value-Theorem-for-Integrals">&#182;</a></h3><p>If $f(x)$ is continuous function on $[a,b]$ then there is a number $c\in[a,b]$ such that $$\int_a^bf(x)\,dx=f(c)(b-a)$$</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Arc-Length">Arc Length<a class="anchor-link" href="#Arc-Length">&#182;</a></h3><p>If $f'$ is continuous on $[a,b]$, then the length (arc length) of the curve $y=f(x)$ from the point $A=(a,f(a))$ to the point $B=(b,f(b))$ is the value of the integral $$L=\int_a^b\sqrt{1+\left[f'(x)\right]^2}\,dx=\int_a^b\sqrt{1+\left[ \frac{dy}{dx} \right]^2}$$</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Volume-by-Disks-for-Rotation-About-the-x-Axis">Volume by Disks for Rotation About the x-Axis<a class="anchor-link" href="#Volume-by-Disks-for-Rotation-About-the-x-Axis">&#182;</a></h3><p>Let $A(x)=\pi(R(x))^2$ where $R(x)$ is a function of the radius of the circle over the domain $x$. The Volume of the object is then $$V=\int_a^bA(x)\,dx$$</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="EXAMPLE-(Volume-by-Disks-for-Rotation)">EXAMPLE (Volume by Disks for Rotation)<a class="anchor-link" href="#EXAMPLE-(Volume-by-Disks-for-Rotation)">&#182;</a></h3><p>The region between the curve $y=\cos(x)$,$\frac{\pi}{4}\le x\le \frac{3\pi}{4}$, and the x-axis is revolved about the x-axis to generate a solid. Find its volume.</p>
+<hr>
+<p>First, look at the graph:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.geogebra.org/3d/hapxqvpr?embed&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;400&quot;</span> <span class="na">allowfullscreen</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;border: 1px solid #e4e4e4;border-radius: 4px;&quot;</span> <span class="na">frameborder</span><span class="o">=</span><span class="s">&quot;0&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<iframe src="https://www.geogebra.org/3d/hapxqvpr?embed" width="400" height="400" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
 </div>
 </body>
 
