@@ -1,0 +1,104 @@
+\documentclass[oneside,english]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=.1cm,bmargin=0.1cm,lmargin=.1cm,rmargin=.1cm}
+\usepackage{amsthm}
+\usepackage{pgf,tikz}
+\usepackage{multicol}
+\pagenumbering{gobble} % no page number
+\usetikzlibrary{automata,positioning} %for newline in tikz
+\usepgflibrary{arrows} % LATEX and plain TEX and pure pgf
+\usepgflibrary[arrows] % ConTEXt and pure pgf
+\usetikzlibrary{shapes,arrows} % LATEX and plain TEX when using Tik Z
+\usetikzlibrary[arrows] % ConTEXt when using Tik Z
+\makeatletter
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+% Define block styles
+\tikzstyle{cloud} = [diamond, draw, fill=gray!20,
+    text width=6em, text badly left, node distance=3cm, inner sep=0pt]
+\tikzstyle{block} = [rectangle, draw, fill=blue!20,
+    text width=10em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{blockk} = [rectangle, draw,
+    text width=6cm, text centered, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+\tikzstyle{result} = [draw, ellipse,fill=red!20, node distance=3cm,
+    minimum height=2em]
+
+
+\begin{tikzpicture}[node distance = 3.5cm,auto]
+	\node [] (init) {$\displaystyle{\sum_na_n}$};
+	\node [node distance =2cm,block, below of = init] (tozero) {Does $a_n\to 0$?};
+	\node [block, below of = tozero] (gzero) {Does $a_n>0$?};
+	\node [block, below of = gzero] (compare) {Are there any easy comparisons?};
+	\node [block, below of = compare] (alt) {Does it feel like $a_n$ 'looks like' some $b_n$?};
+	\node [block, below of = alt] (nroot) {Is $\sqrt[n]{|a_n|}$ easy to analyze?};
+	\node [block, below of = nroot] (ratio) {Is $\left|\frac{a_{n+1}}{a_n} \right|$ easy to analyze?};
+	\node [block, below of = ratio] (int) {Is there a positive decreasing $f(x)$ where $f(n)=a_n$ and $\int f(x)\,dx$ isn't so bad?};
+	\node [result, right of = tozero,node distance = 6cm] (dtest) {Diverges by Divergence Test};
+	\node [block, below of = dtest,node distance =2cm] (altern) {Is it alternating in sing and $|a_n|$ decreasing?};
+	\node [node distance =2cm,result,below of = altern] (altst) {Converges by Alternating Series Test};
+	\node [node distance =2cm,block, below of = altst] (abscon) {Try to show absolute convegence, i.e., $\sum |a_n|$ converges};
+	\node [result,below right = of compare, align=left,node distance =10cm] (comptest)
+		{Try Comparison Test:\\
+		\;If $a_n<b_n$ and $\sum b_n$ converges then $\sum a_n$ converges.\\
+		\;If $b_n<a_n$ and $\sum b_n$ diverges then $\sum a_n$ diverges.
+		};
+	\node [node distance =2cm,result,below right = of alt, align=left] (limitest)
+		{Try Limit Comparison Test:\\
+		$\lim\frac{a_n}{b_n}=c$ then:\\
+		\;If $0\le c <\infty$ then $\sum a_n$ converges $\iff$ $\sum b_n$ converges.\\
+		\;If $c=0$ and $\sum b_n$ converges then $\sum a_n$ converges.\\
+		\;If $c=\infty$ and $\sum b_n$ diverges then $\sum a_n$ converges.
+		};
+	\node [result,below of = limitest, align=left,node distance =4cm] (roott)
+		{Try Root Test:\\
+		$\lim \sqrt[n]{|a_n|}=c$\\
+		\;If $0\le c < 1$ then $\sum a_n$ converges\\
+		\;if $c>1$ then $\sum a_n$ diverges\\
+		\;If $c=1$ then test is inconclusive
+		};
+	\node [result,below of = roott, align=left] (ratiot)
+		{Try Ratio Test:\\
+		\;If $0\le c<1$ then $\sum a_n$ converges\\
+		\;If $c>1$ then $\sum a_n$ diverges\\
+		\;If $c=1$ then test is inconclusive
+		};
+	\node [result,below of = ratiot, align=left] (integralt)
+		{Try Integral Test:\\
+		\;$\sum a_n$ converges $\iff$ $\int^\infty f(x)\,dx$ converges
+		};
+	\path [line] (init) -- (tozero);
+	\path [line] (tozero)--(gzero);
+	\path [line] (gzero) --(compare);
+	\path [line,thick,dashed] (compare)--(alt);
+	\path [line,thick,dashed] (alt)--(nroot);
+	\path [line,thick,dashed] (nroot)--(ratio);
+	\path [line,thick,dashed] (ratio)--(int);
+	\path [line,thick,dashed] (tozero)--(dtest);
+	\path [line,thick,dashed] (gzero)--(altern);
+	\path [line] (altern)--(altst);
+	\path [line] (altst)--(abscon);
+	\path [line] (abscon)--(compare);
+	\path [line] (compare)--(comptest);
+	\path [line] (alt)--(limitest);
+	\path [line] (nroot)--(roott);
+	\path [line] (ratio)--(ratiot);
+	\path [line] (int)--(integralt);
+
+	\node [blockk,align=left,right = of altern] (things)
+		{Things to rememeber:
+		\begin{itemize}
+		\item $p$-series: The series \[\displaystyle{\sum_n \frac{1}{n^p}}\] converges if and only if $p>1$.\\
+		\item Geometric series: If $|r|<1$ then \[\displaystyle{\sum_n^\infty ar^n=\frac{a}{1-r}} \] otherwise, that series diverges.\\
+%		\item All that matters is what happens on a tail.\\
+%		For example, if $a_n$ is only decreasing after $N$ then you can wirte: \[\displaystyle{\sum_{n=1}^\infty a_n=\sum_{n=1}^Na_n+\sum_{N+1}^\infty a_n} \] the finite sum clearly converges, and then you can use convergence tests that require decreasing on the other part.
+		\end{itemize}
+		};
+
+
+\end{tikzpicture}
+\end{document}
