@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; codmccabe&#39;s GitHub Page Jan 2022 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p>Let <span class="math notranslate nohighlight">\(y=\ln\left(\dfrac{6x^{1/5}}{20+4x^{1/5}}\right)\)</span>. Find the
+derivative of <span class="math notranslate nohighlight">\(y\)</span> with respect to <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>First, we will rewrite <span class="math notranslate nohighlight">\(y\)</span> in a more pleasant way:
+$<span class="math notranslate nohighlight">\(\begin{aligned}\ln\left(\dfrac{6x^{1/5}}{20+4x^{1/5}}\right) &amp; =\ln(6x^{1/5})-\ln(20+4x^{1/5})\\
+ &amp; =\ln(6)+\dfrac{1}{5}\ln(x)-\ln(4(5+x^{1/5}))\\
+ &amp; =\ln(6)+\dfrac{1}{5}\ln(x)-\ln(4)-\ln(5+x^{1/5})
+\end{aligned}\)</span>$</p>
+<p>Now, differentiate
+$<span class="math notranslate nohighlight">\(\begin{aligned}\frac{d}{dx}\left[\ln\left(\dfrac{6x^{1/5}}{20+4x^{1/5}}\right)\right] &amp; =\frac{d}{dx}\left[\ln(6)+\dfrac{1}{5}\ln(x)-\ln(4)-\ln(5+x^{1/5})\right]\\
+ &amp; =0+\dfrac{1}{5x}-0-\dfrac{\frac{1}{5}x^{-4/5}}{5+x^{1/5}}\\
+ &amp; =\dfrac{1}{5x}-\dfrac{1}{5x^{4/5}\left(5+x^{1/5}\right)}
+\end{aligned}\)</span><span class="math notranslate nohighlight">\( where ever \)</span>y$ is defined.</p>
+<p>Let <span class="math notranslate nohighlight">\(y=\sqrt{\dfrac{1}{x(x+1)}}\)</span>. Then $<span class="math notranslate nohighlight">\(\begin{aligned}
+    y&amp;=\left( \dfrac{1}{x(x+1)} \right)^{1/2}\\
+    &amp;= \dfrac{1^{1/2}}{\left( x(x+1) \right)^{1/2}}\\
+    &amp;= \dfrac{1}{x^{1/2}(x+1)^{1/2}}
+\end{aligned}\)</span>$</p>
+<p>That is, <span class="math notranslate nohighlight">\(y=\sqrt{\dfrac{1}{x(x+1)}}=\dfrac{1}{x^{1/2}(x+1)^{1/2}}\)</span>.
+Natural Log both sides: $<span class="math notranslate nohighlight">\(\begin{aligned}
+    \ln(y)&amp;=\ln\left( \dfrac{1}{x^{1/2}(x+1)^{1/2}} \right)\\
+    &amp;=\ln(1)-\ln\left( x^{1/2}(x+1)^{1/2} \right)\\
+    &amp;=0-\ln(x^{1/2})-\ln((x+1)^{1/2})\\
+    &amp;=-\frac12 \ln(x)-\frac12 \ln(x+1)\\
+    &amp;=-\frac12\left(\ln(x)+\ln(x+1)\right)
+\end{aligned}\)</span>$</p>
+<p>Multiply both sides by <span class="math notranslate nohighlight">\(-2\)</span> and then implicate differentiate:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+    \frac{d}{dx}\left[-2\ln(y)\right]&amp;=\frac{d}{dx}\left[\ln(x)+\ln(x+1)\right]\\
+    -2\frac{1}{y}\frac{dy}{dx}&amp;=\frac{1}{x}+\frac{1}{x+1}\\
+    \frac{dy}{dx}&amp;=-\frac{y}{2}\left( \frac{1}{x}+\frac{1}{x+1} \right)
+\end{aligned}\end{split}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(y=\sqrt{\dfrac{1}{x(x+1)}}\)</span></p>
+<p>Let <span class="math notranslate nohighlight">\(y=\ln\left( \dfrac{(x^2+8)^5}{\sqrt{4-x}} \right)\)</span>. Then
+$<span class="math notranslate nohighlight">\(y=\ln\left( \dfrac{(x^2+8)^5}{\sqrt{4-x}} \right)=...=5\ln(x^2+8)-\frac12\ln(4-x)\)</span>$</p>
+<p>If we set <span class="math notranslate nohighlight">\(f(x)=\ln(x^2+8)\)</span> and <span class="math notranslate nohighlight">\(g(x)=\ln(4-x)\)</span>. Then
+$<span class="math notranslate nohighlight">\(y=\ln\left( \dfrac{(x^2+8)^5}{\sqrt{4-x}} \right)=5f(x)-\frac12g(x)\)</span><span class="math notranslate nohighlight">\(
+and
+\)</span><span class="math notranslate nohighlight">\(y'=\frac{d}{dx}\left[\ln\left( \dfrac{(x^2+8)^5}{\sqrt{4-x}} \right)\right]=5f'(x)-\frac12g'(x)\)</span>$</p>
+<p>Now, find <span class="math notranslate nohighlight">\(f'(x)\)</span> and <span class="math notranslate nohighlight">\(g'(x)\)</span>.
+$<span class="math notranslate nohighlight">\(f'(x)=\left(\ln(x^2+8)\right)'=\dfrac{\left( x^2+8 \right)'}{x^2+8}=\dfrac{2x}{x^2+8}\)</span><span class="math notranslate nohighlight">\(
+and
+\)</span><span class="math notranslate nohighlight">\(g'(x)=\left( \ln(4-x) \right)'=\dfrac{(4-x)'}{4-x}=\dfrac{-1}{4-x}\)</span>$</p>
+<p>Therefore, putting everything together we have:
+$<span class="math notranslate nohighlight">\(y'=\frac{d}{dx}\left[\ln\left( \dfrac{(x^2+8)^5}{\sqrt{4-x}} \right)\right]=5f'(x)-\frac12g'(x)=5\left(\dfrac{2x}{x^2+8}\right)-\frac12\left(\dfrac{-1}{4-x}\right)\)</span>$</p>
+<p>Let <span class="math notranslate nohighlight">\(y=\cot^{-1}\left( \sqrt{4x^2-1} \right)+\sec^{-1}(2x)\)</span>,
+<span class="math notranslate nohighlight">\(f(x)=\sqrt{4x^2-1}\)</span>, and <span class="math notranslate nohighlight">\(g(x)=2x\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[\label{eq:f1}
+    f'(x)=\frac{d}{dx}\left[(4x^2-1)^{1/2}\right]=\dfrac{(4x^2-1)'}{2\sqrt{4x^2-1}}=\dfrac{8x}{2\sqrt{4x^2-1}}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\label{eq:g1}
+    g'(x)=\frac{d}{dx}\left[2x\right]=2\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\frac{d}{dx}\left[\cot^{-1}(x)\right]=-\dfrac{1}{x^2+1}\)</span> and
+chain rule we have</p>
+<div class="math notranslate nohighlight">
+\[\label{eq:cotchain}
+    \frac{d}{dx}\left[\cot^{-1}(f(x))\right]=-\dfrac{1}{\left(f(x)\right)^2+1}\cdot f'(x)\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\frac{d}{dx}\left[\sec^{-1}(x)\right]=\dfrac{1}{|x|\sqrt{x^2-1}}\)</span>
+and chain rule we have</p>
+<div class="math notranslate nohighlight">
+\[\label{eq:secchain}
+    \frac{d}{dx}\left[\sec^{-1}(g(x))\right]=\dfrac{1}{|g(x)|\sqrt{\left(g(x)\right)^2-1}}\cdot g'(x)\]</div>
+<p>By Equations <a class="reference external" href="#eq:f1">[eq:f1]</a>{reference-type=”eqref”
+reference=”eq:f1”} and
+<a class="reference external" href="#eq:cotchain">[eq:cotchain]</a>{reference-type=”eqref”
+reference=”eq:cotchain”} we have</p>
+<div class="math notranslate nohighlight">
+\[\label{eq:dcf1}
+    \frac{d}{dx}\left[\cot^{-1}\left(\sqrt{4x^2-1}\right)\right]=-\dfrac{1}{\left(\sqrt{4x^2-1}\right)^2+1}\cdot \dfrac{8x}{2\sqrt{4x^2-1}}=...=-\dfrac{1}{x\sqrt{x^2-1}}\]</div>
+<p>By Equations <a class="reference external" href="#eq:g1">[eq:g1]</a>{reference-type=”eqref”
+reference=”eq:g1”} and
+<a class="reference external" href="#eq:secchain">[eq:secchain]</a>{reference-type=”eqref”
+reference=”eq:secchain”} we have</p>
+<div class="math notranslate nohighlight">
+\[\label{eq:dsg1}
+    \frac{d}{dx}\left[\sec^{-1}(2x)\right]=\dfrac{1}{|2x|\sqrt{\left(2x\right)^2-1}}\cdot (2)\]</div>
+<p>Therefore, by Equations <a class="reference external" href="#eq:dcf1">[eq:dcf1]</a>{reference-type=”eqref”
+reference=”eq:dcf1”} and <a class="reference external" href="#eq:dsg1">[eq:dsg1]</a>{reference-type=”eqref”
+reference=”eq:dsg1”} we have</p>
+<div class="math notranslate nohighlight">
+\[\frac{d}{dx}\left[\cot^{-1}\left( \sqrt{4x^2-1} \right)+\sec^{-1}(2x)\right]=-\dfrac{1}{\left(\sqrt{4x^2-1}\right)^2+1}\cdot \dfrac{8x}{2\sqrt{4x^2-1}}+\dfrac{2}{|2x|\sqrt{\left(2x\right)^2-1}}\]</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">codmccabe's GitHub Page</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, Michael McCabe.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../../_sources/BACKUP/md/test1.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
