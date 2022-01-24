@@ -10,6 +10,7 @@ Welcome to McCabe's Calculus Stuff's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   Calc2/Calc2-midterm
 
 
 Indices and tables

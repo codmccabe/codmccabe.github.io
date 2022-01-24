@@ -1,0 +1,966 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Series &#8212; McCabe&#39;s Calculus Stuff  documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">McCabe's Calculus Stuff  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Calc2/series.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#intro">
+   Intro
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-series">
+     Definition (Series)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-harmonic-series">
+     Definition (Harmonic Series)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#algebraic-properties-of-convergent-series">
+     Algebraic Properties of Convergent Series
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#defintion-geometric-series">
+     Defintion (Geometric Series)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#divergence-and-integral-test">
+   Divergence and Integral Test
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-divergence-test">
+     Theorem (Divergence Test)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-integral-test">
+     Theorem (Integral Test)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#note">
+     NOTE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-p-series">
+     Definition (
+     <span class="math notranslate nohighlight">
+      \(p\)
+     </span>
+     -series)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#facts-p-series-convergence-or-divergence">
+     FACTs (
+     <span class="math notranslate nohighlight">
+      \(p\)
+     </span>
+     -series Convergence or Divergence)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-remainder-estimate-from-the-integral-test">
+     Theorem (Remainder Estimate from the Integral Test)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example-estimating-the-value-of-a-series">
+       Example (Estimating the value of a series)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparison-test">
+   Comparison Test
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-comparison-test">
+     Theorem (Comparison Test)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-limit-comparison-test">
+     Theorem (Limit Comparison Test)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alternating-series">
+   Alternating Series
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-alternating-series">
+     Definition (Alternating Series)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-alternating-series-test">
+     Theorem (Alternating Series Test)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-remainders-in-alternating-series">
+     Theorem (Remainders in Alternating Series)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-absolute-and-condition-convergence">
+     Definition (Absolute and Condition Convergence)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-absolute-convergence-implies-convergence">
+     Theorem (Absolute Convergence Implies Convergence)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ratio-and-root-tests">
+   Ratio and Root Tests
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-ratio-test">
+     Theorem (Ratio Test)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-root-test">
+     Theorem (Root Test)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Series</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#intro">
+   Intro
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-series">
+     Definition (Series)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-harmonic-series">
+     Definition (Harmonic Series)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#algebraic-properties-of-convergent-series">
+     Algebraic Properties of Convergent Series
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#defintion-geometric-series">
+     Defintion (Geometric Series)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#divergence-and-integral-test">
+   Divergence and Integral Test
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-divergence-test">
+     Theorem (Divergence Test)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-integral-test">
+     Theorem (Integral Test)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#note">
+     NOTE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-p-series">
+     Definition (
+     <span class="math notranslate nohighlight">
+      \(p\)
+     </span>
+     -series)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#facts-p-series-convergence-or-divergence">
+     FACTs (
+     <span class="math notranslate nohighlight">
+      \(p\)
+     </span>
+     -series Convergence or Divergence)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-remainder-estimate-from-the-integral-test">
+     Theorem (Remainder Estimate from the Integral Test)
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example-estimating-the-value-of-a-series">
+       Example (Estimating the value of a series)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparison-test">
+   Comparison Test
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-comparison-test">
+     Theorem (Comparison Test)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-limit-comparison-test">
+     Theorem (Limit Comparison Test)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alternating-series">
+   Alternating Series
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-alternating-series">
+     Definition (Alternating Series)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-alternating-series-test">
+     Theorem (Alternating Series Test)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-remainders-in-alternating-series">
+     Theorem (Remainders in Alternating Series)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-absolute-and-condition-convergence">
+     Definition (Absolute and Condition Convergence)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-absolute-convergence-implies-convergence">
+     Theorem (Absolute Convergence Implies Convergence)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ratio-and-root-tests">
+   Ratio and Root Tests
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-ratio-test">
+     Theorem (Ratio Test)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-root-test">
+     Theorem (Root Test)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>set_plot_option([svg_file, &quot;maxplot.svg&quot;])$
+</pre></div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="series">
+<h1>Series<a class="headerlink" href="#series" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://codmccabe.github.io/index.html">Home</a></p></li>
+<li><p><a class="reference external" href="https://codmccabe.github.io/calc/index.html">Calc Home</a></p></li>
+<li><p><a class="reference external" href="#intro">Intro</a></p></li>
+<li><p><a class="reference external" href="#diverg">Divergence and Integral Test</a></p></li>
+<li><p><a class="reference external" href="#compar">Comparison Tests</a></p></li>
+<li><p><a class="reference external" href="#altern">Alternating Series</a></p></li>
+<li><p><a class="reference external" href="#ratioRoot">Ratio and Root Tests</a></p></li>
+</ul>
+<p><a id='intro'></a></p>
+<div class="section" id="intro">
+<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://codmccabe.github.io/index.html">Home</a></p></li>
+<li><p><a class="reference external" href="https://codmccabe.github.io/calc/index.html">Calc Home</a></p></li>
+<li><p><a class="reference external" href="#intro">Intro</a></p></li>
+<li><p><a class="reference external" href="#diverg">Divergence and Integral Test</a></p></li>
+<li><p><a class="reference external" href="#compar">Comparison Tests</a></p></li>
+<li><p><a class="reference external" href="#altern">Alternating Series</a></p></li>
+<li><p><a class="reference external" href="#ratioRoot">Ratio and Root Tests</a></p></li>
+</ul>
+<div class="section" id="definition-series">
+<h3>Definition (Series)<a class="headerlink" href="#definition-series" title="Permalink to this headline">¶</a></h3>
+<p>An infinite series is a sume of infinitely many terms and is written in the form $<span class="math notranslate nohighlight">\(\sum_{n=1}^{\infty}a_n = a_1 +a_2 +\cdots\)</span><span class="math notranslate nohighlight">\(
+and the parital sum of an infinite series is \)</span><span class="math notranslate nohighlight">\(S_k = \sum_{n=1}^k a_n = a_1+a_2+\cdots +a_k\)</span>$</p>
+<p>The partial sum form a sequence <span class="math notranslate nohighlight">\(\{S_k\}\)</span>. If the sequence of partial sums converges to a real number <span class="math notranslate nohighlight">\(S\)</span>, the infinite series converges.</p>
+<p>If we can describe the convergence of a series to <span class="math notranslate nohighlight">\(S\)</span>, we call <span class="math notranslate nohighlight">\(S\)</span> the sum of the series, and we write</p>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^{\infty}a_n=S\]</div>
+<p>If the sequence of partial sums diverges, we have the divergence of a series.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="definition-harmonic-series">
+<h3>Definition (Harmonic Series)<a class="headerlink" href="#definition-harmonic-series" title="Permalink to this headline">¶</a></h3>
+<p>The harmonic series is defined as $<span class="math notranslate nohighlight">\(\sum_{n=1}^{\infty}\frac{1}{n}=1+\frac{1}{2}+\frac13+\cdots\)</span>$</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="algebraic-properties-of-convergent-series">
+<h3>Algebraic Properties of Convergent Series<a class="headerlink" href="#algebraic-properties-of-convergent-series" title="Permalink to this headline">¶</a></h3>
+<p><span class="math notranslate nohighlight">\(\newcommand{\SUM}[2]{\sum_{n=1}^{#1}\left(#2\right)}\)</span>
+Let <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> and <span class="math notranslate nohighlight">\(\SUM{\infty}{b_n}\)</span> be convegent series. Then the following algebraic properties hold.</p>
+<ol class="simple">
+<li><p>The series <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n\pm b_n}\)</span> converges and <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n\pm b_n}=\SUM{\infty}{a_n}\pm \SUM{\infty}{b_n}\)</span></p></li>
+<li><p>For any real number <span class="math notranslate nohighlight">\(c\)</span>, the series <span class="math notranslate nohighlight">\(\SUM{\infty}{ca_n}\)</span> converges and <span class="math notranslate nohighlight">\(\SUM{\infty}{ca_n}=c\SUM{\infty}{a_n}\)</span></p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="defintion-geometric-series">
+<h3>Defintion (Geometric Series)<a class="headerlink" href="#defintion-geometric-series" title="Permalink to this headline">¶</a></h3>
+<p>A geometric series is a series of the form</p>
+<div class="math notranslate nohighlight">
+\[\SUM{\infty}{ar^{n-1}}=a+ar+ar^2+ar^3+\cdots\]</div>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(|r|&lt;1\)</span>, the eries converges, and</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\SUM{\infty}{ar^{n-1}}=\frac{a}{1-r}$$ were $|r|&lt;1$.
+* If $|r|&gt;1$, the series diverges.\\---
+### Definition (Telescoping Series)
+A telescoping series is a series in which most of the terms cancel in each of the partial sums, leaving only some of the first terms and some of the last terms. For example:
+$$\SUM{k}{b_n-b_{n+1}} = b_1-b_{k+1}\end{aligned}\end{align} \]</div>
+<hr class="docutils" />
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>sum(1/2,i,1,10);
+10*(1/2);
+(1/2)^1+(1/2)^2+(1/2)^3+(1/2)^4;
+sum((1/2)^n,n,1,4);
+plot2d([discrete,makelist((1/2)^i,i,4)],[style,points])$
+</pre></div>
+</div>
+<p>[\tag{<span class="math notranslate nohighlight">\({\it \%o}_{2}\)</span>}5]</p>
+<p>[\tag{<span class="math notranslate nohighlight">\({\it \%o}_{3}\)</span>}5]</p>
+<p>[\tag{<span class="math notranslate nohighlight">\({\it \%o}_{4}\)</span>}{{15}\over{16}}]</p>
+<p>[\tag{<span class="math notranslate nohighlight">\({\it \%o}_{5}\)</span>}{{15}\over{16}}]</p>
+<p><img alt="svg" src="../_images/series_3_4.svg" /></p>
+<p>As you can see above instead of evaluating:</p>
+<div class="math notranslate nohighlight">
+\[(1/2)^1+(1/2)^2+(1/2)^3+(1/2)^4 = 15/16\]</div>
+<p>we compact the notation to:
+$<span class="math notranslate nohighlight">\(\sum_{n=1}^4 (1/2)^n = 15/16\)</span>$</p>
+<p><a id='diverg'></a></p>
+</div>
+</div>
+<div class="section" id="divergence-and-integral-test">
+<h2>Divergence and Integral Test<a class="headerlink" href="#divergence-and-integral-test" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://codmccabe.github.io/index.html">Home</a></p></li>
+<li><p><a class="reference external" href="https://codmccabe.github.io/calc/index.html">Calc Home</a></p></li>
+<li><p><a class="reference external" href="#intro">Intro</a></p></li>
+<li><p><a class="reference external" href="#diverg">Divergence and Integral Test</a></p></li>
+<li><p><a class="reference external" href="#compar">Comparison Tests</a></p></li>
+<li><p><a class="reference external" href="#altern">Alternating Series</a></p></li>
+<li><p><a class="reference external" href="#ratioRoot">Ratio and Root Tests</a></p></li>
+</ul>
+<div class="section" id="theorem-divergence-test">
+<h3>Theorem (Divergence Test)<a class="headerlink" href="#theorem-divergence-test" title="Permalink to this headline">¶</a></h3>
+<p>If <span class="math notranslate nohighlight">\(\lim_{n\to \infty}a_n=c\ne 0\)</span> or <span class="math notranslate nohighlight">\(\lim_{n\to \infty}a_n\)</span> does not exist, then the series <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> diverges.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="theorem-integral-test">
+<h3>Theorem (Integral Test)<a class="headerlink" href="#theorem-integral-test" title="Permalink to this headline">¶</a></h3>
+<p>Consider the series <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span>.</p>
+<ul class="simple">
+<li><p>If the sequence of <span class="math notranslate nohighlight">\(a_n\)</span> is made up of positive terms.</p></li>
+<li><p>If there exists a function <span class="math notranslate nohighlight">\(f\)</span> and a positive integer <span class="math notranslate nohighlight">\(N\)</span> such that the following three conditions are satisfied:</p></li>
+</ul>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(f\)</span> is continuous,</p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> is decreasing, and</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(n)=a_n\)</span> for all integers <span class="math notranslate nohighlight">\(n\ge N\)</span>.</p></li>
+</ol>
+<p>Then
+$<span class="math notranslate nohighlight">\(\SUM{\infty}{a_n} \text{ and } \int_N^{\infty}f(x)\,dx\)</span>$
+both converge or both diverge.</p>
+</div>
+<div class="section" id="note">
+<h3>NOTE<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h3>
+<p>Very important to satisfy the three conditions in order to use the Integral test.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="definition-p-series">
+<h3>Definition (<span class="math notranslate nohighlight">\(p\)</span>-series)<a class="headerlink" href="#definition-p-series" title="Permalink to this headline">¶</a></h3>
+<p>For any real number <span class="math notranslate nohighlight">\(p\)</span>, the series $<span class="math notranslate nohighlight">\(\SUM{\infty}{\frac{1}{n^p}}\)</span><span class="math notranslate nohighlight">\( is called a \)</span>p$-series.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="facts-p-series-convergence-or-divergence">
+<h3>FACTs (<span class="math notranslate nohighlight">\(p\)</span>-series Convergence or Divergence)<a class="headerlink" href="#facts-p-series-convergence-or-divergence" title="Permalink to this headline">¶</a></h3>
+<p>(More will follow after comparison tests like the ratio test and root test)
+Given the <span class="math notranslate nohighlight">\(p\)</span>-series <span class="math notranslate nohighlight">\(\SUM{\infty}{\frac{1}{n^p}}\)</span></p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(p&lt;0\)</span>, then <span class="math notranslate nohighlight">\(1/n^p \to \infty\)</span>, and if <span class="math notranslate nohighlight">\(p=0\)</span>, then <span class="math notranslate nohighlight">\(1/n^p \to 1\)</span>. Therefore, by the divergence test the <span class="math notranslate nohighlight">\(p\)</span>-series diverges if <span class="math notranslate nohighlight">\(p\le 0\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(p&gt;0\)</span>, then <span class="math notranslate nohighlight">\(f(x)=1/x^p\)</span> is a positive, continuous, decreasing function (integral test). Therefore, for <span class="math notranslate nohighlight">\(p&gt;0\)</span>, we use the integral test, comparing $<span class="math notranslate nohighlight">\(\SUM{\infty}{\frac{1}{n^p}} \text{ and }\int_1^{\infty}\frac{1}{x^p}\,dx\)</span>$ and from improper integrals we know</p>
+<ul>
+<li><p>If <span class="math notranslate nohighlight">\(p&gt;1\)</span> then the <span class="math notranslate nohighlight">\(p\)</span>-series converges.</p></li>
+<li><p>if <span class="math notranslate nohighlight">\(0&lt;p\le 1\)</span> then the <span class="math notranslate nohighlight">\(p\)</span>-series diverges.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="theorem-remainder-estimate-from-the-integral-test">
+<h3>Theorem (Remainder Estimate from the Integral Test)<a class="headerlink" href="#theorem-remainder-estimate-from-the-integral-test" title="Permalink to this headline">¶</a></h3>
+<p>Suppose <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> is a convergent series with positive terms. Suppose there exists a function <span class="math notranslate nohighlight">\(f\)</span> satisfying the following three conditions:</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(f\)</span> is continous,</p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> is decreasing, and</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(n)=a_n\)</span> for all integers <span class="math notranslate nohighlight">\(n\ge 1\)</span>.</p></li>
+</ol>
+<p>Let <span class="math notranslate nohighlight">\(S_N\)</span> be the <span class="math notranslate nohighlight">\(N^{\text{th}}\)</span> partial sum of <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span>. For all positive integers <span class="math notranslate nohighlight">\(N\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[S_N+\int_{N+1}^{\infty}f(x)\,dx&lt;\SUM{\infty}{a_n}&lt;S_N+\int_N^{\infty}f(x)\,dx\]</div>
+<p>In other words, the remainder $<span class="math notranslate nohighlight">\(R_N=\SUM{\infty}{a_n}-S_N = \sum_{n=N+1}^{\infty}\left(a_n\right)\)</span>$
+satisfies the following estimate:</p>
+<div class="math notranslate nohighlight">
+\[\int_{N+1}^{\infty}f(x)\,dx &lt; R_n &lt; \int_N^{\infty}f(x)\,dx.\]</div>
+<hr class="docutils" />
+<hr class="docutils" />
+<div class="section" id="example-estimating-the-value-of-a-series">
+<h4>Example (Estimating the value of a series)<a class="headerlink" href="#example-estimating-the-value-of-a-series" title="Permalink to this headline">¶</a></h4>
+<p>Consider <span class="math notranslate nohighlight">\(\SUM{\infty}{\frac{1}{n^3}}\)</span></p>
+<ol class="simple">
+<li><p>Find the error for <span class="math notranslate nohighlight">\(S_{10}\)</span>.</p></li>
+<li><p>Determien the elase value of <span class="math notranslate nohighlight">\(N\)</span> necessary such that <span class="math notranslate nohighlight">\(S_N\)</span> will estimate <span class="math notranslate nohighlight">\(\SUM{\infty}{1/n^3}\)</span> within <span class="math notranslate nohighlight">\(0.001\)</span>.</p></li>
+</ol>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>sum(1/n^3,n,1,10);
+float(sum(1/n^3,n,1,10));
+f(x):=1/x^3;
+integrate(f(x),x);
+assume(N&gt;1)$
+integrate(f(x),x,1,N);
+limit(integrate(f(x),x,1,N),N,infinity);
+</pre></div>
+</div>
+<p>[\tag{<span class="math notranslate nohighlight">\({\it \%o}_{7}\)</span>}{{19164113947}\over{16003008000}}]</p>
+<p>[\tag{<span class="math notranslate nohighlight">\({\it \%o}_{8}\)</span>}1.197531985674193]</p>
+<p>[\tag{<span class="math notranslate nohighlight">\({\it \%o}_{9}\)</span>}f\left(x\right):={{1}\over{x^3}}]</p>
+<p>[\tag{<span class="math notranslate nohighlight">\({\it \%o}_{10}\)</span>}-{{1}\over{2,x^2}}]</p>
+<p>[\tag{<span class="math notranslate nohighlight">\({\it \%o}_{12}\)</span>}{{1}\over{2}}-{{1}\over{2,N^2}}]</p>
+<p>[\tag{<span class="math notranslate nohighlight">\({\it \%o}_{13}\)</span>}{{1}\over{2}}]</p>
+<p>As we can see from the calculations the remainder estimate is <span class="math notranslate nohighlight">\(R_n=\frac{1}{2N^2}\)</span>. So if we want the error for <span class="math notranslate nohighlight">\(S_{10}\)</span> we have:</p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>Rn(N):=1/(2*N^2);
+Rn(10);
+float(Rn(10));
+</pre></div>
+</div>
+<p>[\tag{<span class="math notranslate nohighlight">\({\it \%o}_{14}\)</span>}{\it Rn}\left(N\right):={{1}\over{2,N^2}}]</p>
+<p>[\tag{<span class="math notranslate nohighlight">\({\it \%o}_{15}\)</span>}{{1}\over{200}}]</p>
+<p>[\tag{<span class="math notranslate nohighlight">\({\it \%o}_{16}\)</span>}0.005]</p>
+<p>Now determine least value of <span class="math notranslate nohighlight">\(N\)</span>. That is solve the following inequality:
+$<span class="math notranslate nohighlight">\(R_N&lt;0.001 \text{ or } \frac{1}{2N^2}&lt;0.001\)</span>$</p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>assume(N&gt;1)$
+solve(1/(2*N^2)=0.001,N);
+float(solve(1/(2*N^2)=0.001,N));
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>rat: replaced -0.001 by -1/1000 = -0.001
+</pre></div>
+</div>
+<p>[\tag{<span class="math notranslate nohighlight">\({\it \%o}_{18}\)</span>}\left[ N=-2,5^{{{3}\over{2}}} , N=2,5^{{{3}\over{2}}} \right] ]</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>rat: replaced -0.001 by -1/1000 = -0.001
+</pre></div>
+</div>
+<p>[\tag{<span class="math notranslate nohighlight">\({\it \%o}_{19}\)</span>}\left[ N=-22.3606797749979 , N=22.3606797749979 \right] ]</p>
+<p>Therefore, the minimum necessary value is <span class="math notranslate nohighlight">\(N=23\)</span>.</p>
+<hr class="docutils" />
+<hr class="docutils" />
+<p><a id='compar'></a></p>
+</div>
+</div>
+</div>
+<div class="section" id="comparison-test">
+<h2>Comparison Test<a class="headerlink" href="#comparison-test" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://codmccabe.github.io/index.html">Home</a></p></li>
+<li><p><a class="reference external" href="https://codmccabe.github.io/calc/index.html">Calc Home</a></p></li>
+<li><p><a class="reference external" href="#intro">Intro</a></p></li>
+<li><p><a class="reference external" href="#diverg">Divergence and Integral Test</a></p></li>
+<li><p><a class="reference external" href="#compar">Comparison Tests</a></p></li>
+<li><p><a class="reference external" href="#altern">Alternating Series</a></p></li>
+<li><p><a class="reference external" href="#ratioRoot">Ratio and Root Tests</a></p></li>
+</ul>
+<div class="section" id="theorem-comparison-test">
+<h3>Theorem (Comparison Test)<a class="headerlink" href="#theorem-comparison-test" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Suppose there exists an integer <span class="math notranslate nohighlight">\(N\)</span> such that <span class="math notranslate nohighlight">\(0\le a_n\le b_n\)</span> for all <span class="math notranslate nohighlight">\(n\ge N\)</span>. If <span class="math notranslate nohighlight">\(\SUM{\infty}{b_n}\)</span> converges, then <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> converges.</p></li>
+<li><p>Suppose there exists an integer <span class="math notranslate nohighlight">\(N\)</span> such that <span class="math notranslate nohighlight">\(a_n\ge b_n\ge 0\)</span> for all <span class="math notranslate nohighlight">\(n\ge N\)</span>. If <span class="math notranslate nohighlight">\(\SUM{\infty}{b_n}\)</span> diverges, then <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> diverges.</p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="theorem-limit-comparison-test">
+<h3>Theorem (Limit Comparison Test)<a class="headerlink" href="#theorem-limit-comparison-test" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(a_n\)</span>, <span class="math notranslate nohighlight">\(b_n\ge 0\)</span> for all <span class="math notranslate nohighlight">\(n\ge 1\)</span>.</p>
+<ol class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\lim_{n\to \infty}\left(a_n/b_n\right) = L \ne 0\)</span>, then <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> and <span class="math notranslate nohighlight">\(\SUM{\infty}{b_n}\)</span> both converge or both diverge.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\lim_{n\to \infty}\left(a_n/b_n\right) = 0\)</span> and <span class="math notranslate nohighlight">\(\SUM{\infty}{b_n}\)</span> converges, then <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> converges</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\lim_{n\to \infty}\left(a_n/b_n\right) = \infty\)</span> and <span class="math notranslate nohighlight">\(\SUM{\infty}{b_n}\)</span> diverges, then <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> diverges.</p></li>
+</ol>
+<hr class="docutils" />
+<p><a id='altern'></a></p>
+</div>
+</div>
+<div class="section" id="alternating-series">
+<h2>Alternating Series<a class="headerlink" href="#alternating-series" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://codmccabe.github.io/index.html">Home</a></p></li>
+<li><p><a class="reference external" href="https://codmccabe.github.io/calc/index.html">Calc Home</a></p></li>
+<li><p><a class="reference external" href="#intro">Intro</a></p></li>
+<li><p><a class="reference external" href="#diverg">Divergence and Integral Test</a></p></li>
+<li><p><a class="reference external" href="#compar">Comparison Tests</a></p></li>
+<li><p><a class="reference external" href="#altern">Alternating Series</a></p></li>
+<li><p><a class="reference external" href="#ratioRoot">Ratio and Root Tests</a></p></li>
+</ul>
+<div class="section" id="definition-alternating-series">
+<h3>Definition (Alternating Series)<a class="headerlink" href="#definition-alternating-series" title="Permalink to this headline">¶</a></h3>
+<p>Any series whose terms alternate between positive and negative values is called an alternating series. An alternating series can be written in the form</p>
+<div class="math notranslate nohighlight">
+\[\SUM{\infty}{(-1)^{n+1}b_n} = b_1 -b_2+b_3-b_4+\cdots\]</div>
+<p>or
+$<span class="math notranslate nohighlight">\(\SUM{\infty}{(-1)^n b_n} = -b_1+b_2-b_3+b_4-\cdots\)</span>$</p>
+<p>where <span class="math notranslate nohighlight">\(b_n\ge 0\)</span> for all positive integers <span class="math notranslate nohighlight">\(n\)</span>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="theorem-alternating-series-test">
+<h3>Theorem (Alternating Series Test)<a class="headerlink" href="#theorem-alternating-series-test" title="Permalink to this headline">¶</a></h3>
+<p>An alternating series of the form
+$<span class="math notranslate nohighlight">\(\SUM{\infty}{(-1)^{n+1}b_n}\text{ or } \SUM{\infty}{(-1)^n b_n}\)</span>$
+converges if</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(0\le b_{n+1} \le b_n\)</span> for all <span class="math notranslate nohighlight">\(n\ge 1\)</span> and</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to \infty}b_n=0\)</span>.</p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="theorem-remainders-in-alternating-series">
+<h3>Theorem (Remainders in Alternating Series)<a class="headerlink" href="#theorem-remainders-in-alternating-series" title="Permalink to this headline">¶</a></h3>
+<p>Consider the alternating series of the form
+$<span class="math notranslate nohighlight">\(\SUM{\infty}{(-1)^{n+1}b_n} \text{ or }\SUM{\infty}{(-1)^nb_n}\)</span>$
+that satisfies the hypotheses of the alternating series test.</p>
+<p>Let <span class="math notranslate nohighlight">\(S\)</span> denote the sum of the series and <span class="math notranslate nohighlight">\(S_N\)</span> denote the <span class="math notranslate nohighlight">\(N^{\text{th}}\)</span> partial sum. For any integer <span class="math notranslate nohighlight">\(N\ge 1\)</span>, the remainder <span class="math notranslate nohighlight">\(R_N = S - S_N\)</span> satisfies
+$<span class="math notranslate nohighlight">\(|R_N|\le b_{N+1}\)</span>$</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="definition-absolute-and-condition-convergence">
+<h3>Definition (Absolute and Condition Convergence)<a class="headerlink" href="#definition-absolute-and-condition-convergence" title="Permalink to this headline">¶</a></h3>
+<p>A series <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> exhibits absolute convergence if <span class="math notranslate nohighlight">\(\SUM{\infty}{|a_n|}\)</span> converges. A series <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> exhibits conditional convergence if <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> converges but <span class="math notranslate nohighlight">\(\SUM{\infty}{|a_n|}\)</span> diverges.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="theorem-absolute-convergence-implies-convergence">
+<h3>Theorem (Absolute Convergence Implies Convergence)<a class="headerlink" href="#theorem-absolute-convergence-implies-convergence" title="Permalink to this headline">¶</a></h3>
+<p>If <span class="math notranslate nohighlight">\(\SUM{\infty}{|a_n|}\)</span> converges, then <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> converges.</p>
+<hr class="docutils" />
+<p><a id='ratioRoot'></a></p>
+</div>
+</div>
+<div class="section" id="ratio-and-root-tests">
+<h2>Ratio and Root Tests<a class="headerlink" href="#ratio-and-root-tests" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://codmccabe.github.io/index.html">Home</a></p></li>
+<li><p><a class="reference external" href="https://codmccabe.github.io/calc/index.html">Calc Home</a></p></li>
+<li><p><a class="reference external" href="#intro">Intro</a></p></li>
+<li><p><a class="reference external" href="#diverg">Divergence and Integral Test</a></p></li>
+<li><p><a class="reference external" href="#compar">Comparison Tests</a></p></li>
+<li><p><a class="reference external" href="#altern">Alternating Series</a></p></li>
+<li><p><a class="reference external" href="#ratioRoot">Ratio and Root Tests</a></p></li>
+</ul>
+<div class="section" id="theorem-ratio-test">
+<h3>Theorem (Ratio Test)<a class="headerlink" href="#theorem-ratio-test" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> be a series with nonzero terms. Let
+$<span class="math notranslate nohighlight">\(\rho = \lim_{n\to \infty}\left|\frac{a_{n+1}}{a_n}\right|.\)</span>$</p>
+<ol class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(0\le\rho &lt;1\)</span>, then <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> converges absolutely.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\rho &gt;1\)</span> or <span class="math notranslate nohighlight">\(\rho = \infty\)</span>, then <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> diverges.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\rho = 1\)</span>, the test does not provide any information.</p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="theorem-root-test">
+<h3>Theorem (Root Test)<a class="headerlink" href="#theorem-root-test" title="Permalink to this headline">¶</a></h3>
+<p>Consider the series <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span>. Let
+$<span class="math notranslate nohighlight">\(\rho = \lim_{n\to \infty}\sqrt[n]{\left|a_n\right|}\)</span>$</p>
+<ol class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(0\le \rho &lt;1\)</span>, then <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> converges absolutely.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\rho &gt; 1\)</span> or <span class="math notranslate nohighlight">\(\rho = \infty\)</span>, then <span class="math notranslate nohighlight">\(\SUM{\infty}{a_n}\)</span> diverges.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\rho = 1\)</span>, the test does not provide any information.</p></li>
+</ol>
+<hr class="docutils" />
+ <table style="width:100%">
+  <tr>
+    <th>Series or Test</th>
+      <th>Conclusions</th>
+      <th>Comments</th>
+  </tr>
+  <tr>
+    <th rowspan="2">
+        <p>Divergence Test </p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    &lt;p&gt;For any series $\sum_{n=1}^{\infty}(a_{n})$, evaluate $\lim_{n\to\infty}(a_{n})$.&lt;/p&gt;&lt;/th&gt;
+&lt;td&gt;If $\lim_{n\to\infty}(a_{n})=0$, the test is inconclusive.&lt;/td&gt;
+  &lt;td&gt;The test cannot prove convergence of a series.&lt;/td&gt;
+</pre></div>
+</div>
+  </tr>
+  <tr>
+    <td>If $\lim_{n\to\infty}(a_{n})\ne0$, the series diverges.</td>
+  </tr>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;tr&gt;
+&lt;th rowspan=&quot;2&quot;&gt;
+    &lt;p&gt;Geometric Series &lt;/p&gt;
+    
+    &lt;p&gt;$\sum_{n=1}^{\infty}\left(ar^{n-1}\right)$&lt;/p&gt;&lt;/th&gt;
+&lt;td&gt;If $|r|&lt;1$, the series converges to $\frac{a}{1-r}$.&lt;/td&gt;
+  &lt;td&gt;Any geometric series can be re-indexed to be written in the form $a+ar+ar^{2}+\cdots$,
+</pre></div>
+</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is the initial term and <span class="math notranslate nohighlight">\(r\)</span> is the ratio.</td></p>
+  </tr>
+  <tr>
+    <td>If $|r|\ge1$, the series diverges.</td>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;th rowspan=&quot;2&quot;&gt;
+    &lt;p&gt;$p$-Series &lt;/p&gt;
+    
+    &lt;p&gt;$\sum_{n=1}^{\infty}\left(\frac{1}{n^{p}}\right)$&lt;/p&gt;&lt;/th&gt;
+&lt;td&gt;If $p&gt;1$, the series converges.&lt;/td&gt;
+  &lt;td&gt;For $p=1$, we have the harmonic series $\sum_{n=1}^{\infty}\left(\frac{1}{n}\right)$.&lt;/td&gt;
+</pre></div>
+</div>
+  </tr>
+  <tr>
+    <td>If $p\le1$, the series diverges.</td>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;/tr&gt;
+
+ &lt;tr&gt;
+&lt;th rowspan=&quot;2&quot;&gt;
+    &lt;p&gt;Comparison Test &lt;/p&gt;
+    
+    &lt;p&gt;For $\sum_{n=1}^{\infty}(a_{n})$ with nonnegative terms, compare with a known series $\sum_{n=1}^{\infty}(b_{n})$.&lt;/p&gt;&lt;/th&gt;
+&lt;td&gt;If $a_{n}\le b_{n}$ for all $n\ge N$ and $\sum_{n=1}^{\infty}(b_{n})$
+</pre></div>
+</div>
+<p>converges, then <span class="math notranslate nohighlight">\(\sum_{n=1}^{\infty}(a_{n})\)</span> converges</td>
+<td>Typically used for a series similar to a geometric or <span class="math notranslate nohighlight">\(p\)</span>-series.
+It can sometimes be difficult to find an appropriate series.</td></p>
+  </tr>
+  <tr>
+    <td>If $a_{n}\ge b_{n}$ for all $n\ge N$ and $\sum_{n=1}^{\infty}(b_{n})$
+diverges, then $\sum_{n=1}^{\infty}(a_{n})$ diverges.</td>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;/tr&gt;
+
+ &lt;tr&gt;
+&lt;th rowspan=&quot;3&quot;&gt;
+    &lt;p&gt;Limit Comparison Test &lt;/p&gt;
+    
+    &lt;p&gt;For $\sum_{n=1}^{\infty}(a_{n})$ with positive terms, compare with a series $\sum_{n=1}^{\infty}(b_{n})$ by evaluating $L=\lim_{n\to\infty}\frac{a_{n}}{b_{n}}$.&lt;/p&gt;&lt;/th&gt;
+&lt;td&gt;If $L$ is a real number and $L\ne0$, then $\sum_{n=1}^{\infty}(a_{n})$
+</pre></div>
+</div>
+<p>and <span class="math notranslate nohighlight">\(\sum_{n=1}^{\infty}(b_{n})\)</span> both converge or both diverge.</td>
+<td>Typically used for a series similar to a geometric or p-series. Often
+easier to apply than the comparison test.</td></p>
+  </tr>
+  <tr>
+    <td>If $L=0$ and $\sum_{n=1}^{\infty}(b_{n})$ converges, then $\sum_{n=1}^{\infty}(a_{n})$
+converges.</td>
+      </tr>
+    <tr>
+        <td> If $L=\infty$ and $\sum_{n=1}^{\infty}(b_{n})$ diverges, then $\sum_{n=1}^{\infty}(a_{n})$
+diverges.</td>
+    </tr>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;tr&gt;
+    &lt;th&gt;&lt;p&gt; Integral Test&lt;/p&gt;
+        &lt;p&gt; If there exists a positive, continuous, decreasing function $f$ such
+            that $a_{n}=f(n)$ for all $n\ge N,$evaluate $\int_{N}^{\infty}f(x)\,dx$.&lt;/p&gt;
+    &lt;/th&gt;
+    &lt;td&gt;$\int_{N}^{\infty}f(x)\,dx$ and $\sum_{n=1}^{\infty}(a_{n})$ both
+</pre></div>
+</div>
+<p>converge or both diverge. </td>
+<td> Limited to those series for which the corresponding function <span class="math notranslate nohighlight">\(f\)</span>
+can be easily integrated.</td>
+</tr></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;tr&gt;
+    &lt;th&gt;&lt;p&gt;Alternating Series&lt;/p&gt;
+        &lt;p&gt; $\sum_{n=1}^{\infty}\left((-1)^{n+1}b_{n}\right)$ or $\sum_{n=1}^{\infty}\left((-1)^{n}b_{n}\right)$&lt;/p&gt;
+    &lt;/th&gt;
+    &lt;td&gt;If $b_{n+1}\le b_{n}$ for all $n\ge1$ and $b_{n}\to0$ as $n\to\infty$,
+</pre></div>
+</div>
+<p>then the series converges.</td>
+<td>  Only applies to alternating series.</td>
+</tr></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;tr&gt;
+&lt;th rowspan=&quot;3&quot;&gt;
+    &lt;p&gt;Ratio Test&lt;/p&gt;
+    
+    &lt;p&gt;For any series $\sum_{n=1}^{\infty}(a_{n})$ with nonzero terms, let
+</pre></div>
+</div>
+<p><span class="math notranslate nohighlight">\(\rho=\lim_{n\to\infty}\left|\dfrac{a_{n+1}}{a_{n}}\right|\)</span>.</p></th>
+<td>If <span class="math notranslate nohighlight">\(0\le\rho&lt;1\)</span>, the series converges absolutely.</td>
+<td>Often used for series involving factorials or exponential.</td></p>
+  </tr>
+  <tr>
+    <td>If $\rho>1$ or $\rho=\infty$, the series diverges.</td>
+      </tr>
+    <tr>
+        <td> If $\rho=1$, the test is inconclusive.</td>
+    </tr>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;tr&gt;
+&lt;th rowspan=&quot;3&quot;&gt;
+    &lt;p&gt;Root Test&lt;/p&gt;
+    
+    &lt;p&gt;For any series $\sum_{n=1}^{\infty}(a_{n})$ with nonzero terms, let
+</pre></div>
+</div>
+<p><span class="math notranslate nohighlight">\(\rho=\lim_{n\to\infty}\sqrt[n]{|a_{n}|}\)</span>.</p></th>
+<td>If <span class="math notranslate nohighlight">\(0\le\rho&lt;1\)</span>, the series converges absolutely.</td>
+<td>Often used for series where <span class="math notranslate nohighlight">\(|a_n|=b_n^n\)</span></td></p>
+  </tr>
+  <tr>
+    <td>If $\rho>1$ or $\rho=\infty$, the series diverges.</td>
+      </tr>
+    <tr>
+        <td> If $\rho=1$, the test is inconclusive.</td>
+    </tr>
+</table> 
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Michael McCabe<br/>
+    
+        &copy; Copyright 2022, Michael McCabe.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

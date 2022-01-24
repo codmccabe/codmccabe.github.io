@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; McCabe&#39;s Calculus Stuff  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">McCabe's Calculus Stuff  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Calc2-midterm.html">
+   Calc 2 Mid-Term Content
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/Calc2/ipynb/seqSer.ipynb.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1><no title></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <dl>
+<dt>{</dt><dd><dl>
+<dt>“cells”: [</dt><dd><dl>
+<dt>{</dt><dd><p>“cell_type”: “markdown”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“# Sequences and Seriesn”,
+“* [Home](<a class="reference external" href="https://codmccabe.github.io/index.html)n">https://codmccabe.github.io/index.html)n</a>”,
+“* [Calc Home](<a class="reference external" href="https://codmccabe.github.io/calc/index.html)n">https://codmccabe.github.io/calc/index.html)n</a>”,
+“* [Sequences](#sequences)n”,
+”    - [Properties of Sequences](#propSeq)n”,
+”    - [Bounded and Monotonic](#boundMono)n”,
+“* [Series](#series)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“metadata”: {</p>
+<blockquote>
+<div><p>“tags”: []</p>
+</div></blockquote>
+<p>},
+“source”: [</p>
+<blockquote>
+<div><p>“&lt;a id=’sequences’&gt;&lt;/a&gt;n”,
+“## Sequencen”,
+“### Definition (Converges and Diverges)n”,
+“n”,
+“The sequence $\{a_n\}$ converges to the number $L$ if for every positive number $\epsilon$ there corresponds an integer $N$ such thatn”,
+“n”,
+“$$ <a href="#id1"><span class="problematic" id="id2">|</span></a>a_n-L|&lt;\epsilon \text{ whenever } n&gt;N$$n”,
+“n”,
+“If no such number $L$ exists, we say that $\{a_n\}$ diverges.n”,
+“n”,
+“If $\{a_n\}$ converges to $L$, we writen”,
+“n”,
+“$$\lim_{n\to \infty}a_n=L \text{ or } a_n\to L$$n”,
+“n”,
+“and call $L$ the limit of the sequence.n”,
+“n”,
+“### Definition (Diverges to $\pm \infty$)n”,
+“If for every number $M$ there exists an $N$ such that for all $n&gt;N$ we have $a_n&gt;M$, then the sequence $\{a_n\}$ diverges to infinity. This is denoted by:n”,
+“n”,
+“$$\lim_{n\to\infty}a_n=\infty \text{ or } a_n\to \infty $$n”,
+“n”,
+“Similarly, If for every $m$ there exists an $N$ such that for all $n&gt;N$ we have $a_n&lt;m$, then the sequence $\{a_n\}$ diverges to negative infinity. This is denoted by:n”,
+“n”,
+“$$\lim_{n\to \infty}a_n = -\infty \text{ or } a_n\to -\infty. $$n”,
+“n”,
+“—”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“* [Home](<a class="reference external" href="https://codmccabe.github.io/index.html)n">https://codmccabe.github.io/index.html)n</a>”,
+“* [Calc Home](<a class="reference external" href="https://codmccabe.github.io/calc/index.html)n">https://codmccabe.github.io/calc/index.html)n</a>”,
+“* [Sequences](#sequences)n”,
+“* [Properties of Sequences](#propSeq)n”,
+“* [Bounded and Monotonic](#boundMono)”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“&lt;a id=’propSeq’&gt;&lt;/a&gt;n”,
+“## Properties of Sequencesn”,
+“### Theorem (Law of Sequences)n”,
+“Let $\{a_n\}$ and $\{b_n\}$ be sequences of real numbers, and let $A$ and $B$ be real numbers. The following rules hold ifn”,
+“$$ \lim_{n\to \infty}a_n=A \text{ and } \lim_{n\to \infty}b_n=B$$n”,
+“1. $\lim_{n\to \infty}\left(a_n \pm b_n\right)= \lim_{n\to \infty}a_n\pm \lim_{n\to \infty}b_n$n”,
+“2. $\lim_{n\to \infty}k\cdot a_n = k\cdot A$ where $k$ is some real number.n”,
+“3. $\lim_{n\to \infty}\left(a_n\cdot b_n\right)= A\cdot B$n”,
+“4. $\lim_{n\to \infty}\dfrac{a_n}{b_n} = \dfrac{A}{B}$ provided $B\ne 0$n”,
+“n”,
+“—n”,
+“n”,
+“### Theorem (Squeeze Theorem)n”,
+“Let $\{a_n\}$, $\{b_n\}$, and $\{c_n\}$ be sequences of real numbers. If $a_n\le b_n\le c_n$ hold for for all $n&gt;N$ where $N$ is some natural number and n”,
+“$$\lim_{n\to \infty}a_n=\lim_{n\to \infty}c_n=L$$n”,
+“then n”,
+“$$\lim_{n\to \infty}b_n=L.$$n”,
+“n”,
+“—n”,
+“### Theorem (Continuous Function)n”,
+“Let $\{a_n\}$ be a seqeunce of real numbers. If $a_n\to L$ and if $f$ is a function that is continuous at $L$ and defined at all $a_n$, then $$f(a_n)\to f(L)$$n”,
+“n”,
+“—n”,
+“n”,
+“### Theoremn”,
+“Suppose that $f(x)$ is a function defined for all $x\ge n_0$ and that $\{a_n\}$ is a  sequence of real numbers such that $a_n=f(n)$ for $n\ge n_0$. Then n”,
+“$$\lim_{n\to \infty}a_n=L \text{ whenever } \lim_{n\to \infty}f(x)=L $$n”,
+“n”,
+“—n”,
+“n”,
+“### Theorem (Popular Functions)n”,
+“The following six sequences converges to the limit listed below:n”,
+“1. $\lim_{n\to \infty}\frac{\ln(n)}{n}=0$n”,
+“2. $\lim_{n\to \infty}\sqrt[n]{n}=1$n”,
+“3. $\lim_{n\to \infty}x^{\frac{1}{n}}=1$ provided $x&gt;0$ and fixedn”,
+“4. $\lim_{n\to \infty}x^n=0$ provided $-1&lt;x&lt;1$ and fixedn”,
+“5. $\lim_{n\to \infty}\left( 1+\frac{x}{n} \right)^n = e^x$ for any fixed $x$ n”,
+“6. $\lim_{n\to \infty}\dfrac{x^n}{n!}=0$ for any fixed $x$n”,
+“n”,
+“—n”,
+“### Definition (Factorial)n”,
+“Let $n$ be a natural numbern”,
+“$$n! = 1\cdot 2\cdot 3\cdot \cdots \cdot n$$n”,
+“A useful properties is $$(n+1)! = (n+1)\cdot n!$$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“* [Home](<a class="reference external" href="https://codmccabe.github.io/index.html)n">https://codmccabe.github.io/index.html)n</a>”,
+“* [Calc Home](<a class="reference external" href="https://codmccabe.github.io/calc/index.html)n">https://codmccabe.github.io/calc/index.html)n</a>”,
+“* [Sequences](#sequences)n”,
+“* [Properties of Sequences](#propSeq)n”,
+“* [Bounded and Monotonic](#boundMono)”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“&lt;a id=’bondMono’&gt;&lt;/a&gt;n”,
+“## Bounded and Monotonicn”,
+“### Definitionn”,
+“A sequence $\{a_n\}$ is bounded from above if there exists a number $M$ such that $a_n\le M$ for all $n$. The number $M$ is an upper bound for $\{a_n\}$. If $M$ is an upper bound for $\{a_n\}$ but no number less than $M$ is an upper bound for $\{a_n\}$, then $M$ is the least upper bound for $\{a_n\}$.n”,
+“n”,
+“A seqeunce $\{a_n\}$ is bounded from below if there exists a number $m$ such that $a_n\ge m$ or all $n$. The number $m$ is a ower bound of $\{a_n\}$. If $m$ is a lower bound for $\{a_n\}$ but no number greater that $m$ is a lower bound for $\{a_n\}$, then $m$ is the greatest lower bound for $\{a_n\}$.n”,
+“n”,
+“If $\{a_n\}$ is bounded from above and below, then $\{a_n\}$ is bounded. If $\{a_n\}$ is not bounded, then we say that $\{a_n\}$ is an unbounded sequence.n”,
+“n”,
+“### Definitionn”,
+“A sequence $\{a_n\}$ is increasing (nondecreasing) if $a_n\le a_{n+1}$ for all $n$. That is,n”,
+“n”,
+“$$a_1\le a_2\le a_3\le \cdots $$n”,
+“n”,
+“The sequence is decreasing (nonincreasing) if $a_n\ge a_{n+1}$ for all $n$. That is,n”,
+“n”,
+“$$a_1 \ge a_2 \ge a_3 \ge \cdots $$n”,
+“n”,
+“—n”,
+“n”,
+“### Theorem (Monotonic Sequence Theorem)n”,
+“If a sequence $\{a_n\}$ is both bounded and monotonic, then the sequence converges.n”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“* [Home](<a class="reference external" href="https://codmccabe.github.io/index.html)n">https://codmccabe.github.io/index.html)n</a>”,
+“* [Calc Home](<a class="reference external" href="https://codmccabe.github.io/calc/index.html)n">https://codmccabe.github.io/calc/index.html)n</a>”,
+“* [Sequences](#sequences)n”,
+“* [Properties of Sequences](#propSeq)n”,
+“* [Bounded and Monotonic](#boundMono)”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“&lt;a id=’series’&gt;&lt;/a&gt;n”,
+“## Seriesn”,
+“n”,
+“### Theoremn”,
+“If $\sum a_n$ converges, then $\lim_{x\to \infty }a_n = 0$.n”,
+“n”,
+“#### NOTEn”,
+“The previous theorem does not state:n”,
+“If $\lim_{x\to \infty}a_n=0$, then $\sum a_n$ converges.n”,
+“This is a false statement.n”,
+“n”,
+“However, the contrapositive of the theorem is true:n”,
+“### Theorem (Divergence Test)n”,
+“If $\lim_{x\to \infty}a_n \ne 0, then $\sum a_n$ will diverge.n”,
+“n”,
+“—n”,
+“### Definition (Conditional and Absolute Convergence)n”,
+“A series $\sum a_n$ is said to be absolutely convergent if $\sum <a href="#id3"><span class="problematic" id="id4">|</span></a>a_n|$ also converges.n”,
+“n”,
+“If $\sum a_n$ converges but $\sum <a href="#id5"><span class="problematic" id="id6">|</span></a>a_n|$ diverges, then we say $\sum a_n$ converges conditionally.n”,
+“n”,
+“—n”,
+“n”,
+“n”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: null,
+“metadata”: {},
+“outputs”: [],
+“source”: []</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: null,
+“metadata”: {},
+“outputs”: [],
+“source”: []</p>
+</div></blockquote>
+<p>}</p>
+</dd>
+</dl>
+<p>],
+“metadata”: {</p>
+<blockquote>
+<div><dl class="simple">
+<dt>“kernelspec”: {</dt><dd><p>“display_name”: “Maxima”,
+“language”: “maxima”,
+“name”: “maxima”</p>
+</dd>
+</dl>
+<p>},
+“language_info”: {</p>
+<blockquote>
+<div><p>“codemirror_mode”: “maxima”,
+“file_extension”: “.mac”,
+“mimetype”: “text/x-maxima”,
+“name”: “maxima”,
+“pygments_lexer”: “maxima”,
+“version”: “5.45.1”</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>},
+“nbformat”: 4,
+“nbformat_minor”: 4</p>
+</dd>
+</dl>
+<p>}</p>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Michael McCabe<br/>
+    
+        &copy; Copyright 2022, Michael McCabe.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

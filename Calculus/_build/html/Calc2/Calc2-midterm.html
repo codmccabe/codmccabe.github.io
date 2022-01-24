@@ -1,0 +1,666 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calc 2 Mid-Term Content &#8212; McCabe&#39;s Calculus Stuff  documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Welcome to McCabe’s Calculus Stuff’s documentation!" href="../index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">McCabe's Calculus Stuff  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Calc 2 Mid-Term Content
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Calc2/Calc2-midterm.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-useful-identities">
+   Some useful identities
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trig-substitution">
+   Trig Substitution:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partial-fractions">
+   Partial Fractions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#improper-integrals">
+   Improper Integrals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparison-test">
+   Comparison Test
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#p-test">
+     p-Test:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#l-hospital-s-rule">
+     L’Hospital’s Rule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#average-function-value">
+     Average Function Value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-mean-value-theorem-for-integrals">
+     The Mean Value Theorem for Integrals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arc-length">
+     Arc Length
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#volume-by-disks-for-rotation-about-the-x-axis">
+     Volume by Disks for Rotation About the x-Axis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-volume-by-disks-for-rotation">
+     EXAMPLE (Volume by Disks for Rotation)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Calc 2 Mid-Term Content</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-useful-identities">
+   Some useful identities
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trig-substitution">
+   Trig Substitution:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#partial-fractions">
+   Partial Fractions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#improper-integrals">
+   Improper Integrals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparison-test">
+   Comparison Test
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#p-test">
+     p-Test:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#l-hospital-s-rule">
+     L’Hospital’s Rule
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#average-function-value">
+     Average Function Value
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-mean-value-theorem-for-integrals">
+     The Mean Value Theorem for Integrals
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arc-length">
+     Arc Length
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#volume-by-disks-for-rotation-about-the-x-axis">
+     Volume by Disks for Rotation About the x-Axis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-volume-by-disks-for-rotation">
+     EXAMPLE (Volume by Disks for Rotation)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="calc-2-mid-term-content">
+<h1>Calc 2 Mid-Term Content<a class="headerlink" href="#calc-2-mid-term-content" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>Evaluate the following:</p>
+<div class="math notranslate nohighlight">
+\[\int \cos^4(2t)\,dt\]</div>
+<div class="math notranslate nohighlight">
+\[\int \cos(3t)\sin(8t)\,dt\]</div>
+<div class="math notranslate nohighlight">
+\[\int_1^3 \sin(8x)\sin(x)\,dx\]</div>
+<div class="math notranslate nohighlight">
+\[\int \cot(10x)\csc^4(10x)\,dx\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>integrate((cos(2*t))^4,t);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{3}$}\frac{\frac{\frac{\sin \left(8\,t\right)}{2}+4\,t}{8}+\frac{\sin \left(4\,t\right)}{2}+t}{4}\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>integrate(cos(3*t)*sin(8*t),t);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{2}$}-\frac{\cos \left(11\,t\right)}{22}-\frac{\cos \left(5\,t\right)}{10}\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>integrate(sin(8*x)*sin(x),x,1,3);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{5}$}\frac{7\,\sin 9-9\,\sin 7}{126}-\frac{7\,\sin 27-9\,\sin 21}{126}\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>float(integrate(sin(8*x)*sin(x),x,1,3));
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{6}$}-0.01740302177606207\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>integrate(cot(10*x)*(csc(10*x))^4,x);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{8}$}-\frac{1}{40\,\sin ^4\left(10\,x\right)}\]</div>
+</div>
+<div class="section" id="some-useful-identities">
+<h2>Some useful identities<a class="headerlink" href="#some-useful-identities" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sin^2(x)+\cos^2(x)=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\tan^2(x)+1=\sec^2(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\cos^2(x)=\frac12\left(1+\cos(2x)\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin^2(x)=\frac12\left(1-\cos(2x)\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin(x)\cos(x)=\frac12\sin(2x)\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="trig-substitution">
+<h2>Trig Substitution:<a class="headerlink" href="#trig-substitution" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Form</p></th>
+<th class="text-align:center head"><p>Looks Like</p></th>
+<th class="text-align:center head"><p>Substitution</p></th>
+<th class="text-align:center head"><p>Limit Assumptions</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(\sqrt{b^2x^2-a^2}\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\sec^2(\theta)-1=\tan^2(\theta)\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(x=\frac{a}{b}\sec(\theta)\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(0\le\theta&lt;\frac{\pi}{2},\,\frac{\pi}{2}&lt;\theta\le \pi\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(\sqrt{a^2-b^2x^2}\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(1-\sin^2(\theta)=\cos^2(\theta)\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(x=\frac{a}{b}\sin(\theta)\)</span>$</p></td>
+<td class="text-align:center"><p>$<span class="math notranslate nohighlight">\(-\frac{\pi}{2}\le\theta\le\frac{\pi}{2}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(\sqrt{a^2+b^2x^2}\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\tan^2(\theta)+1=\sec^2(\theta)\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(x=\frac{a}{b}\tan(\theta)\)</span>$</p></td>
+<td class="text-align:center"><p>$<span class="math notranslate nohighlight">\(-\frac{\pi}{2}&lt;\theta&lt;\frac{\pi}{2}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Use a trig substitution to eliminate the root.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sqrt{4-9x^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sqrt{3+25x^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\left(7x^2-3\right)^{\frac{5}{2}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sqrt{(w+3)^2-100}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sqrt{4(9x-5)^2+1}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sqrt{1-4x-2x^2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\left( x^2-8x+21 \right)^{\frac{3}{2}}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sqrt{e^{8x}-9}\)</span></p></li>
+</ol>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>f1(x):=sqrt(4-9*x^2)$
+    f1((2/3)*sec(theta));
+    factor(f1((2/3)*sec(theta)));
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{12}$}\sqrt{4-4\,\sec ^2\vartheta}\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{13}$}2\,\sqrt{1-\sec ^2\vartheta}\]</div>
+<p>Notice that <span class="math notranslate nohighlight">\(2\sqrt{1-\sec^2(\theta)}=2\sqrt{\tan^2(\theta)}=2\tan(\theta)\)</span>. Thus, by letting <span class="math notranslate nohighlight">\(x=\frac{2}{3}\sec(\theta)\)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{4-9x^2}=2\tan(\theta)\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>f2(x):=sqrt(3+25*x^2)$
+    f2((sqrt(3)/5)*tan(theta));
+    factor(f2((sqrt(3)/5)*tan(theta)));
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{15}$}\sqrt{3\,\tan ^2\vartheta+3}\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{16}$}\sqrt{3}\,\sqrt{\tan ^2\vartheta+1}\]</div>
+<p>Notice that <span class="math notranslate nohighlight">\(\sqrt3\sqrt{\tan^2(\theta)+1}=\sqrt3\sqrt{\sec^2(\theta)}=\sqrt3\sec(\theta)\)</span>. thus, by letting <span class="math notranslate nohighlight">\(x=\frac{\sqrt3}{5}\tan(\theta)\)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{3+25x^2}=\sqrt3\sec(\theta)\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>f3(x):=(7*x^2-3)^(5/2)$
+    f3((sqrt(3)/sqrt(7)*sec(theta)));
+    factor(f3((sqrt(3)/sqrt(7)*sec(theta))));
+    3^(5/2)*((tan(theta))^2)^(5/2);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{12}$}\left(3\,\sec ^2\vartheta-3\right)^{\frac{5}{2}}\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{13}$}3^{\frac{5}{2}}\,\left(\sec ^2\vartheta-1\right)^{\frac{5}{2}}\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{14}$}3^{\frac{5}{2}}\,\tan ^4\vartheta\,\left| \tan \vartheta\right| \]</div>
+<p>Notice that <span class="math notranslate nohighlight">\(3^{5/2}\cdot (\sec^2(\theta)-1)^{5/2} = 3^{5/2}\cdot tan^5(\theta)\)</span>. Thus, by letting <span class="math notranslate nohighlight">\(x=\frac{\sqrt3}{\sqrt7}\sec(\theta)\)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[\left(7x^2-3\right)^{5/2}=3^{5/2}\tan^5(\theta)\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>f4(x):=sqrt((x+3)^2-100)$
+    f4(10*sec(theta)-3);
+    factor(f4(10*sec(theta)-3));
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{33}$}\sqrt{100\,\sec ^2\vartheta-100}\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{34}$}10\,\sqrt{\sec ^2\vartheta-1}\]</div>
+<p>Notice that <span class="math notranslate nohighlight">\(10\sqrt{\sec^2(\theta)-1}=10\tan(\theta)\)</span>. Thus, by letting <span class="math notranslate nohighlight">\(x=10\sec(\theta)-3\)</span> we have</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{(x+3)^2-100}=10\tan(\theta)\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>f5(x):=sqrt(4*(9*x-5)^2+1)$
+    solve((1/2)*tan(theta)=9*x-5,x);
+    f5((tan(theta)+10)/18);
+    factor(f5((tan(theta)+10)/18));
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{60}$}\left[ x=\frac{\tan \vartheta+10}{18} \right] \]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{61}$}\sqrt{4\,\left(\frac{\tan \vartheta+10}{2}-5\right)^2+1}\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{62}$}\sqrt{\tan ^2\vartheta+1}\]</div>
+<p>First, solve the equation:</p>
+<div class="math notranslate nohighlight">
+\[\frac12\tan(\theta)=9x-5\]</div>
+<p>to get <span class="math notranslate nohighlight">\(x=\frac{\tan(\theta)+10}{18}\)</span>. Then we notice that <span class="math notranslate nohighlight">\(\sqrt{\tan^2(\theta)+1}=\sec(\theta)\)</span>. Thus, with <span class="math notranslate nohighlight">\(x=\frac{\tan(\theta)+10}{18}\)</span>, we have,</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{4(9x-5)^2+1}=\sec(\theta)\]</div>
+<p>Use a trig substitution to evaluat ethe given integral.</p>
+<div class="math notranslate nohighlight">
+\[\int \frac{\sqrt{x^2+16}}{x^4}\, dx\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>integrate(sqrt(x^2+16)/x^4,x);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{129}$}-\frac{\left(x^2+16\right)^{\frac{3}{2}}}{48\,x^3}\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>Top(x):=sqrt(x^2+16)$
+    Top(4*tan(theta));
+    factor(Top(4*tan(theta)));
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{96}$}\sqrt{16\,\tan ^2\vartheta+16}\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{97}$}4\,\sqrt{\tan ^2\vartheta+1}\]</div>
+<p>Notice that when <span class="math notranslate nohighlight">\(x=4\tan(\theta)\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{x^2+16}=4\sec(\theta)\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>(4*sec(theta))/((4*tan(theta))^4);
+trigreduce((4*sec(theta))/((4*tan(theta))^4));
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{121}$}\frac{\sec \vartheta}{64\,\tan ^4\vartheta}\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{122}$}\frac{\cot ^3\vartheta\,\csc \vartheta}{64}\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>trigreduce((cot(x))^2+1);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{124}$}\csc ^2x\]</div>
+<p>So we have:</p>
+<div class="math notranslate nohighlight">
+\[\int \frac{\sqrt{x^2+16}}{x^4}\, dx= \int\frac{\sec(\theta)}{64\tan^4(\theta)}\,dx\]</div>
+<p>Recall that <span class="math notranslate nohighlight">\(\csc^2(\xi)=\cot^2(\xi)+1\)</span>. That is,</p>
+<div class="math notranslate nohighlight">
+\[\cot^3(\theta)\cdot \csc(\theta)=\left(\cot(\theta)\csc(\theta)\right)\cdot \cot^2(\theta)\]</div>
+<div class="math notranslate nohighlight">
+\[\left(\cot(\theta)\csc(\theta)\right)\cdot \cot^2(\theta) = \left(\cot(\theta)\csc(\theta)\right)\cdot \left(\csc^2(\theta)-1\right)\]</div>
+<div class="math notranslate nohighlight">
+\[\int\frac{\sec(\theta)}{64\tan^4(\theta)}\,dx = \frac{1}{64} \int \left(\cot(\theta)\csc(\theta)\right)\cdot \left(\csc^2(\theta)-1\right)\,d\theta\]</div>
+<p>Let <span class="math notranslate nohighlight">\(u=\csc(\theta)\)</span> and <span class="math notranslate nohighlight">\(du=\cot(\theta)\csc(\theta)\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{64} \int \left(\cot(\theta)\csc(\theta)\right)\cdot \left(\csc^2(\theta)-1\right)\,d\theta= \frac{1}{64}\int\left(u^2-1\right)\,du\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>IF9(u):=(u*(u^2-3)/192);
+IF9(csc(theta));
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{142}$}{\it IF}_{9}\left(u\right):=\frac{u\,\left(u^2-3\right)}{192}\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{143}$}\frac{\csc \vartheta\,\left(\csc ^2\vartheta-3\right)}{192}\]</div>
+</div>
+<div class="section" id="partial-fractions">
+<h2>Partial Fractions<a class="headerlink" href="#partial-fractions" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Factor in Denominator</p></th>
+<th class="text-align:center head"><p>Term in Partial Fraction Decomposition</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><span class="math notranslate nohighlight">\(ax+b\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\dfrac{A}{ax+b}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><span class="math notranslate nohighlight">\((ax+b)^k\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\dfrac{A_1}{ax+b}+\dfrac{A_2}{(ax+b)^2}+\cdots+\dfrac{A_k}{(ax+b)^k},\,k=1,2,3,...\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><span class="math notranslate nohighlight">\((ax^2+bx+c)^k\)</span></p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\dfrac{A_1x+B_1}{ax^2+bx+c}+\dfrac{A_2x+B_2}{(ax^2+bx+c)^2}+\cdots+\dfrac{A_kx+B_k}{(ax^2+bx+c)^k},\,k=1,2,3,...\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="improper-integrals">
+<h2>Improper Integrals<a class="headerlink" href="#improper-integrals" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\int_a ^tf(x)\,dx\)</span> exists for every <span class="math notranslate nohighlight">\(t&gt;a\)</span>, then</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\int_a^{\infty}f(x)\,dx=\lim_{t\to\infty}\int_a^tf(x)\,dx\]</div>
+<p>Provided the limit exists and is finite.
+2. If <span class="math notranslate nohighlight">\(\int_t ^bf(x)\,dx\)</span> exists for every <span class="math notranslate nohighlight">\(b&gt;t\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\int_{-\infty}^bf(x)\,dx=\lim_{t\to\infty}\int_t^bf(x)\,dx\]</div>
+<p>Provided the limit exists and is finite.
+3. If <span class="math notranslate nohighlight">\(\int_{-\infty}^{c}f(x)\,dx\)</span> and <span class="math notranslate nohighlight">\(\int_{c}^{\infty}f(x)\,dx\)</span> are both convergent, then</p>
+<div class="math notranslate nohighlight">
+\[\int_{-\infty}^{\infty}f(x)\,dx=\int_{-\infty}^{c}f(x)\,dx+\int_{c}^{\infty}f(x)\,dx\]</div>
+<p>where <span class="math notranslate nohighlight">\(c\)</span> is any number.
+4. If <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous on the interval <span class="math notranslate nohighlight">\([a,b)\)</span> and not continuous at <span class="math notranslate nohighlight">\(x=b\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\int_a^bf(x)\,dx=\lim_{x\to b^-}\int_a^tf(x)\,dx\]</div>
+<p>provide the limit exists and is finite.
+5. If <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous on the interval <span class="math notranslate nohighlight">\((a,b]\)</span> and not continuous at <span class="math notranslate nohighlight">\(x=a\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\int_a^bf(x)\,dx=\lim_{t\to a^+}\int_t^bf(x)\,dx\]</div>
+<p>provided the limit exists and is finite.
+6. If <span class="math notranslate nohighlight">\(f(x)\)</span> is not continuous at <span class="math notranslate nohighlight">\(x=c\)</span> where <span class="math notranslate nohighlight">\(a&lt;c&lt;b\)</span> and <span class="math notranslate nohighlight">\(\int_a^cf(x)\,dx\)</span> and <span class="math notranslate nohighlight">\(\int_c^bf(x)\,dx\)</span> are both convergent, then $<span class="math notranslate nohighlight">\(\int_a^bf(x)\,dx=\int_a^cf(x)\,dx+\int_c^bf(x)\,dx\)</span><span class="math notranslate nohighlight">\(
+7. If f(x) is not continuous at \)</span>x=a<span class="math notranslate nohighlight">\( and \)</span>x=b<span class="math notranslate nohighlight">\( and if \)</span>\int_a^cf(x),dx<span class="math notranslate nohighlight">\( and \)</span>\int_c^bf(x),dx<span class="math notranslate nohighlight">\( are both convergent, then \)</span><span class="math notranslate nohighlight">\(\int_a^bf(x)\,dx=\int_a^cf(x)\,dx+\int_c^bf(x)\,dx\)</span><span class="math notranslate nohighlight">\( where \)</span>c$ is any number.</p>
+<p>Note for number 3: the integral <span class="math notranslate nohighlight">\(\int_{-\infty}^{\infty}f(x)\,dx\)</span> is convergent if and only if <span class="math notranslate nohighlight">\(\int_{-\infty}^cf(x)\,dx\)</span> and <span class="math notranslate nohighlight">\(\int_c^{\infty}f(x)\,dx\)</span> are both convergent.</p>
+</div>
+<div class="section" id="comparison-test">
+<h2>Comparison Test<a class="headerlink" href="#comparison-test" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="p-test">
+<h3>p-Test:<a class="headerlink" href="#p-test" title="Permalink to this headline">¶</a></h3>
+<p>If <span class="math notranslate nohighlight">\(a&gt;0\)</span> then</p>
+<div class="math notranslate nohighlight">
+\[\int_a^{\infty}\dfrac{1}{x^p}\,dx\]</div>
+<p>is convergent if <span class="math notranslate nohighlight">\(p&gt;1\)</span> and divergent if <span class="math notranslate nohighlight">\(p\le1\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(f(x)\ge g(x)\ge 0\)</span> on the interval <span class="math notranslate nohighlight">\([a,\infty)\)</span>, then</p>
+<ol class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(\int_a^{\infty}f(x)\,dx\)</span> converges then so does <span class="math notranslate nohighlight">\(\int_a^{\infty}g(x)\,dx\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\int_a^{\infty}g(x)\,dx\)</span> diverges then so does <span class="math notranslate nohighlight">\(\int_a^{\infty}f(x)\,dx\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="l-hospital-s-rule">
+<h3>L’Hospital’s Rule<a class="headerlink" href="#l-hospital-s-rule" title="Permalink to this headline">¶</a></h3>
+<p>Suppose <span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}|f(x)|=\lim_{x\to a}|g(x)|=\infty}\)</span> or <span class="math notranslate nohighlight">\(\displaystyle \lim_{x\to a}f(x)=\lim_{x\to a}g(x)=0\)</span>.
+If <span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}\dfrac{f'(x)}{g'(x)}}\)</span> exists in
+either the finite or infinite sense, then
+$<span class="math notranslate nohighlight">\(
+\lim_{x\to a}\dfrac{f(x)}{g(x)}=\lim_{x\to a}\dfrac{f'(x)}{g'(x)}.
+\)</span>$</p>
+</div>
+<div class="section" id="average-function-value">
+<h3>Average Function Value<a class="headerlink" href="#average-function-value" title="Permalink to this headline">¶</a></h3>
+<p>The average value of a function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\([a,b]\)</span> is given by $<span class="math notranslate nohighlight">\(f_{ave}=dfrac{1}{b-a}\int_a^bf(x)\,dx\)</span>$</p>
+</div>
+<div class="section" id="the-mean-value-theorem-for-integrals">
+<h3>The Mean Value Theorem for Integrals<a class="headerlink" href="#the-mean-value-theorem-for-integrals" title="Permalink to this headline">¶</a></h3>
+<p>If <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous function on <span class="math notranslate nohighlight">\([a,b]\)</span> then there is a number <span class="math notranslate nohighlight">\(c\in[a,b]\)</span> such that $<span class="math notranslate nohighlight">\(\int_a^bf(x)\,dx=f(c)(b-a)\)</span>$</p>
+</div>
+<div class="section" id="arc-length">
+<h3>Arc Length<a class="headerlink" href="#arc-length" title="Permalink to this headline">¶</a></h3>
+<p>If <span class="math notranslate nohighlight">\(f'\)</span> is continuous on <span class="math notranslate nohighlight">\([a,b]\)</span>, then the length (arc length) of the curve <span class="math notranslate nohighlight">\(y=f(x)\)</span> from the point <span class="math notranslate nohighlight">\(A=(a,f(a))\)</span> to the point <span class="math notranslate nohighlight">\(B=(b,f(b))\)</span> is the value of the integral $<span class="math notranslate nohighlight">\(L=\int_a^b\sqrt{1+\left[f'(x)\right]^2}\,dx=\int_a^b\sqrt{1+\left[ \frac{dy}{dx} \right]^2}\)</span>$</p>
+</div>
+<div class="section" id="volume-by-disks-for-rotation-about-the-x-axis">
+<h3>Volume by Disks for Rotation About the x-Axis<a class="headerlink" href="#volume-by-disks-for-rotation-about-the-x-axis" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(A(x)=\pi(R(x))^2\)</span> where <span class="math notranslate nohighlight">\(R(x)\)</span> is a function of the radius of the circle over the domain <span class="math notranslate nohighlight">\(x\)</span>. The Volume of the object is then $<span class="math notranslate nohighlight">\(V=\int_a^bA(x)\,dx\)</span>$</p>
+</div>
+<div class="section" id="example-volume-by-disks-for-rotation">
+<h3>EXAMPLE (Volume by Disks for Rotation)<a class="headerlink" href="#example-volume-by-disks-for-rotation" title="Permalink to this headline">¶</a></h3>
+<p>The region between the curve <span class="math notranslate nohighlight">\(y=\cos(x)\)</span>,<span class="math notranslate nohighlight">\(\frac{\pi}{4}\le x\le \frac{3\pi}{4}\)</span>, and the x-axis is revolved about the x-axis to generate a solid. Find its volume.</p>
+<hr class="docutils" />
+<p>First, look at the graph:</p>
+<p><a class="reference external" href="https://www.geogebra.org/3d/hapxqvpr">Geogebra Graph</a></p>
+<iframe src="https://www.geogebra.org/3d/hapxqvpr?embed" width="800" height="400" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to McCabe’s Calculus Stuff’s documentation!</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Michael McCabe<br/>
+    
+        &copy; Copyright 2022, Michael McCabe.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

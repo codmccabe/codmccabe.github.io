@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sequences and Series &#8212; McCabe&#39;s Calculus Stuff  documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">McCabe's Calculus Stuff  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Calc2/seqSer.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sequence">
+   Sequence
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-converges-and-diverges">
+     Definition (Converges and Diverges)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-diverges-to-pm-infty">
+     Definition (Diverges to
+     <span class="math notranslate nohighlight">
+      \(\pm \infty\)
+     </span>
+     )
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#properties-of-sequences">
+   Properties of Sequences
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-law-of-sequences">
+     Theorem (Law of Sequences)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-squeeze-theorem">
+     Theorem (Squeeze Theorem)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-continuous-function">
+     Theorem (Continuous Function)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem">
+     Theorem
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-popular-functions">
+     Theorem (Popular Functions)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-factorial">
+     Definition (Factorial)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bounded-and-monotonic">
+   Bounded and Monotonic
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition">
+     Definition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Definition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-monotonic-sequence-theorem">
+     Theorem (Monotonic Sequence Theorem)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#series">
+   Series
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Theorem
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note">
+       NOTE
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-divergence-test">
+     Theorem (Divergence Test)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-conditional-and-absolute-convergence">
+     Definition (Conditional and Absolute Convergence)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Sequences and Series</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sequence">
+   Sequence
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-converges-and-diverges">
+     Definition (Converges and Diverges)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-diverges-to-pm-infty">
+     Definition (Diverges to
+     <span class="math notranslate nohighlight">
+      \(\pm \infty\)
+     </span>
+     )
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#properties-of-sequences">
+   Properties of Sequences
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-law-of-sequences">
+     Theorem (Law of Sequences)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-squeeze-theorem">
+     Theorem (Squeeze Theorem)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-continuous-function">
+     Theorem (Continuous Function)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem">
+     Theorem
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-popular-functions">
+     Theorem (Popular Functions)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-factorial">
+     Definition (Factorial)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bounded-and-monotonic">
+   Bounded and Monotonic
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition">
+     Definition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Definition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-monotonic-sequence-theorem">
+     Theorem (Monotonic Sequence Theorem)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#series">
+   Series
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Theorem
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#note">
+       NOTE
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-divergence-test">
+     Theorem (Divergence Test)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-conditional-and-absolute-convergence">
+     Definition (Conditional and Absolute Convergence)
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="sequences-and-series">
+<h1>Sequences and Series<a class="headerlink" href="#sequences-and-series" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://codmccabe.github.io/index.html">Home</a></p></li>
+<li><p><a class="reference external" href="https://codmccabe.github.io/calc/index.html">Calc Home</a></p></li>
+<li><p><a class="reference external" href="#sequences">Sequences</a></p>
+<ul>
+<li><p><a class="reference external" href="#propSeq">Properties of Sequences</a></p></li>
+<li><p><a class="reference external" href="#boundMono">Bounded and Monotonic</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#series">Series</a></p></li>
+</ul>
+<p><a id='sequences'></a></p>
+<div class="section" id="sequence">
+<h2>Sequence<a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="definition-converges-and-diverges">
+<h3>Definition (Converges and Diverges)<a class="headerlink" href="#definition-converges-and-diverges" title="Permalink to this headline">¶</a></h3>
+<p>The sequence <span class="math notranslate nohighlight">\(\{a_n\}\)</span> converges to the number <span class="math notranslate nohighlight">\(L\)</span> if for every positive number <span class="math notranslate nohighlight">\(\epsilon\)</span> there corresponds an integer <span class="math notranslate nohighlight">\(N\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[ |a_n-L|&lt;\epsilon \text{ whenever } n&gt;N\]</div>
+<p>If no such number <span class="math notranslate nohighlight">\(L\)</span> exists, we say that <span class="math notranslate nohighlight">\(\{a_n\}\)</span> diverges.</p>
+<p>If <span class="math notranslate nohighlight">\(\{a_n\}\)</span> converges to <span class="math notranslate nohighlight">\(L\)</span>, we write</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n\to \infty}a_n=L \text{ or } a_n\to L\]</div>
+<p>and call <span class="math notranslate nohighlight">\(L\)</span> the limit of the sequence.</p>
+</div>
+<div class="section" id="definition-diverges-to-pm-infty">
+<h3>Definition (Diverges to <span class="math notranslate nohighlight">\(\pm \infty\)</span>)<a class="headerlink" href="#definition-diverges-to-pm-infty" title="Permalink to this headline">¶</a></h3>
+<p>If for every number <span class="math notranslate nohighlight">\(M\)</span> there exists an <span class="math notranslate nohighlight">\(N\)</span> such that for all <span class="math notranslate nohighlight">\(n&gt;N\)</span> we have <span class="math notranslate nohighlight">\(a_n&gt;M\)</span>, then the sequence <span class="math notranslate nohighlight">\(\{a_n\}\)</span> diverges to infinity. This is denoted by:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n\to\infty}a_n=\infty \text{ or } a_n\to \infty \]</div>
+<p>Similarly, If for every <span class="math notranslate nohighlight">\(m\)</span> there exists an <span class="math notranslate nohighlight">\(N\)</span> such that for all <span class="math notranslate nohighlight">\(n&gt;N\)</span> we have <span class="math notranslate nohighlight">\(a_n&lt;m\)</span>, then the sequence <span class="math notranslate nohighlight">\(\{a_n\}\)</span> diverges to negative infinity. This is denoted by:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{n\to \infty}a_n = -\infty \text{ or } a_n\to -\infty. \]</div>
+<hr class="docutils" />
+<ul class="simple">
+<li><p><a class="reference external" href="https://codmccabe.github.io/index.html">Home</a></p></li>
+<li><p><a class="reference external" href="https://codmccabe.github.io/calc/index.html">Calc Home</a></p></li>
+<li><p><a class="reference external" href="#sequences">Sequences</a></p></li>
+<li><p><a class="reference external" href="#propSeq">Properties of Sequences</a></p></li>
+<li><p><a class="reference external" href="#boundMono">Bounded and Monotonic</a></p></li>
+</ul>
+<p><a id='propSeq'></a></p>
+</div>
+</div>
+<div class="section" id="properties-of-sequences">
+<h2>Properties of Sequences<a class="headerlink" href="#properties-of-sequences" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="theorem-law-of-sequences">
+<h3>Theorem (Law of Sequences)<a class="headerlink" href="#theorem-law-of-sequences" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> and <span class="math notranslate nohighlight">\(\{b_n\}\)</span> be sequences of real numbers, and let <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> be real numbers. The following rules hold if
+$<span class="math notranslate nohighlight">\( \lim_{n\to \infty}a_n=A \text{ and } \lim_{n\to \infty}b_n=B\)</span>$</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to \infty}\left(a_n \pm b_n\right)= \lim_{n\to \infty}a_n\pm \lim_{n\to \infty}b_n\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to \infty}k\cdot a_n = k\cdot A\)</span> where <span class="math notranslate nohighlight">\(k\)</span> is some real number.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to \infty}\left(a_n\cdot b_n\right)= A\cdot B\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to \infty}\dfrac{a_n}{b_n} = \dfrac{A}{B}\)</span> provided <span class="math notranslate nohighlight">\(B\ne 0\)</span></p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="theorem-squeeze-theorem">
+<h3>Theorem (Squeeze Theorem)<a class="headerlink" href="#theorem-squeeze-theorem" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span>, <span class="math notranslate nohighlight">\(\{b_n\}\)</span>, and <span class="math notranslate nohighlight">\(\{c_n\}\)</span> be sequences of real numbers. If <span class="math notranslate nohighlight">\(a_n\le b_n\le c_n\)</span> hold for for all <span class="math notranslate nohighlight">\(n&gt;N\)</span> where <span class="math notranslate nohighlight">\(N\)</span> is some natural number and
+$<span class="math notranslate nohighlight">\(\lim_{n\to \infty}a_n=\lim_{n\to \infty}c_n=L\)</span><span class="math notranslate nohighlight">\(
+then 
+\)</span><span class="math notranslate nohighlight">\(\lim_{n\to \infty}b_n=L.\)</span>$</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="theorem-continuous-function">
+<h3>Theorem (Continuous Function)<a class="headerlink" href="#theorem-continuous-function" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a seqeunce of real numbers. If <span class="math notranslate nohighlight">\(a_n\to L\)</span> and if <span class="math notranslate nohighlight">\(f\)</span> is a function that is continuous at <span class="math notranslate nohighlight">\(L\)</span> and defined at all <span class="math notranslate nohighlight">\(a_n\)</span>, then $<span class="math notranslate nohighlight">\(f(a_n)\to f(L)\)</span>$</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="theorem">
+<h3>Theorem<a class="headerlink" href="#theorem" title="Permalink to this headline">¶</a></h3>
+<p>Suppose that <span class="math notranslate nohighlight">\(f(x)\)</span> is a function defined for all <span class="math notranslate nohighlight">\(x\ge n_0\)</span> and that <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is a  sequence of real numbers such that <span class="math notranslate nohighlight">\(a_n=f(n)\)</span> for <span class="math notranslate nohighlight">\(n\ge n_0\)</span>. Then
+$<span class="math notranslate nohighlight">\(\lim_{n\to \infty}a_n=L \text{ whenever } \lim_{n\to \infty}f(x)=L \)</span>$</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="theorem-popular-functions">
+<h3>Theorem (Popular Functions)<a class="headerlink" href="#theorem-popular-functions" title="Permalink to this headline">¶</a></h3>
+<p>The following six sequences converges to the limit listed below:</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to \infty}\frac{\ln(n)}{n}=0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to \infty}\sqrt[n]{n}=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to \infty}x^{\frac{1}{n}}=1\)</span> provided <span class="math notranslate nohighlight">\(x&gt;0\)</span> and fixed</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to \infty}x^n=0\)</span> provided <span class="math notranslate nohighlight">\(-1&lt;x&lt;1\)</span> and fixed</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to \infty}\left( 1+\frac{x}{n} \right)^n = e^x\)</span> for any fixed <span class="math notranslate nohighlight">\(x\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{n\to \infty}\dfrac{x^n}{n!}=0\)</span> for any fixed <span class="math notranslate nohighlight">\(x\)</span></p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="definition-factorial">
+<h3>Definition (Factorial)<a class="headerlink" href="#definition-factorial" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(n\)</span> be a natural number
+$<span class="math notranslate nohighlight">\(n! = 1\cdot 2\cdot 3\cdot \cdots \cdot n\)</span><span class="math notranslate nohighlight">\(
+A useful properties is \)</span><span class="math notranslate nohighlight">\((n+1)! = (n+1)\cdot n!\)</span>$</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://codmccabe.github.io/index.html">Home</a></p></li>
+<li><p><a class="reference external" href="https://codmccabe.github.io/calc/index.html">Calc Home</a></p></li>
+<li><p><a class="reference external" href="#sequences">Sequences</a></p></li>
+<li><p><a class="reference external" href="#propSeq">Properties of Sequences</a></p></li>
+<li><p><a class="reference external" href="#boundMono">Bounded and Monotonic</a></p></li>
+</ul>
+<p><a id='bondMono'></a></p>
+</div>
+</div>
+<div class="section" id="bounded-and-monotonic">
+<h2>Bounded and Monotonic<a class="headerlink" href="#bounded-and-monotonic" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="definition">
+<h3>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
+<p>A sequence <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is bounded from above if there exists a number <span class="math notranslate nohighlight">\(M\)</span> such that <span class="math notranslate nohighlight">\(a_n\le M\)</span> for all <span class="math notranslate nohighlight">\(n\)</span>. The number <span class="math notranslate nohighlight">\(M\)</span> is an upper bound for <span class="math notranslate nohighlight">\(\{a_n\}\)</span>. If <span class="math notranslate nohighlight">\(M\)</span> is an upper bound for <span class="math notranslate nohighlight">\(\{a_n\}\)</span> but no number less than <span class="math notranslate nohighlight">\(M\)</span> is an upper bound for <span class="math notranslate nohighlight">\(\{a_n\}\)</span>, then <span class="math notranslate nohighlight">\(M\)</span> is the least upper bound for <span class="math notranslate nohighlight">\(\{a_n\}\)</span>.</p>
+<p>A seqeunce <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is bounded from below if there exists a number <span class="math notranslate nohighlight">\(m\)</span> such that <span class="math notranslate nohighlight">\(a_n\ge m\)</span> or all <span class="math notranslate nohighlight">\(n\)</span>. The number <span class="math notranslate nohighlight">\(m\)</span> is a ower bound of <span class="math notranslate nohighlight">\(\{a_n\}\)</span>. If <span class="math notranslate nohighlight">\(m\)</span> is a lower bound for <span class="math notranslate nohighlight">\(\{a_n\}\)</span> but no number greater that <span class="math notranslate nohighlight">\(m\)</span> is a lower bound for <span class="math notranslate nohighlight">\(\{a_n\}\)</span>, then <span class="math notranslate nohighlight">\(m\)</span> is the greatest lower bound for <span class="math notranslate nohighlight">\(\{a_n\}\)</span>.</p>
+<p>If <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is bounded from above and below, then <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is bounded. If <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is not bounded, then we say that <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is an unbounded sequence.</p>
+</div>
+<div class="section" id="id1">
+<h3>Definition<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>A sequence <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is increasing (nondecreasing) if <span class="math notranslate nohighlight">\(a_n\le a_{n+1}\)</span> for all <span class="math notranslate nohighlight">\(n\)</span>. That is,</p>
+<div class="math notranslate nohighlight">
+\[a_1\le a_2\le a_3\le \cdots \]</div>
+<p>The sequence is decreasing (nonincreasing) if <span class="math notranslate nohighlight">\(a_n\ge a_{n+1}\)</span> for all <span class="math notranslate nohighlight">\(n\)</span>. That is,</p>
+<div class="math notranslate nohighlight">
+\[a_1 \ge a_2 \ge a_3 \ge \cdots \]</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="theorem-monotonic-sequence-theorem">
+<h3>Theorem (Monotonic Sequence Theorem)<a class="headerlink" href="#theorem-monotonic-sequence-theorem" title="Permalink to this headline">¶</a></h3>
+<p>If a sequence <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is both bounded and monotonic, then the sequence converges.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://codmccabe.github.io/index.html">Home</a></p></li>
+<li><p><a class="reference external" href="https://codmccabe.github.io/calc/index.html">Calc Home</a></p></li>
+<li><p><a class="reference external" href="#sequences">Sequences</a></p></li>
+<li><p><a class="reference external" href="#propSeq">Properties of Sequences</a></p></li>
+<li><p><a class="reference external" href="#boundMono">Bounded and Monotonic</a></p></li>
+</ul>
+<p><a id='series'></a></p>
+</div>
+</div>
+<div class="section" id="series">
+<h2>Series<a class="headerlink" href="#series" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Theorem<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>If <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges, then <span class="math notranslate nohighlight">\(\lim_{x\to \infty }a_n = 0\)</span>.</p>
+<div class="section" id="note">
+<h4>NOTE<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h4>
+<p>The previous theorem does not state:
+If <span class="math notranslate nohighlight">\(\lim_{x\to \infty}a_n=0\)</span>, then <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges.
+This is a false statement.</p>
+<p>However, the contrapositive of the theorem is true:</p>
+</div>
+</div>
+<div class="section" id="theorem-divergence-test">
+<h3>Theorem (Divergence Test)<a class="headerlink" href="#theorem-divergence-test" title="Permalink to this headline">¶</a></h3>
+<p>If <span class="math notranslate nohighlight">\(\lim_{x\to \infty}a_n \ne 0, then \)</span>\sum a_n$ will diverge.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="definition-conditional-and-absolute-convergence">
+<h3>Definition (Conditional and Absolute Convergence)<a class="headerlink" href="#definition-conditional-and-absolute-convergence" title="Permalink to this headline">¶</a></h3>
+<p>A series <span class="math notranslate nohighlight">\(\sum a_n\)</span> is said to be absolutely convergent if <span class="math notranslate nohighlight">\(\sum |a_n|\)</span> also converges.</p>
+<p>If <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges but <span class="math notranslate nohighlight">\(\sum |a_n|\)</span> diverges, then we say <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges conditionally.</p>
+<hr class="docutils" />
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Michael McCabe<br/>
+    
+        &copy; Copyright 2022, Michael McCabe.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

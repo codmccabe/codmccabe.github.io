@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conic Section &#8212; McCabe&#39;s Calculus Stuff  documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">McCabe's Calculus Stuff  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Calc2/conicone-Copy1.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theorem-focus-directrix-and-eccentricity">
+   Theorem (Focus, Directrix, and Eccentricity)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theorem-polar-equation-and-conic-section">
+   Theorem (Polar Equation and Conic Section)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-algebra-skills-check">
+     Example (Algebra Skills Check)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-conic-section-general-form-equations">
+   Definition (Conic Section General Form Equations)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theorem-characteristics-of-the-general-form-equations">
+   Theorem (Characteristics of the General Form Equations)
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Conic Section</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theorem-focus-directrix-and-eccentricity">
+   Theorem (Focus, Directrix, and Eccentricity)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theorem-polar-equation-and-conic-section">
+   Theorem (Polar Equation and Conic Section)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-algebra-skills-check">
+     Example (Algebra Skills Check)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition-conic-section-general-form-equations">
+   Definition (Conic Section General Form Equations)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theorem-characteristics-of-the-general-form-equations">
+   Theorem (Characteristics of the General Form Equations)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="conic-section">
+<h1>Conic Section<a class="headerlink" href="#conic-section" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://codmccabe.github.io">Home</a></p></li>
+</ul>
+<div class="section" id="theorem-focus-directrix-and-eccentricity">
+<h2>Theorem (Focus, Directrix, and Eccentricity)<a class="headerlink" href="#theorem-focus-directrix-and-eccentricity" title="Permalink to this headline">¶</a></h2>
+<p>Let <span class="math notranslate nohighlight">\(F\)</span> be a fixed point (called the focus) and <span class="math notranslate nohighlight">\(l\)</span> be a fixed line (called the directrix) in a plane. Let <span class="math notranslate nohighlight">\(e\)</span> be a fixed positive number (called the eccentricity). The set of all points <span class="math notranslate nohighlight">\(P\)</span> in the plane such that</p>
+<div class="math notranslate nohighlight">
+\[ \dfrac{|PF|}{|Pl|} = e \]</div>
+<p>(that is, the ration of the distance from <span class="math notranslate nohighlight">\(F\)</span> to the distance from <span class="math notranslate nohighlight">\(l\)</span> is the constant <span class="math notranslate nohighlight">\(e\)</span>) is a connect section.</p>
+<p>The conic is:</p>
+<ul class="simple">
+<li><p>a circle if <span class="math notranslate nohighlight">\(e=\)</span>,</p></li>
+<li><p>an ellipse if <span class="math notranslate nohighlight">\(e&lt;1\)</span>,</p></li>
+<li><p>a parabola if <span class="math notranslate nohighlight">\(e=1\)</span>,</p></li>
+<li><p>or a hyperbola if <span class="math notranslate nohighlight">\(e&gt;1\)</span>.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="theorem-polar-equation-and-conic-section">
+<h2>Theorem (Polar Equation and Conic Section)<a class="headerlink" href="#theorem-polar-equation-and-conic-section" title="Permalink to this headline">¶</a></h2>
+<p>Assume <span class="math notranslate nohighlight">\(F\)</span> (focus) is at the origin/pole.</p>
+<p>A polar equation of the form:</p>
+<div class="math notranslate nohighlight">
+\[r=\dfrac{ed}{1\pm e\cos(\theta)}\, \text{or}\, r=\dfrac{ed}{1\pm e\sin(\theta)}\]</div>
+<p>represents a conic section with eccentricity <span class="math notranslate nohighlight">\(e\)</span>.</p>
+<hr class="docutils" />
+<div class="section" id="example-algebra-skills-check">
+<h3>Example (Algebra Skills Check)<a class="headerlink" href="#example-algebra-skills-check" title="Permalink to this headline">¶</a></h3>
+<p>Write the equation <span class="math notranslate nohighlight">\(\dfrac{a}{b+cx}\)</span> as <span class="math notranslate nohighlight">\(\dfrac{m}{1+nx}\)</span> where <span class="math notranslate nohighlight">\(a,b,c,m,n\)</span> are real numbers.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{rl}
+    \dfrac{a}{b+cx} &amp; = \frac{a}{b+\frac{b}{b}\cdot cx}\\
+    &amp; = \dfrac{a}{b+b\cdot \frac{c}{b}x}\\
+    &amp; = \dfrac{a}{b\left(1+\frac{c}{b}x\right)}\\
+    &amp; = \dfrac{\frac{a}{b}}{1+\frac{c}{b}x}\\
+    &amp; = \dfrac{m}{1+nx}
+\end{array}
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(m=\frac{a}{b}\)</span> and <span class="math notranslate nohighlight">\(n=\frac{c}{b}\)</span>.</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="definition-conic-section-general-form-equations">
+<h2>Definition (Conic Section General Form Equations)<a class="headerlink" href="#definition-conic-section-general-form-equations" title="Permalink to this headline">¶</a></h2>
+<p>A conic section has the general form</p>
+<div class="math notranslate nohighlight">
+\[Ax^2+Bxy+Cy^2+Dx+Ey+F=0\]</div>
+<p>where <span class="math notranslate nohighlight">\(A,B,C\)</span> are non-zero real numbers.</p>
+</div>
+<div class="section" id="theorem-characteristics-of-the-general-form-equations">
+<h2>Theorem (Characteristics of the General Form Equations)<a class="headerlink" href="#theorem-characteristics-of-the-general-form-equations" title="Permalink to this headline">¶</a></h2>
+<p>If <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(C\)</span> are non zero real numbers and <span class="math notranslate nohighlight">\(B=0\)</span>, then we have the following general equation:</p>
+<div class="math notranslate nohighlight">
+\[Ax^2+Cy^2+Dx+Ey+F=0\]</div>
+<p>and the conic has not been rotated.</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(A\ne C\)</span> and <span class="math notranslate nohighlight">\(AC&gt;0\)</span>, then the equation represents an ellipse.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(A = C\)</span>, then the equation represents a circle.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(A&lt;0\)</span> or <span class="math notranslate nohighlight">\(C&lt;0\)</span>, then the equation represents a hyperbola.</p></li>
+<li><p>IF <span class="math notranslate nohighlight">\(A\)</span> or <span class="math notranslate nohighlight">\(C\)</span> is allowed to be zero, then the equation represents a parabola.</p></li>
+</ul>
+<iframe src="https://www.geogebra.org/classic/tm2wpace?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+</div>
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Michael McCabe<br/>
+    
+        &copy; Copyright 2022, Michael McCabe.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

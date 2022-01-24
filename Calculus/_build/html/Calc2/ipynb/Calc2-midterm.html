@@ -1,0 +1,1598 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; McCabe&#39;s Calculus Stuff  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">McCabe's Calculus Stuff  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Calc2-midterm.html">
+   Calc 2 Mid-Term Content
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/Calc2/ipynb/Calc2-midterm.ipynb.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1><no title></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <dl>
+<dt>{</dt><dd><dl>
+<dt>“cells”: [</dt><dd><dl>
+<dt>{</dt><dd><p>“cell_type”: “markdown”,
+“id”: “f991c6dd”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“# Calc 2 Mid-Term Summer 2021n”,
+“Here is a collection of problems pulled from Jim’s PowerPoint presentations. n”,
+“* [Home](<a class="reference external" href="https://codmccabe.github.io)n">https://codmccabe.github.io)n</a>”,
+“* [Calc Page](<a class="reference external" href="https://codmccabe.github.io/calc/)n">https://codmccabe.github.io/calc/)n</a>”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “8a7fbb4f”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“1. Evaluate the following:n”,
+“n”,
+“$$\int \cos^4(2t)\,dt$$n”,
+“$$\int \cos(3t)\sin(8t)\,dt$$n”,
+“$$\int_1^3 \sin(8x)\sin(x)\,dx$$n”,
+“$$\int \cot(10x)\csc^4(10x)\,dx$$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 3,
+“id”: “bc53e804”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{3}$}\frac{\frac{\frac{\sin \left(8\,t\right)}{2}+4\,t}{8}+\frac{\sin \left(4\,t\right)}{2}+t}{4}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                         sin(8 t)n”,
+”                         ——– + 4 tn”,
+”                            2             sin(4 t)n”,
+”                         ————– + ——– + tn”,
+”                               8             2n”,
+“(%o3)                    —————————–n”,
+”                                       4”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“((sin(8*t)/2+4*t)/8+sin(4*t)/2+t)/4”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 3,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“integrate((cos(2*t))^4,t);”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 2,
+“id”: “2f52e8d4”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{2}$}-\frac{\cos \left(11\,t\right)}{22}-\frac{\cos \left(5\,t\right)}{10}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                              cos(11 t)    cos(5 t)n”,
+“(%o2)                      (- ———) - ——–n”,
+”                                 22           10”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“(-cos(11*t)/22)-cos(5*t)/10”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 2,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“integrate(cos(3*t)*sin(8*t),t);”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 5,
+“id”: “f6ce04b2”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{5}$}\frac{7\,\sin 9-9\,\sin 7}{126}-\frac{7\,\sin 27-9\,\sin 21}{126}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                  7 sin(9) - 9 sin(7)   7 sin(27) - 9 sin(21)n”,
+“(%o5)             ——————- - ———————n”,
+”                          126                    126”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“(7*sin(9)-9*sin(7))/126-(7*sin(27)-9*sin(21))/126”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 5,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“integrate(sin(8*x)*sin(x),x,1,3);”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 6,
+“id”: “2b3c1057”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{6}$}-0.01740302177606207\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>“(%o6)                        - 0.01740302177606207”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“-0.01740302177606207”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 6,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“float(integrate(sin(8*x)*sin(x),x,1,3));”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 8,
+“id”: “60592416”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{8}$}-\frac{1}{40\,\sin ^4\left(10\,x\right)}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                        1n”,
+“(%o8)                           - ————-n”,
+”                                        4n”,
+”                                  40 sin (10 x)”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“-1/(40*sin(10*x)^4)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 8,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“integrate(cot(10*x)*(csc(10*x))^4,x);”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “15971d41”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“## Some useful identitiesn”,
+“* $\sin^2(x)+\cos^2(x)=1$n”,
+“* $\tan^2(x)+1=\sec^2(x)$n”,
+“* $\cos^2(x)=\frac12\left(1+\cos(2x)\right)$n”,
+“* $\sin^2(x)=\frac12\left(1-\cos(2x)\right)$n”,
+“* $\sin(x)\cos(x)=\frac12\sin(2x)$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “228705c6”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“## Trig Substitution:n”,
+“<a href="#id3"><span class="problematic" id="id4">|Form |Looks Like|Substitution|Limit Assumptions|</span></a>n”,
+“| :—————-: | :—————-: | :—————-: | :—————-: <a href="#id5"><span class="problematic" id="id6">|\n&quot;,
+&quot;|$$\\sqrt{b^2x^2-a^2}$$|$$\\sec^2(\\theta)-1=\\tan^2(\\theta)$$|$$x=\\frac{a}{b}\\sec(\\theta)$$|$$0\\le\\theta&lt;\\frac{\\pi}{2},\\,\\frac{\\pi}{2}&lt;\\theta\\le \\pi$$|</span></a>n”,
+“<a href="#id7"><span class="problematic" id="id8">|$$\\sqrt{a^2-b^2x^2}$$|$$1-\\sin^2(\\theta)=\\cos^2(\\theta)$$|$$x=\\frac{a}{b}\\sin(\\theta)$$|$$-\\frac{\\pi}{2}\\le\\theta\\le\\frac{\\pi}{2}$$|</span></a>n”,
+“<a href="#id9"><span class="problematic" id="id10">|$$\\sqrt{a^2+b^2x^2}$$|$$\\tan^2(\\theta)+1=\\sec^2(\\theta)$$|$$x=\\frac{a}{b}\\tan(\\theta)$$|$$-\\frac{\\pi}{2}&lt;\\theta&lt;\\frac{\\pi}{2}$$|</span></a>”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “c143a48e”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“Use a trig substitution to eliminate the root.n”,
+“1. $\sqrt{4-9x^2}$n”,
+“2. $\sqrt{3+25x^2}$n”,
+“3. $\left(7x^2-3\right)^{\frac{5}{2}}$n”,
+“4. $\sqrt{(w+3)^2-100}$n”,
+“5. $\sqrt{4(9x-5)^2+1}$n”,
+“6. $\sqrt{1-4x-2x^2}$n”,
+“7. $\left( x^2-8x+21 \right)^{\frac{3}{2}}$n”,
+“8. $\sqrt{e^{8x}-9}$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 11,
+“id”: “107d5055”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{12}$}\sqrt{4-4\,\sec ^2\vartheta}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                          2n”,
+“(%o12)                      sqrt(4 - 4 sec (theta))”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“sqrt(4-4*sec(theta)^2)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 11,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</dd>
+</dl>
+<p>},
+{</p>
+<blockquote>
+<div><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{13}$}2\,\sqrt{1-\sec ^2\vartheta}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                          2n”,
+“(%o13)                      2 sqrt(1 - sec (theta))”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“2*sqrt(1-sec(theta)^2)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 11,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“f1(x):=sqrt(4-9*x^2)$n”,
+”    f1((2/3)*sec(theta));n”,
+”    factor(f1((2/3)*sec(theta)));”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “eb25ef75”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“Notice that $2\sqrt{1-\sec^2(\theta)}=2\sqrt{\tan^2(\theta)}=2\tan(\theta)$. Thus, by letting $x=\frac{2}{3}\sec(\theta)$ we have $$\sqrt{4-9x^2}=2\tan(\theta)$$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 12,
+“id”: “98552026”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{15}$}\sqrt{3\,\tan ^2\vartheta+3}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                      2n”,
+“(%o15)                      sqrt(3 tan (theta) + 3)”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“sqrt(3*tan(theta)^2+3)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 12,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</dd>
+</dl>
+<p>},
+{</p>
+<blockquote>
+<div><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{16}$}\sqrt{3}\,\sqrt{\tan ^2\vartheta+1}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                         2n”,
+“(%o16)                   sqrt(3) sqrt(tan (theta) + 1)”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“sqrt(3)*sqrt(tan(theta)^2+1)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 12,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“f2(x):=sqrt(3+25*x^2)$n”,
+”    f2((sqrt(3)/5)*tan(theta));n”,
+”    factor(f2((sqrt(3)/5)*tan(theta)));”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “3d3a1d4f”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“Notice that $\sqrt3\sqrt{\tan^2(\theta)+1}=\sqrt3\sqrt{\sec^2(\theta)}=\sqrt3\sec(\theta)$. thus, by letting $x=\frac{\sqrt3}{5}\tan(\theta)$ we have $$\sqrt{3+25x^2}=\sqrt3\sec(\theta)$$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 7,
+“id”: “295ed784”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{12}$}\left(3\,\sec ^2\vartheta-3\right)^{\frac{5}{2}}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                  2            5/2n”,
+“(%o12)                      (3 sec (theta) - 3)”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“(3*sec(theta)^2-3)^(5/2)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 7,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</dd>
+</dl>
+<p>},
+{</p>
+<blockquote>
+<div><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{13}$}3^{\frac{5}{2}}\,\left(\sec ^2\vartheta-1\right)^{\frac{5}{2}}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                            5/2     2            5/2n”,
+“(%o13)                     3    (sec (theta) - 1)”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“3^(5/2)*(sec(theta)^2-1)^(5/2)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 7,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{14}$}3^{\frac{5}{2}}\,\tan ^4\vartheta\,\left| \tan \vartheta\right| \]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                        5/2    4n”,
+“(%o14)                 3    tan (theta) abs(tan(theta))”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“3^(5/2)*tan(theta)^4*abs(tan(theta))”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 7,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“f3(x):=(7*x^2-3)^(5/2)$n”,
+”    f3((sqrt(3)/sqrt(7)*sec(theta)));n”,
+”    factor(f3((sqrt(3)/sqrt(7)*sec(theta))));n”,
+”    3^(5/2)*((tan(theta))^2)^(5/2);”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “8068e6b2”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“Notice that $3^{5/2}\cdot (\sec^2(\theta)-1)^{5/2} = 3^{5/2}\cdot tan^5(\theta)$. Thus, by letting $x=\frac{\sqrt3}{\sqrt7}\sec(\theta)$ we have $$\left(7x^2-3\right)^{5/2}=3^{5/2}\tan^5(\theta)$$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 14,
+“id”: “df5db73e”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{33}$}\sqrt{100\,\sec ^2\vartheta-100}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                      2n”,
+“(%o33)                    sqrt(100 sec (theta) - 100)”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“sqrt(100*sec(theta)^2-100)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 14,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</dd>
+</dl>
+<p>},
+{</p>
+<blockquote>
+<div><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{34}$}10\,\sqrt{\sec ^2\vartheta-1}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                      2n”,
+“(%o34)                     10 sqrt(sec (theta) - 1)”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“10*sqrt(sec(theta)^2-1)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 14,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“f4(x):=sqrt((x+3)^2-100)$n”,
+”    f4(10*sec(theta)-3);n”,
+”    factor(f4(10*sec(theta)-3));”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “50183741”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“Notice that $10\sqrt{\sec^2(\theta)-1}=10\tan(\theta)$. Thus, by letting $x=10\sec(\theta)-3$ we have $$\sqrt{(x+3)^2-100}=10\tan(\theta)$$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 27,
+“id”: “c2820614”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{60}$}\left[ x=\frac{\tan \vartheta+10}{18} \right] \]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                  tan(theta) + 10n”,
+“(%o60)                       [x = —————]n”,
+”                                        18”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“[x = (tan(theta)+10)/18]”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 27,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</dd>
+</dl>
+<p>},
+{</p>
+<blockquote>
+<div><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{61}$}\sqrt{4\,\left(\frac{\tan \vartheta+10}{2}-5\right)^2+1}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                              tan(theta) + 10     2n”,
+“(%o61)                sqrt(4 (————— - 5)  + 1)n”,
+”                                     2”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“sqrt(4*((tan(theta)+10)/2-5)^2+1)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 27,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{62}$}\sqrt{\tan ^2\vartheta+1}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                     2n”,
+“(%o62)                       sqrt(tan (theta) + 1)”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“sqrt(tan(theta)^2+1)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 27,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“f5(x):=sqrt(4*(9*x-5)^2+1)$n”,
+”    solve((1/2)*tan(theta)=9*x-5,x);n”,
+”    f5((tan(theta)+10)/18);n”,
+”    factor(f5((tan(theta)+10)/18));”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “a1090f5e”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“First, solve the equation: $$\frac12\tan(\theta)=9x-5$$ to get $x=\frac{\tan(\theta)+10}{18}$. Then we notice that $\sqrt{\tan^2(\theta)+1}=\sec(\theta)$. Thus, with $x=\frac{\tan(\theta)+10}{18}$, we have, $$\sqrt{4(9x-5)^2+1}=\sec(\theta)$$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “735872b8”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“Use a trig substitution to evaluat ethe given integral. $$\int \frac{\sqrt{x^2+16}}{x^4}\, dx$$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 67,
+“id”: “483edef2”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{129}$}-\frac{\left(x^2+16\right)^{\frac{3}{2}}}{48\,x^3}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                    2      3/2n”,
+”                                  (x  + 16)n”,
+“(%o129)                         - ————n”,
+”                                         3n”,
+”                                     48 x”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“-(x^2+16)^(3/2)/(48*x^3)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 67,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“integrate(sqrt(x^2+16)/x^4,x);”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 39,
+“id”: “1e7a09cf”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{96}$}\sqrt{16\,\tan ^2\vartheta+16}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                      2n”,
+“(%o96)                     sqrt(16 tan (theta) + 16)”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“sqrt(16*tan(theta)^2+16)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 39,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</dd>
+</dl>
+<p>},
+{</p>
+<blockquote>
+<div><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{97}$}4\,\sqrt{\tan ^2\vartheta+1}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                      2n”,
+“(%o97)                      4 sqrt(tan (theta) + 1)”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“4*sqrt(tan(theta)^2+1)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 39,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“Top(x):=sqrt(x^2+16)$n”,
+”    Top(4*tan(theta));n”,
+”    factor(Top(4*tan(theta)));”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “e54e97dc”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“Notice that when $x=4\tan(\theta)$, we have $$\sqrt{x^2+16}=4\sec(\theta)$$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 60,
+“id”: “c67f9be3”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{121}$}\frac{\sec \vartheta}{64\,\tan ^4\vartheta}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                  sec(theta)n”,
+“(%o121)                         ————–n”,
+”                                      4n”,
+”                                64 tan (theta)”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“sec(theta)/(64*tan(theta)^4)”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 60,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</dd>
+</dl>
+<p>},
+{</p>
+<blockquote>
+<div><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{122}$}\frac{\cot ^3\vartheta\,\csc \vartheta}{64}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                               3n”,
+”                            cot (theta) csc(theta)n”,
+“(%o122)                     ———————-n”,
+”                                      64”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“(cot(theta)^3*csc(theta))/64”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 60,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“(4*sec(theta))/((4*tan(theta))^4);n”,
+“trigreduce((4*sec(theta))/((4*tan(theta))^4));”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 62,
+“id”: “eb14d128”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{124}$}\csc ^2x\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                       2n”,
+“(%o124)                             csc (x)”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“csc(x)^2”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 62,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“trigreduce((cot(x))^2+1);”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “09e2f81a”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“So we have:n”,
+“n”,
+“$$\int \frac{\sqrt{x^2+16}}{x^4}\, dx= \int\frac{\sec(\theta)}{64\tan^4(\theta)}\,dx$$n”,
+“n”,
+“Recall that $\csc^2(\xi)=\cot^2(\xi)+1$. That is,n”,
+“n”,
+“$$\cot^3(\theta)\cdot \csc(\theta)=\left(\cot(\theta)\csc(\theta)\right)\cdot \cot^2(\theta)$$n”,
+“n”,
+“$$\left(\cot(\theta)\csc(\theta)\right)\cdot \cot^2(\theta) = \left(\cot(\theta)\csc(\theta)\right)\cdot \left(\csc^2(\theta)-1\right)$$n”,
+“n”,
+“$$\int\frac{\sec(\theta)}{64\tan^4(\theta)}\,dx = \frac{1}{64} \int \left(\cot(\theta)\csc(\theta)\right)\cdot \left(\csc^2(\theta)-1\right)\,d\theta$$n”,
+“n”,
+“Let $u=\csc(\theta)$ and $du=\cot(\theta)\csc(\theta)$, thenn”,
+“n”,
+“$$\frac{1}{64} \int \left(\cot(\theta)\csc(\theta)\right)\cdot \left(\csc^2(\theta)-1\right)\,d\theta= \frac{1}{64}\int\left(u^2-1\right)\,du$$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 75,
+“id”: “90042060”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{142}$}{\it IF}_{9}\left(u\right):=\frac{u\,\left(u^2-3\right)}{192}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                           2n”,
+”                                       u (u  - 3)n”,
+“(%o142)                      IF9(u) := ———-n”,
+”                                          192”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“IF9(u):=(u*(u^2-3))/192”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 75,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</dd>
+</dl>
+<p>},
+{</p>
+<blockquote>
+<div><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/latex”: [</dt><dd><p>“\[\tag{${\it \%o}_{143}$}\frac{\csc \vartheta\,\left(\csc ^2\vartheta-3\right)}{192}\]”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>”                                        2n”,
+”                         csc(theta) (csc (theta) - 3)n”,
+“(%o143)                  —————————-n”,
+”                                     192”</p>
+</div></blockquote>
+<p>],
+“text/x-maxima”: [</p>
+<blockquote>
+<div><p>“(csc(theta)*(csc(theta)^2-3))/192”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“execution_count”: 75,
+“metadata”: {},
+“output_type”: “execute_result”</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“IF9(u):=(u*(u^2-3)/192);n”,
+“IF9(csc(theta));”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “91997f3b”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“## Partial Fractionsn”,
+“<a href="#id11"><span class="problematic" id="id12">|Factor in Denominator|Term in Partial Fraction Decomposition|</span></a>n”,
+“<a href="#id13"><span class="problematic" id="id14">|:------:|</span></a>:———————–:<a href="#id15"><span class="problematic" id="id16">|\n&quot;,
+&quot;|$$ax+b$$|$$\\dfrac{A}{ax+b}$$|</span></a>n”,
+“<a href="#id17"><span class="problematic" id="id18">|$$(ax+b)^k$$|$$\\dfrac{A_1}{ax+b}+\\dfrac{A_2}{(ax+b)^2}+\\cdots+\\dfrac{A_k}{(ax+b)^k},\\,k=1,2,3,...$$|</span></a>n”,
+“<a href="#id1"><span class="problematic" id="id2">|</span></a>$$(ax^2+bx+c)^k$$|$$\dfrac{A_1x+B_1}{ax^2+bx+c}+\dfrac{A_2x+B_2}{(ax^2+bx+c)^2}+\cdots+\dfrac{A_kx+B_k}{(ax^2+bx+c)^k},\,k=1,2,3,…$$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “009016ee”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“## Improper Integralsn”,
+“1. If $\int_a ^tf(x)\,dx$ exists for every $t&gt;a$, then $$\int_a^{\infty}f(x)\,dx=\lim_{t\to\infty}\int_a^tf(x)\,dx$$ Provided the limit exists and is finite.n”,
+“2. If $\int_t ^bf(x)\,dx$ exists for every $b&gt;t$, then $$\int_{-\infty}^bf(x)\,dx=\lim_{t\to\infty}\int_t^bf(x)\,dx$$ Provided the limit exists and is finite.n”,
+“3. If $\int_{-\infty}^{c}f(x)\,dx$ and $\int_{c}^{\infty}f(x)\,dx$ are both convergent, then $$\int_{-\infty}^{\infty}f(x)\,dx=$\int_{-\infty}^{c}f(x)\,dx+\int_{c}^{\infty}f(x)\,dx$$ where $c$ is any number.n”,
+“4. If $f(x)$ is continuous on the interval $[a,b)$ and not continuous at $x=b$, then $$\int_a^bf(x)\,dx=\lim_{x\to b^-}\int_a^tf(x)\,dx$$ provied the limit exists and is finite.n”,
+“5. If $f(x)$ is continuous on the interval $(a,b]$ and not continuous at $x=a$, then $$\int_a^bf(x)\,dx=\lim_{t\to a^+}\int_t^bf(x)\,dx$$ provided the limit exists and is finite.n”,
+“6. If $f(x)$ is not continuous at $x=c$ where $a&lt;c&lt;b$ and $\int_a^cf(x)\,dx$ and $\int_c^bf(x)\,dx$ are both convergent, then $$\int_a^bf(x)\,dx=\int_a^cf(x)\,dx+\int_c^bf(x)\,dx$$n”,
+“7. If f(x) is not continuous at $x=a$ and $x=b$ and if $\int_a^cf(x)\,dx$ and $\int_c^bf(x)\,dx$ are both convergent, then $$\int_a^bf(x)\,dx=\int_a^cf(x)\,dx+\int_c^bf(x)\,dx$$ where $c$ is any number.n”,
+“n”,
+“Note for number 3: the integral $\int_{-\infty}^{\infty}f(x)\,dx$ is convergent if and only if $\int_{-\infty}^cf(x)\,dx$ and $\int_c^{\infty}f(x)\,dx$ are both convergent.”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “fa92b932”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“### Comparison Testn”,
+“n”,
+“—n”,
+“If $a&gt;0$ then $$\int_a^{\infty}\dfrac{1}{x^p}\,dx$$ is convergent if $p&gt;1$ and divergent if $p\le1$.n”,
+“n”,
+“—n”,
+“If $f(x)\ge g(x)\ge 0$ on the interval $[a,\infty)$, thenn”,
+“1. If $\int_a^{\infty}f(x)\,dx$ converges then so does $\int_a^{\infty}g(x)\,dx$.n”,
+“2. If $\int_a^{\infty}g(x)\,dx$ diverges then so does $\int_a^{\infty}f(x)\,dx$.”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “ca9f23ef”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“### L’Hospital’s Rulen”,
+“Suppose ${\displaystyle \lim_{x\to a}|f(x)|=\lim_{x\to a}|g(x)|=\infty}$ or $\displaystyle \lim_{x\to a}f(x)=\lim_{x\to a}g(x)=0$.n”,
+“If ${\displaystyle \lim_{x\to a}\dfrac{f’(x)}{g’(x)}}$ exists inn”,
+“either the finite or infinite sense, thenn”,
+“$$n”,
+“\lim_{x\to a}\dfrac{f(x)}{g(x)}=\lim_{x\to a}\dfrac{f’(x)}{g’(x)}.n”,
+“$$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “fbf5610c”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“### Average Function Valuen”,
+“The average value of a function $f(x)$ over the interval $[a,b]$ is given by $$f_{ave}=dfrac{1}{b-a}\int_a^bf(x)\,dx$$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “6dd1ab41”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“### The Mean Value Theorem for Integralsn”,
+“If $f(x)$ is continuous function on $[a,b]$ then there is a number $c\in[a,b]$ such that $$\int_a^bf(x)\,dx=f(c)(b-a)$$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “5bef3b58”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“### Arc Lengthn”,
+“If $f’$ is continuous on $[a,b]$, then the length (arc length) of the curve $y=f(x)$ from the point $A=(a,f(a))$ to the point $B=(b,f(b))$ is the value of the integral $$L=\int_a^b\sqrt{1+\left[f’(x)\right]^2}\,dx=\int_a^b\sqrt{1+\left[ \frac{dy}{dx} \right]^2}$$n”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “d78198b6”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“### Volume by Disks for Rotation About the x-Axisn”,
+“Let $A(x)=\pi(R(x))^2$ where $R(x)$ is a function of the radius of the circle over the domain $x$. The Volume of the object is then $$V=\int_a^bA(x)\,dx$$”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “markdown”,
+“id”: “05c01799”,
+“metadata”: {},
+“source”: [</p>
+<blockquote>
+<div><p>“### EXAMPLE (Volume by Disks for Rotation)n”,
+“The region between the curve $y=\cos(x)$,$\frac{\pi}{4}\le x\le \frac{3\pi}{4}$, and the x-axis is revolved about the x-axis to generate a solid. Find its volume.n”,
+“n”,
+“—n”,
+“First, look at the graph:”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: 4,
+“id”: “c6cc13b7”,
+“metadata”: {},
+“outputs”: [</p>
+<blockquote>
+<div><dl>
+<dt>{</dt><dd><dl>
+<dt>“data”: {</dt><dd><dl class="simple">
+<dt>“text/html”: [</dt><dd><p>“&lt;iframe src=&quot;<a class="reference external" href="https://www.geogebra.org/3d/hapxqvpr?embed">https://www.geogebra.org/3d/hapxqvpr?embed</a>&quot; width=&quot;400&quot; height=&quot;400&quot; allowfullscreen style=&quot;border: 1px solid #e4e4e4;border-radius: 4px;&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;n”</p>
+</dd>
+</dl>
+<p>],
+“text/plain”: [</p>
+<blockquote>
+<div><p>“&lt;IPython.core.display.HTML object&gt;”</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>},
+“metadata”: {},
+“output_type”: “display_data”</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>],
+“source”: [</p>
+<blockquote>
+<div><p>“%%htmln”,
+“&lt;iframe src=&quot;<a class="reference external" href="https://www.geogebra.org/3d/hapxqvpr?embed">https://www.geogebra.org/3d/hapxqvpr?embed</a>&quot; width=&quot;400&quot; height=&quot;400&quot; allowfullscreen style=&quot;border: 1px solid #e4e4e4;border-radius: 4px;&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;”</p>
+</div></blockquote>
+<p>]</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“cell_type”: “code”,
+“execution_count”: null,
+“id”: “a7b8e66f”,
+“metadata”: {},
+“outputs”: [],
+“source”: []</p>
+</div></blockquote>
+<p>}</p>
+</dd>
+</dl>
+<p>],
+“metadata”: {</p>
+<blockquote>
+<div><dl class="simple">
+<dt>“kernelspec”: {</dt><dd><p>“display_name”: “Maxima”,
+“language”: “maxima”,
+“name”: “maxima”</p>
+</dd>
+</dl>
+<p>},
+“language_info”: {</p>
+<blockquote>
+<div><p>“codemirror_mode”: “maxima”,
+“file_extension”: “.mac”,
+“mimetype”: “text/x-maxima”,
+“name”: “maxima”,
+“pygments_lexer”: “maxima”,
+“version”: “5.45.1”</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>},
+“nbformat”: 4,
+“nbformat_minor”: 5</p>
+</dd>
+</dl>
+<p>}</p>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Michael McCabe<br/>
+    
+        &copy; Copyright 2022, Michael McCabe.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
