@@ -10,18 +10,25 @@ $\newcommand{\ddx}[1]{\frac{d}{dx}\left[#1\right]}$
 
 ### Complex Numbers and Trigonometry
 Relationship to trigonometry
-$$\begin{aligned}\cos(x) & =\Re(e^{ix})=\dfrac{e^{ix}+e^{-ix}}{2} & \sin(x) & =\Im(e^{ix})=\dfrac{e^{ix}-e^{-ix}}{2i}\\
-\cos(iy) & =\dfrac{e^{y}+e^{-y}}{2}=\cosh(y) & \sin(iy) & =\dfrac{e^{y}-e^{-y}}{2i}=i\sinh(y)
-\end{aligned}$$
+
+$$
+\begin{aligned}
+  \cos(x) & =\Re(e^{ix})=\dfrac{e^{ix}+e^{-ix}}{2} & \sin(x) & =\Im(e^{ix})=\dfrac{e^{ix}-e^{-ix}}{2i}\\
+  \cos(iy) & =\dfrac{e^{y}+e^{-y}}{2}=\cosh(y) & \sin(iy) & =\dfrac{e^{y}-e^{-y}}{2i}=i\sinh(y)
+\end{aligned}
+$$
 
 ---
 ### The Sum of Two Angles
-The Sum of Two Angles 
+The Sum of Two Angles
+
 $$\cos(\alpha+\beta)=\cos(\alpha)\cos(\beta)-\sin(\alpha)\sin(\beta)$$
+
 $$\sin(\alpha+\beta)=\cos(\alpha)\sin(\beta)+\cos(\beta)\sin(\alpha)$$
 
 
 Proof. Sum of Angles
+
 $$\begin{aligned}
  \cos(\alpha+\beta) & =\Re\left(e^{i(\alpha+\beta)}\right) & i & =\sqrt{-1}\\
  & =\Re\left(e^{i\alpha}e^{i\beta}\right)\\
@@ -31,7 +38,8 @@ $$\begin{aligned}
 \end{aligned}
 $$
 
-Proof. 
+Proof.
+
 $$\begin{aligned}
  \sin(\alpha+\beta) & =\Im\left(e^{i(\alpha+\beta)}\right) & i & =\sqrt{-1}\\
  & =\Im\left(e^{i\alpha}e^{i\beta}\right)\\
@@ -43,6 +51,7 @@ $$
 
 ---
 ### Hyperbolic Functions in Exponential Form
+
 $$
 \begin{aligned}
  \cosh(x) & :=\dfrac{e^{x}+e^{-x}}{2} & \text{sech}(x) & =\dfrac{1}{\cosh(x)}\\
@@ -63,6 +72,7 @@ $$
 
 ---
 ### Derivative of the Hyperbolic Functions
+
 $$
 \begin{aligned}
  \frac{d}{dx}\left[\sinh(x)\right] & =\cosh(x) & \frac{d}{dx}\left[\cosh(x)\right] & =\sinh(x)\\
@@ -73,6 +83,7 @@ $$
 
 ---
 ### Integration Table for Hyperbolic Functions
+
 $$
 \begin{aligned}
  \int\sinh(x)\,dx & =\cosh(x)+C & \int\cosh(x)\,dx & =\sinh(x)+C\\
@@ -83,10 +94,11 @@ $$
 
 ---
 ### Inverse Hyperbolic Functions
+
 1. Let $x\in(-\infty,\infty)$ and $f(x)=\sinh(x)\in(-\infty,\infty)$,
-then $f^{-1}(x)=\sinh^{-1}(x)\in(-\infty,\infty)$ where $x\in(-\infty,\infty)$. 
+then $f^{-1}(x)=\sinh^{-1}(x)\in(-\infty,\infty)$ where $x\in(-\infty,\infty)$.
 2. Let $x\in[0,\infty)$ and $f(x)=\cosh(x)\in[1,\infty)$, then $f^{-1}(x)=\cosh^{-1}(x)\in[0,\infty)$
-where $x\in[1,\infty)$. 
+where $x\in[1,\infty)$.
 3. Let $x\in(0,1]$ and $f(x)=\text{sech}(x)\in[0,\infty)$, then $f^{-1}(x)=\text{sech}^{-1}(x)\in(0,1]$
 where $x\in[0,\infty)$.
 4. Let $x\in(-\infty,\infty)$ and $f(x)=\tanh(x)\in(-1,1)$, then $f^{-1}(x)=\tanh^{-1}(x)\in(-\infty,\infty)$
@@ -94,7 +106,8 @@ where $x\in(-1,1)$.
 5. Let $x\in(-\infty,0)\cup(0,\infty)$ and $f(x)=\coth(x)\in(-\infty,-1)\cup(1,\infty)$,
 then $f^{-1}(x)=\coth^{-1}(x)$ where $x\in(-\infty,-1)\cup(1,\infty)$.
 6. Let $x\in(-\infty,0)\cup(0,\infty)$ and $f(x)=\text{csch}^{-1}(x)\in(-\infty,0)\cup(0,\infty)$,
-then $f^{-1}(x)=\text{csch}^{-1}(x)$ where $x\in(-\infty,0)\cup(0,\infty)$. 
+then $f^{-1}(x)=\text{csch}^{-1}(x)$ where $x\in(-\infty,0)\cup(0,\infty)$.
+
 $$
 \begin{aligned}
  \text{sech}^{-1}(x) & =\cosh^{-1}(\frac{1}{x})\\
@@ -105,6 +118,7 @@ $$
 
 ---
 ### Derivative of the Inverse Hyperbolic Functions
+
 $$
 \begin{aligned}
  \frac{d}{dx}\left[\sinh^{-1}(x)\right] & =\dfrac{1}{\sqrt{1+x^{2}}}\\
@@ -118,6 +132,7 @@ $$
 
 ---
 ### Integral Table of Invese Hyperbolic Functions
+
 $$
 \begin{aligned}
  \int\dfrac{1}{\sqrt{1+x^{2}}}\,dx & =\sinh^{-1}(x)+C\\
@@ -137,7 +152,9 @@ $$
 ## Examples
 
 #### Evaluate an integral
+
 $$\int\dfrac{2\,dx}{\sqrt{3+4x^{2}}}$$
+
 $$
 \begin{aligned}
  \int\dfrac{2\,dx}{\sqrt{3+4x^{2}}} & =\int\dfrac{2\,dx}{\sqrt{(\sqrt{3})^{2}+(2x)^{2}}}\\
@@ -169,8 +186,3 @@ $$\tag{${\it \%o}_{3}$}{\rm asinh}\; \left({{ 2\, x}\over{\sqrt{3}}}\right)$$
 * [Calc Home](https://codmccabe.github.io/calc/index.html)
 * [Definitions, Thoerems, and Lemmas](#DefThmLem)
 * [Examples](#example)
-
-
-```maxima
-
-```
