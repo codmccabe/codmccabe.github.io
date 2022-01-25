@@ -161,7 +161,7 @@ integrate(2/sqrt(3+4*x^2),x);
 
 
 
-\[\tag{${\it \%o}_{3}$}{\rm asinh}\; \left({{2\,x}\over{\sqrt{3}}}\right)\]
+$$\tag{${\it \%o}_{3}$}{\rm asinh}\; \left({{ 2\, x}\over{\sqrt{3}}}\right)$$
 
 
 
