@@ -1,0 +1,1156 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Limits &#8212; Business Calculus Jan 2022 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Review of Functions" href="../Functions/Functions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Business Calculus Jan 2022 documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Functions/Functions.html">
+   Review of Functions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Limits
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Limits/Limits.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#average-rate-of-change-slope">
+   Average Rate of Change (Slope)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slope">
+     Slope:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-nice-function">
+     A “Nice” Function:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visual">
+     Visual:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#from-the-left">
+     From the Left:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#from-the-right">
+     From the Right:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#error">
+     Error:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#close-enough">
+   Close Enough:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     From the Left
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     From the Right
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#together">
+     Together
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Limits
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-a-limit-intuitive-approach">
+     Definition of a Limit (Intuitive Approach)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numerical">
+     Numerical
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example">
+       Example
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graphically">
+     Graphically
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algebraically">
+   Algebraically
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#corollary-1">
+     Corollary 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#properties-of-limits">
+     Properties of Limits
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Example
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-sided-limits">
+   One-Sided Limits
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-one-side-limits">
+     Definition (One-Side Limits)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-existence-of-the-limit">
+     Theorem (Existence of the Limit)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#corollary-2">
+     Corollary 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Example
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#limits-and-infinity">
+   Limits and Infinity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-limit-and-infinity">
+     Theorem (Limit and Infinity)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-5">
+     Theorem 5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Example
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Limits</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#average-rate-of-change-slope">
+   Average Rate of Change (Slope)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#slope">
+     Slope:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-nice-function">
+     A “Nice” Function:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visual">
+     Visual:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#from-the-left">
+     From the Left:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#from-the-right">
+     From the Right:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#error">
+     Error:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#close-enough">
+   Close Enough:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     From the Left
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     From the Right
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#together">
+     Together
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   Limits
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-a-limit-intuitive-approach">
+     Definition of a Limit (Intuitive Approach)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numerical">
+     Numerical
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example">
+       Example
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graphically">
+     Graphically
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algebraically">
+   Algebraically
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#corollary-1">
+     Corollary 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#properties-of-limits">
+     Properties of Limits
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Example
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#one-sided-limits">
+   One-Sided Limits
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-one-side-limits">
+     Definition (One-Side Limits)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-existence-of-the-limit">
+     Theorem (Existence of the Limit)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#corollary-2">
+     Corollary 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Example
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#limits-and-infinity">
+   Limits and Infinity
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-limit-and-infinity">
+     Theorem (Limit and Infinity)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem-5">
+     Theorem 5
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Example
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="limits">
+<h1>Limits<a class="headerlink" href="#limits" title="Permalink to this headline">¶</a></h1>
+<p>In order to find instantaneous rate of change of a function using only one point and a special type of function; one must go beyond exact and perceive close enough.</p>
+<div class="section" id="average-rate-of-change-slope">
+<h2>Average Rate of Change (Slope)<a class="headerlink" href="#average-rate-of-change-slope" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="slope">
+<h3>Slope:<a class="headerlink" href="#slope" title="Permalink to this headline">¶</a></h3>
+<p>Recall the slope of a line passing through two points <span class="math notranslate nohighlight">\((x_1,y_1)\)</span> and <span class="math notranslate nohighlight">\((x_2,y_2)\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[m=\frac{\Delta y}{\Delta x}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Delta y = y_2 - y_1\)</span> and <span class="math notranslate nohighlight">\(\Delta x = x_2 - x_1\)</span>. We say the change in the vertical direction (the <span class="math notranslate nohighlight">\(y\)</span>-direction) is <span class="math notranslate nohighlight">\(\Delta y\)</span> and the change in the horizontal direction (the <span class="math notranslate nohighlight">\(x\)</span>-direction) is <span class="math notranslate nohighlight">\(\Delta x\)</span>.</p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>set_plot_option([svg_file, &quot;maxplot.svg&quot;])$
+</pre></div>
+</div>
+<p><img alt="Line Graph with  and ." src="../_images/lineGraph.v2.svg" /></p>
+</div>
+<div class="section" id="a-nice-function">
+<h3>A “Nice” Function:<a class="headerlink" href="#a-nice-function" title="Permalink to this headline">¶</a></h3>
+<p>Next, consider a “nice” function <span class="math notranslate nohighlight">\(y=f(x)=\frac{2 x^3}{3}-5 x^2+\frac{35 x}{3}-\frac{16}{3}\)</span>. Define the domain of <span class="math notranslate nohighlight">\(f\)</span> as the set of all <span class="math notranslate nohighlight">\(x\)</span> values on a closed interval <span class="math notranslate nohighlight">\([a,b]\)</span>.</p>
+<p><img alt="niceGraph1.svg" src="../_images/niceGraph1.svg" /></p>
+<p>If there are two values <span class="math notranslate nohighlight">\(x_1,x_2\)</span> such that <span class="math notranslate nohighlight">\(a&lt;x_1&lt;x_2&lt;b\)</span>, then <span class="math notranslate nohighlight">\(f(x_1)\)</span>, <span class="math notranslate nohighlight">\(f(x_2)\)</span> exists and a line will pass through the points <span class="math notranslate nohighlight">\((x_1,f(x_1))\)</span> and <span class="math notranslate nohighlight">\((x_2,f(x_2))\)</span>.</p>
+<p><img alt="niceGraph2.svg" src="../_images/niceGraph2.svg" /></p>
+<p>Let’s call this line <span class="math notranslate nohighlight">\(y=S(x)\)</span>. The slope of <span class="math notranslate nohighlight">\(S(x)\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[m=\dfrac{f(x_2)-(f(x_1)}{x_2-x_1}.\]</div>
+<p>Next, use the point-slope form line equation:</p>
+<div class="math notranslate nohighlight">
+\[y-y_1=m(x-x_1).\]</div>
+<p>in order to construct the line equation <span class="math notranslate nohighlight">\(S(x)\)</span> using the slope <span class="math notranslate nohighlight">\(m\)</span> and the point <span class="math notranslate nohighlight">\((x_1,f(x_1))\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[S(x)-f(x_1)=m(x-x_1)\]</div>
+<p>solving for <span class="math notranslate nohighlight">\(S(x)\)</span> we have:</p>
+<div class="math notranslate nohighlight">
+\[S(x)=m(x-x_1)+f(x_1).\]</div>
+<p>This is called a secant line through the function <span class="math notranslate nohighlight">\(f\)</span> and the two points <span class="math notranslate nohighlight">\((x_1,x_2)\)</span>.</p>
+</div>
+<div class="section" id="visual">
+<h3>Visual:<a class="headerlink" href="#visual" title="Permalink to this headline">¶</a></h3>
+<p>Let’s consider a visual of what is happening here:</p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>f(x):=2*x^3/3-5*x^2+35*x/3-16/3$
+a:1$ b:4$ x1:1.5$ x2:3.5$
+m(x1,x2):=(f(x2)-f(x1))/(x2-x1)$
+S(x,x1,x2):=m(x1,x2)*(x-x1)+f(x1)$
+plot2d([
+    f(x),
+    S(x,x1,x2)
+    ],
+    [x,0,5],
+    [legend,&quot;f(x)&quot;,&quot;S(x)&quot;]);
+</pre></div>
+</div>
+<p><img alt="svg" src="../_images/Limits_8_0.svg" /></p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>m(3/2,7/2);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{9}$}-\frac{1}{6}\]</div>
+<p>We see here the the average rate of change of the function <span class="math notranslate nohighlight">\(f(x)\)</span> over the interval <span class="math notranslate nohighlight">\((x_1,x_2)=(1.5,3.5)\)</span> is about <span class="math notranslate nohighlight">\(-\frac{1}{6}\)</span>.</p>
+<p>Let’s consider what happens to the average rate of change as the function values approach <span class="math notranslate nohighlight">\(x=1.5\)</span> from the left and from the right.</p>
+</div>
+<div class="section" id="from-the-left">
+<h3>From the Left:<a class="headerlink" href="#from-the-left" title="Permalink to this headline">¶</a></h3>
+<p>From the left we will use the intervals:</p>
+<div class="math notranslate nohighlight">
+\[[1,\frac32],[\frac{9}{8},\frac32],[\frac54,\frac32],[\frac{11}{8},\frac32].\]</div>
+<p>This yields a <span class="math notranslate nohighlight">\(\Delta x = \{\frac12,\frac38,\frac14,\frac18\}\)</span>.</p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>m([1,9/8,5/4,11/8],[3/2,3/2,3/2,3/2]);
+float(%);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{10}$}\left[ \frac{7}{3} , \frac{193}{96} , \frac{41}{24} , \frac{137}{96} \right] \]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{11}$}\left[ 2.333333333333333 , 2.010416666666667 , 1.708333333333333 , 1.427083333333333 \right] \]</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p><span class="math notranslate nohighlight">\(x_1\)</span></p></th>
+<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(x_2\)</span></p></th>
+<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(m\)</span> Average Rate of Change from <span class="math notranslate nohighlight">\(x_2\)</span> to <span class="math notranslate nohighlight">\(x_1\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac73=2.\bar3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac98\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{193}{96}=2.01041\bar6\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac54\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{41}{24}=1.708\bar3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{11}{8}\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{137}{96}=1.42708\bar3\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>expand(S(x,[1,9/8,5/4,11/8],3/2));
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{12}$}\left[ \frac{7\,x}{3}-\frac{1}{3} , \frac{193\,x}{96}+\frac{29}{192} , \frac{41\,x}{24}+\frac{29}{48} , \frac{137\,x}{96}+\frac{197}{192} \right] \]</div>
+<p><img alt="niceGraph5-2.svg" src="../_images/niceGraph5.svg" /></p>
+</div>
+<div class="section" id="from-the-right">
+<h3>From the Right:<a class="headerlink" href="#from-the-right" title="Permalink to this headline">¶</a></h3>
+<p>From the right we will use the intervals: $<span class="math notranslate nohighlight">\([\frac32,\frac{13}{8}],[\frac32,\frac74],[\frac32,\frac{15}{8}],[\frac32,2].\)</span>$</p>
+<p>This yields <span class="math notranslate nohighlight">\(\Delta x = \{ \frac18,\frac14,\frac38,\frac12 \}\)</span>.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p><span class="math notranslate nohighlight">\(x_1\)</span></p></th>
+<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(x_2\)</span></p></th>
+<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(m\)</span> Average Rate of Change from <span class="math notranslate nohighlight">\(x_2\)</span> to <span class="math notranslate nohighlight">\(x_1\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{13}{8}\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{89}{96}=0.92708\bar3 \)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac74\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{17}{24}=0.708\bar3 \)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{15}{8}\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{49}{96}=0.51041\bar6 \)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(2\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac13=0.\bar3 \)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="niceGraph6.svg" src="Limits/attachment:niceGraph6.svg" /></p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>expand(S(x,3/2,[13/8,7/4,15/8,2]));
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{13}$}\left[ \frac{89\,x}{96}+\frac{341}{192} , \frac{17\,x}{24}+\frac{101}{48} , \frac{49\,x}{96}+\frac{461}{192} , \frac{x}{3}+\frac{8}{3} \right] \]</div>
+<p>So, to recap:</p>
+<div class="math notranslate nohighlight">
+\[f(x)=\frac{2x^3}{3}-5x^2+\frac{35x}{3}-\frac{16}{3}\]</div>
+<p>with out loss of generality the average rate of change of the function <span class="math notranslate nohighlight">\(f\)</span> from <span class="math notranslate nohighlight">\(x_2\)</span> to <span class="math notranslate nohighlight">\(x_1\)</span> will be defined as:</p>
+<div class="math notranslate nohighlight">
+\[m=\dfrac{f(x_2)-f(x_1)}{x_2-x_1}.\]</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p><span class="math notranslate nohighlight">\(x_1\)</span></p></th>
+<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(x_2\)</span></p></th>
+<th class="text-align:left head"><p><span class="math notranslate nohighlight">\(m\)</span> Average Rate of Change from <span class="math notranslate nohighlight">\(x_2\)</span> to <span class="math notranslate nohighlight">\(x_1\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac73=2.\bar3 \)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac98\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{193}{96}=2.01041\bar6 \)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac54\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{41}{24}=1.708\bar3 \)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{11}{8}\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{137}{96}=1.42708\bar3 \)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{13}{8}\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{89}{96}=0.92708\bar3 \)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac74\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{17}{24}=0.708\bar3 \)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{15}{8}\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac{49}{96}=0.51041\bar6 \)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac32\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(2\)</span></p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\frac13=0.\bar3 \)</span></p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>m(3/2,3/2);
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>expt: undefined: 0 to a negative exponent.
+#0: m(x1=3/2,x2=3/2) (92697F2DD3884DF64C81787A5BE5B130-984089857.mac line 2)
+ -- an error. To debug this try: debugmode(true);
+</pre></div>
+</div>
+</div>
+<div class="section" id="error">
+<h3>Error:<a class="headerlink" href="#error" title="Permalink to this headline">¶</a></h3>
+<p>Notice that when <span class="math notranslate nohighlight">\(x_1=x_2=1.5\)</span> or <span class="math notranslate nohighlight">\(\frac32\)</span> the slope is undefined. This can be seen by the following work:</p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>&#39;(f(3/2))=f(3/2);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{15}$}f\left(\frac{3}{2}\right)=\frac{19}{6}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+    \frac{f(x_2)-f(x_2)}{x_2 - x_1 } &amp; = \frac{\frac{19}{6}-\frac{19}{6}}{\frac32 - \frac32}\\
+        &amp; = \frac{0}{0}
+\end{align}
+\end{split}\]</div>
+<p><em>Important</em>: when <span class="math notranslate nohighlight">\(m=\dfrac{\Delta y}{\Delta x} = \frac00\)</span> we say the average rate of change is undefined.</p>
+<p><em>Important</em>: when evaluating <span class="math notranslate nohighlight">\(m=\dfrac{f(x_2)-f(x_1)}{x_2 - x_1}\)</span> we are evaluating exactly <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span>.</p>
+<p>From the “nice” function there should be a line that has a defined slope at the point <span class="math notranslate nohighlight">\((\frac32,\frac{19}{6})\)</span> and touching the curve. However, letting <span class="math notranslate nohighlight">\(x_1=x_2=\frac32=1.5\)</span> and evaluating <span class="math notranslate nohighlight">\(m\)</span> (the slope) results with an undefined  average rate of change.</p>
+<p>Does this mean the slope formula is broken? No. The slope formula is being used to find the average rate of change. When <span class="math notranslate nohighlight">\(x_1=x_2\)</span> the situation is no longer an average rate of change between two distinct points on the curve. The situation is an instantaneous rate of change at a single point on a curve. The exact slope formula learned in College Algebra will not be used to find the instantaneous rate of change of a function at a point located on a curve. We will discover that a modified form of the slope formula will be used, but first we must understand close enough.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="close-enough">
+<h2>Close Enough:<a class="headerlink" href="#close-enough" title="Permalink to this headline">¶</a></h2>
+<p>Consider the following function:</p>
+<div class="math notranslate nohighlight">
+\[f(x)=\frac{x^2-4}{x-2}.\]</div>
+<p>We know that <span class="math notranslate nohighlight">\(f(2)\)</span> is undefined. However, if we look at a table of values where <span class="math notranslate nohighlight">\(x\)</span> is approaching <span class="math notranslate nohighlight">\(2\)</span> from the left and right we see:</p>
+<div class="section" id="id1">
+<h3>From the Left<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>f(x):=(x^2-4)/(x-2);
+f([1,1.5,1.9,1.99,1.999]);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{16}$}f\left(x\right):=\frac{x^2-4}{x-2}\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{17}$}\left[ 3 , 3.5 , 3.899999999999998 , 3.989999999999979 , 3.99899999999986 \right] \]</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(x\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(y=f(x)\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(1.5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3.5\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(1.9\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3.8\bar9 \)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(1.99\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3.98\bar9 \)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(1.999\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3.998\bar9 \)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id2">
+<h3>From the Right<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>f([2.001,2.01,2.1,2.5,3]);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{18}$}\left[ 4.00100000000014 , 4.009999999999977 , 4.099999999999998 , 4.5 , 5 \right] \]</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(x\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(y=f(x)\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(2.001\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4.001\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(2.01\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4.01\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(2.1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4.1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(2.5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4.5\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(3\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(5\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="together">
+<h3>Together<a class="headerlink" href="#together" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>f([1.9,1.99,1.999,2.001,2.01,2.1]);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{19}$}\left[ 3.899999999999998 , 3.989999999999979 , 3.99899999999986 , 4.00100000000014 , 4.009999999999977 , 4.099999999999998 \right] \]</div>
+<p>We see that as <span class="math notranslate nohighlight">\(x\)</span> approaches <span class="math notranslate nohighlight">\(2\)</span> from the left and right <span class="math notranslate nohighlight">\(f(x)\)</span> approaches 4; however, <span class="math notranslate nohighlight">\(f(x)\)</span> will never be exactly 4.</p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>plot2d(f(x),[x,0,5]);
+</pre></div>
+</div>
+<p><img alt="svg" src="../_images/Limits_33_0.svg" /></p>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{20}$}\left[ \mbox{ /tmp/maxout172110.gnuplot } , \mbox{ /tmp/maxplot.svg } \right] \]</div>
+<p>As we can see from the plot the curve shows that when <span class="math notranslate nohighlight">\(x=2\)</span> the output appears to be <span class="math notranslate nohighlight">\(4\)</span>. However,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+f(2) &amp; = \dfrac{2^2-4}{2-2}\\
+&amp; = \dfrac{4-4}{2-2}\\
+&amp; = \dfrac{0}{0}
+\end{align*}
+\end{split}\]</div>
+<p>in this case means <span class="math notranslate nohighlight">\(f(2)\)</span> is undefined. That is, <span class="math notranslate nohighlight">\(f\)</span> is undefined exactly at <span class="math notranslate nohighlight">\(x=2\)</span>.</p>
+<p>One more time, <span class="math notranslate nohighlight">\(f\)</span> is defined at <span class="math notranslate nohighlight">\(x\)</span> values close to <span class="math notranslate nohighlight">\(x=2\)</span>; however, <span class="math notranslate nohighlight">\(f\)</span> is undefined exactly when <span class="math notranslate nohighlight">\(x=2\)</span>.</p>
+<p>Claim: <span class="math notranslate nohighlight">\(f(x)\)</span> is 4 when <span class="math notranslate nohighlight">\(x\)</span> is sufficiently close to <span class="math notranslate nohighlight">\(2\)</span>.</p>
+<p>One way to look at this claim being true is to simplify <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+f(x) &amp; = \dfrac{x^2-4}{x-2}\\
+&amp; = \dfrac{(x-2)(x+2)}{x-2}\\
+&amp; = x+2
+\end{align*}
+\end{split}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(g(x)=x+2\)</span> and notice that <span class="math notranslate nohighlight">\(f(x)=g(x)\)</span> for all <span class="math notranslate nohighlight">\(x\ne 2\)</span>. That is,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+f(x) &amp; = \begin{cases} \dfrac{x^2-4}{x-2} &amp; x\ne 2\\ \text{UND} &amp; x = 2\end{cases}\\
+&amp; = \begin{cases} g(x) &amp; x\ne 2\\ \text{UND} &amp; x = 2\end{cases}
+\end{align*}
+\end{split}\]</div>
+<p>Notice that <span class="math notranslate nohighlight">\(g(2)=4\)</span>; however, <span class="math notranslate nohighlight">\(f(2)\)</span> is undefined.</p>
+<p>Shouldn’t there be something; anything, that allows <span class="math notranslate nohighlight">\(f\)</span> to be <span class="math notranslate nohighlight">\(4\)</span> as <span class="math notranslate nohighlight">\(x\)</span> approaches <span class="math notranslate nohighlight">\(2\)</span> but isn’t actually <span class="math notranslate nohighlight">\(4\)</span> when <span class="math notranslate nohighlight">\(x=2\)</span>? Here we will properly define Limits.</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>Limits<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<hr class="docutils" />
+<div class="section" id="definition-of-a-limit-intuitive-approach">
+<h3>Definition of a Limit (Intuitive Approach)<a class="headerlink" href="#definition-of-a-limit-intuitive-approach" title="Permalink to this headline">¶</a></h3>
+<p>The function <span class="math notranslate nohighlight">\(f\)</span> has the limit <span class="math notranslate nohighlight">\(L\)</span> as <span class="math notranslate nohighlight">\(x\)</span> approaches <span class="math notranslate nohighlight">\(a\)</span>, written</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to a}f(x)=L
+\]</div>
+<p>if the value of <span class="math notranslate nohighlight">\(f(x)\)</span> can be made close to the number <span class="math notranslate nohighlight">\(L\)</span> as we
+please by taking <span class="math notranslate nohighlight">\(x\)</span> sufficiently close to (but not equal to) <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<hr class="docutils" />
+<p>We will demonstrate this definition with these three methods:</p>
+<ol class="simple">
+<li><p>numerically</p></li>
+<li><p>graphically</p></li>
+<li><p>algebraically</p></li>
+</ol>
+</div>
+<div class="section" id="numerical">
+<h3>Numerical<a class="headerlink" href="#numerical" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example">
+<h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<p>Let <span class="math notranslate nohighlight">\(k(x)=\dfrac{x^2 - 9}{x-3}\)</span> and evaluate</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to 3}k(x).\]</div>
+<p>We have done this already in a previous example. We will use values close to <span class="math notranslate nohighlight">\(3\)</span> but not <span class="math notranslate nohighlight">\(3\)</span> and notice what <span class="math notranslate nohighlight">\(k\)</span> is approaching.</p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>k(x):=(x^2-9)/(x-3);
+k([2,2.5,2.9,2.99,2.999,3.001,3.01,3.1,3.5,4]);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{21}$}k\left(x\right):=\frac{x^2-9}{x-3}\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{22}$}\left[ 5 , 5.5 , 5.899999999999993 , 5.990000000000023 , 5.99899999999986 , 6.00100000000014 , 6.009999999999977 , 6.100000000000007 , 6.5 , 7 \right] \]</div>
+<p>Numerically we see that <span class="math notranslate nohighlight">\(k\)</span> is approaching <span class="math notranslate nohighlight">\(6\)</span> as <span class="math notranslate nohighlight">\(x\)</span> is approaching <span class="math notranslate nohighlight">\(3\)</span>. Therefore, we say:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to 3}k(x) = 6\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>limit(k(x),x,3);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{23}$}6\]</div>
+</div>
+</div>
+<div class="section" id="graphically">
+<h3>Graphically<a class="headerlink" href="#graphically" title="Permalink to this headline">¶</a></h3>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+q(x) = \begin{cases}
+    3 &amp; x&lt;1\\
+    x^2 &amp; x=1\\
+    3 &amp; x&gt;1
+    \end{cases}
+\end{split}\]</div>
+<p>The plot of this would be the following:</p>
+<p><img alt="graphMethod1.svg" src="../_images/graphMethod1.svg" /></p>
+<p>From the left and from the right of the graph near the hole we see that <span class="math notranslate nohighlight">\(q\)</span> approaches <span class="math notranslate nohighlight">\(1\)</span> as <span class="math notranslate nohighlight">\(x\)</span> approaches <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<p><img alt="graphMethod2.svg" src="../_images/graphMethod2.svg" /></p>
+<p>Thus,</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to 1}q(x)=1.\]</div>
+<p>Notice throughout the presentation about the limit of <span class="math notranslate nohighlight">\(q(x)\)</span> the exact point <span class="math notranslate nohighlight">\((1,3)\)</span> was ignored.</p>
+</div>
+</div>
+<div class="section" id="algebraically">
+<h2>Algebraically<a class="headerlink" href="#algebraically" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="corollary-1">
+<h3>Corollary 1<a class="headerlink" href="#corollary-1" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> be defined near <span class="math notranslate nohighlight">\(x=a\)</span> and <span class="math notranslate nohighlight">\(f(x)=g(x)\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to a}f(x)=\lim_{x\to a}g(x).
+\]</div>
+</div>
+<div class="section" id="properties-of-limits">
+<h3>Properties of Limits<a class="headerlink" href="#properties-of-limits" title="Permalink to this headline">¶</a></h3>
+<p>Suppose</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to a}f(x)=L\,\,\text{ and }\,\,\lim_{x\to a}g(x)=M
+\]</div>
+<p>Then</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}x=a}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}b}=b\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}\left[f(x)\right]}^{r}{\displaystyle =\left[\lim_{x\to a}f(x)\right]^{r}=L^{r}}\)</span>
+where <span class="math notranslate nohighlight">\(r\)</span> is a positive number.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}cf(x)=c\lim_{x\to a}f(x)=cL}\)</span> where
+<span class="math notranslate nohighlight">\(c\)</span> is a real number.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}\left[f(x)\pm g(x)\right]=\lim_{x\to a}f(x)\pm\lim_{x\to a}g(x)=L\pm M}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}\left[f(x)g(x)\right]=\left[\lim_{x\to a}f(x)\right]\left[\lim_{x\to a}g(x)\right]=L\cdot M}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}\frac{f(x)}{g(x)}=\frac{\lim_{x\to a}f(x)}{\lim_{x\to a}g(x)}=\frac{L}{M}}\)</span>
+where <span class="math notranslate nohighlight">\(M\ne0\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h3>Example<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Evaluate $<span class="math notranslate nohighlight">\(\lim_{x\to a}\dfrac{x^3 - a^3}{x-a}\)</span><span class="math notranslate nohighlight">\( where \)</span>a$ is a nonzero real number.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+    \lim_{x\to a}\dfrac{x^3 - a^3}{x-a} &amp; = \lim_{x\to a}\dfrac{(x-a)(x^2+ax+a^2)}{(x-a)} &amp;&amp; \text{since $x^3-a^3=(x-a)(x^2+ax+a^2)$}\\
+    &amp; = \lim_{x\to a}\left( x^2+ax+a^2 \right)\\
+    &amp; = \lim_{x\to a}(x^2) + \lim_{x\to a}(ax)+\lim_{x\to a}(a^2) &amp;&amp; \text{since $\lim_{x\to a}\left(f(x)+g(x)\right)=\lim_{x\to a}f(x)+\lim_{x\to a}g(x)$}\\
+    &amp; = \left( \lim_{x\to a}x \right)^2 + a\left( \lim_{x\to a}x \right) + \left( \lim_{x\to a}a \right)^2 &amp;&amp; \text{since $\lim_{x\to a}x^2 = \left( \lim_{x\to a}x \right)^2$ and $\lim_{x\to a}(ax)=a\lim_{x\to a}x$}\\
+    &amp; = \left( a \right)^2 + a\left(a\right)+\left(a\right)^2 &amp;&amp; \text{since $\lim_{x\to a}x=a$}
+\end{align*}
+\end{split}\]</div>
+<p>Notice that by Corollary 1 and <span class="math notranslate nohighlight">\(\dfrac{x^3-a^3}{x-a}=x^2+ax+a^2\)</span> for all <span class="math notranslate nohighlight">\(x\ne a\)</span> we have $<span class="math notranslate nohighlight">\(\lim_{x\to a}\dfrac{x^3-a^3}{x-a}=\lim_{x\to a}\left( x^2+ax+a^2 \right)\)</span>$</p>
+</div>
+</div>
+<div class="section" id="one-sided-limits">
+<h2>One-Sided Limits<a class="headerlink" href="#one-sided-limits" title="Permalink to this headline">¶</a></h2>
+<p>Earlier we talked about <span class="math notranslate nohighlight">\(x\)</span> approaching a number from the left and from the right. Here we will introduce notation that describes this idea.</p>
+<div class="section" id="definition-one-side-limits">
+<h3>Definition (One-Side Limits)<a class="headerlink" href="#definition-one-side-limits" title="Permalink to this headline">¶</a></h3>
+<p>The function <span class="math notranslate nohighlight">\(f\)</span> has the right-hand limit <span class="math notranslate nohighlight">\(L\)</span> as <span class="math notranslate nohighlight">\(x\)</span> approaches
+<span class="math notranslate nohighlight">\(a\)</span> from the right, written</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to a^{+}}f(x)=L
+\]</div>
+<p>if the value of <span class="math notranslate nohighlight">\(f(x)\)</span> can be made as close to <span class="math notranslate nohighlight">\(L\)</span> as we please
+by taking <span class="math notranslate nohighlight">\(x\)</span> sufficiently close to (but not equal to) <span class="math notranslate nohighlight">\(a\)</span> and to
+the right of <span class="math notranslate nohighlight">\(a\)</span>.</p>
+<p>Similarly, the function <span class="math notranslate nohighlight">\(f\)</span> has the left-hand limit <span class="math notranslate nohighlight">\(M\)</span> as <span class="math notranslate nohighlight">\(x\)</span>
+approaches <span class="math notranslate nohighlight">\(a\)</span> from the left, written</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to a^{-}}f(x)=M
+\]</div>
+<p>if the values of <span class="math notranslate nohighlight">\(f(x)\)</span> can be made as close to <span class="math notranslate nohighlight">\(M\)</span> as we please
+by taking <span class="math notranslate nohighlight">\(x\)</span> sufficiently close to (but not equal to) <span class="math notranslate nohighlight">\(a\)</span> and to
+the left of <span class="math notranslate nohighlight">\(a\)</span>.</p>
+</div>
+<div class="section" id="theorem-existence-of-the-limit">
+<h3>Theorem (Existence of the Limit)<a class="headerlink" href="#theorem-existence-of-the-limit" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be a function that is defined for all values of <span class="math notranslate nohighlight">\(x\)</span> close
+to <span class="math notranslate nohighlight">\(x=a\)</span> with the possible exception of <span class="math notranslate nohighlight">\(a\)</span> itself. Then</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{aligned}\lim_{x\to a}f(x) &amp; =L &amp; \text{if and only if} &amp;  &amp; \lim_{x\to a^{+}}f(x) &amp; =\lim_{x\to a^{-}}f(x)=L.\end{aligned}
+\]</div>
+</div>
+<div class="section" id="corollary-2">
+<h3>Corollary 2<a class="headerlink" href="#corollary-2" title="Permalink to this headline">¶</a></h3>
+<p>If <span class="math notranslate nohighlight">\(\lim_{x\to a^{+}}f(x)\ne\lim_{x\to a^{-}}f(x)\)</span>, then we say <span class="math notranslate nohighlight">\(\lim_{x\to a}f(x)\)</span> does not exists.</p>
+</div>
+<div class="section" id="id5">
+<h3>Example<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(x) = \begin{cases}
+    1 &amp; x&gt;0\\
+    -1 &amp; x&lt;0
+    \end{cases}
+\end{split}\]</div>
+<p>Then</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to 0^-}f(x)=\lim_{x\to 0^-}-1=-1\]</div>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to 0^+}f(x)=\lim_{x\to 0^+}1 = 1\]</div>
+<p>Finally, <span class="math notranslate nohighlight">\(\lim_{x\to 0}f(x)\)</span> does not exist since <span class="math notranslate nohighlight">\(\lim_{x\to 0^-}f(x)\ne \lim_{x\to 0^+}f(x)\)</span> by Corollary 2.</p>
+<p><img alt="setGraph.svg" src="../_images/setGraph.svg" /></p>
+</div>
+</div>
+<div class="section" id="limits-and-infinity">
+<h2>Limits and Infinity<a class="headerlink" href="#limits-and-infinity" title="Permalink to this headline">¶</a></h2>
+<p>For this situation we will analysis the function</p>
+<div class="math notranslate nohighlight">
+\[p(x)=\frac{1}{x}+1\]</div>
+<p>where <span class="math notranslate nohighlight">\(x\to \pm \infty\)</span> and <span class="math notranslate nohighlight">\(x\to 0\)</span>. With the power of computations we can predict what will happen when <span class="math notranslate nohighlight">\(x\)</span> approaches <span class="math notranslate nohighlight">\(\infty\)</span>.</p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>p(x):=1/x+1;
+float(p([10^0,10^1,10^2,10^3,10^4,10^5,10^6,10^7,10^8,10^9]));
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{24}$}p\left(x\right):=\frac{1}{x}+1\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{25}$}\left[ 2.0 , 1.1 , 1.01 , 1.001 , 1.0001 , 1.00001 , 1.000001 , 1.0000001 , 1.00000001 , 1.000000001 \right] \]</div>
+<p>From the computations we see that as <span class="math notranslate nohighlight">\(x\)</span> gets sufficiently large the output of <span class="math notranslate nohighlight">\(p\)</span> is <span class="math notranslate nohighlight">\(1\)</span>. Therefore, numerically we see that</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to \infty}p(x)=1\]</div>
+<p>Now, consider what will happen when <span class="math notranslate nohighlight">\(x\)</span> approaches <span class="math notranslate nohighlight">\(-\infty\)</span>.</p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>float(p([-10^0,-10^1,-10^2,-10^3,-10^4,-10^5,-10^6,-10^7,-10^8,-10^9]));
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{26}$}\left[ 0.0 , 0.9 , 0.99 , 0.999 , 0.9999 , 0.99999 , 0.999999 , 0.9999999 , 0.99999999 , 0.999999999 \right] \]</div>
+<p>From the computations we see that as <span class="math notranslate nohighlight">\(x\)</span> get sufficiently large (in the negative direction) the output of <span class="math notranslate nohighlight">\(p\)</span> is <span class="math notranslate nohighlight">\(1\)</span>. Therefore, numerically we see that</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to -\infty}p(x)=1\]</div>
+<p>Next, consider what will happen when <span class="math notranslate nohighlight">\(x\)</span> approaches <span class="math notranslate nohighlight">\(0\)</span> from the left.</p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>float(p([-10^0,-10^(-1),-10^(-2),-10^(-3),-10^(-4),-10^(-5),-10^(-6),-10^(-7),-10^(-8),-10^(-9)]));
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{27}$}\left[ 0.0 , -9.0 , -99.0 , -999.0 , -9999.0 , -99999.0 , -999999.0 , -9999999.0 , -9.999999900000001 \times 10^{+7} , -9.99999999 \times 10^{+8} \right] \]</div>
+<p>From the computations we see that as <span class="math notranslate nohighlight">\(x\)</span> get sufficiently small and close to zero (from the left) the output of <span class="math notranslate nohighlight">\(p\)</span> approaches a negative large number. We state that as <span class="math notranslate nohighlight">\(x\)</span> gets closer to zero (from the left) the output will approach negative infinity, or</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to 0^-}p(x)=-\infty\]</div>
+<p>Finally, consider what will happen when <span class="math notranslate nohighlight">\(x\)</span> approaches <span class="math notranslate nohighlight">\(0\)</span> from the right.</p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>float(p([10^0,10^(-1),10^(-2),10^(-3),10^(-4),10^(-5),10^(-6),10^(-7),10^(-8),10^(-9)]));
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{28}$}\left[ 2.0 , 11.0 , 101.0 , 1001.0 , 10001.0 , 100001.0 , 1000001.0 , 1.0000001 \times 10^{+7} , 1.00000001 \times 10^{+8} , 1.000000001 \times 10^{+9} \right] \]</div>
+<p>From the computations we see that as <span class="math notranslate nohighlight">\(x\)</span> get sufficiently small and close to zero (from the right) the output of <span class="math notranslate nohighlight">\(p\)</span> approaches a positive large number. We state that as <span class="math notranslate nohighlight">\(x\)</span> gets closer to zero (from the right) the output will approach positive infinity, or</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to 0^+}p(x)=+\infty\]</div>
+<hr class="docutils" />
+<div class="section" id="theorem-limit-and-infinity">
+<h3>Theorem (Limit and Infinity)<a class="headerlink" href="#theorem-limit-and-infinity" title="Permalink to this headline">¶</a></h3>
+<p>The function <span class="math notranslate nohighlight">\(f\)</span> has the limit <span class="math notranslate nohighlight">\(L\)</span> as <span class="math notranslate nohighlight">\(x\)</span> increases without bound
+(or as <span class="math notranslate nohighlight">\(x\)</span> approaches infinity), written</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to\infty}f(x)=L
+\]</div>
+<p>if <span class="math notranslate nohighlight">\(f(x)\)</span> can be made arbitrarily close to <span class="math notranslate nohighlight">\(L\)</span> by taking <span class="math notranslate nohighlight">\(x\)</span> large
+enough.</p>
+<p>Similarly, the function <span class="math notranslate nohighlight">\(f\)</span> has the limit <span class="math notranslate nohighlight">\(M\)</span> as <span class="math notranslate nohighlight">\(x\)</span> decreases
+without bounds (or as <span class="math notranslate nohighlight">\(x\)</span> approaches negative infinity), written</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to-\infty}f(x)=M
+\]</div>
+<p>if <span class="math notranslate nohighlight">\(f(x)\)</span> can be made arbitrarily close to <span class="math notranslate nohighlight">\(M\)</span> by taking <span class="math notranslate nohighlight">\(x\)</span> to
+be negative and sufficiently large in absolute value.</p>
+</div>
+<div class="section" id="theorem-5">
+<h3>Theorem 5<a class="headerlink" href="#theorem-5" title="Permalink to this headline">¶</a></h3>
+<p>For all <span class="math notranslate nohighlight">\(n&gt;0\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to\pm\infty}\frac{1}{x^{n}}=0
+\]</div>
+<p>provided that <span class="math notranslate nohighlight">\(\frac{1}{x^{n}}\)</span> is defined.</p>
+<p>Notice that the following example is were <span class="math notranslate nohighlight">\(x\to \infty\)</span></p>
+</div>
+<div class="section" id="id6">
+<h3>Example<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>Evaluate $<span class="math notranslate nohighlight">\(\lim_{x\to \infty}\dfrac{x^2+9x+4}{3x^2+8x-5}\)</span>$</p>
+<p>SOLUTION:
+Note:</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to \infty}c =c\]</div>
+<p>where <span class="math notranslate nohighlight">\(c\)</span> is some real number and</p>
+<div class="math notranslate nohighlight">
+\[\lim_{x\to \infty}\frac{1}{x}=0\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lim_{x\to\infty}\dfrac{x^{2}+9x+4}{3x^{2}+8x-5} &amp; =\lim_{x\to\infty}\left(\dfrac{x^{2}+9x+4}{3x^{2}+8x-5}\right)\cdot\left(\dfrac{\frac{1}{x^{2}}}{\frac{1}{x^{2}}}\right)\\
+ &amp; =\lim_{x\to\infty}\dfrac{\frac{x^{2}}{x^{2}}+\frac{9x}{x^{2}}+\frac{4}{x^{2}}}{\frac{3x^{2}}{x^{2}}+\frac{8x}{x^{2}}-\frac{5}{x^{2}}}\\
+ &amp; =\lim_{x\to\infty}\dfrac{1+\frac{9}{x}+\frac{4}{x^{2}}}{3+\frac{8}{x}-\frac{5}{x^{2}}}\\
+ &amp; =\dfrac{\lim_{x\to\infty}1+\lim_{x\to\infty}\frac{9}{x}+\lim_{x\to\infty}\frac{4}{x^{2}}}{\lim_{x\to\infty}3+\lim_{x\to\infty}\frac{8}{x}-\lim_{x\to\infty}\frac{5}{x^{2}}}\\
+ &amp; =\dfrac{1+9\lim_{x\to\infty}\frac{1}{x}+4\lim_{x\to\infty}\frac{1}{x^{2}}}{3+8\lim_{x\to\infty}\frac{1}{x}-5\lim_{x\to\infty}\frac{1}{x^{2}}}\\
+ &amp; =\dfrac{1+9\cdot0+4\left(\lim_{x\to\infty}\frac{1}{x}\right)^{2}}{3+8\cdot0-5\left(\lim_{x\to\infty}\frac{1}{x}\right)^{2}}\\
+ &amp; =\dfrac{1+9\cdot0+4\left(0\right)^{2}}{3+8\cdot0-5\left(0\right)^{2}}\\
+ &amp; =\frac{1}{3}
+\end{align*}
+\end{split}\]</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../Functions/Functions.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Review of Functions</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Michael McCabe<br/>
+    
+        &copy; Copyright 2022, Michael McCabe.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

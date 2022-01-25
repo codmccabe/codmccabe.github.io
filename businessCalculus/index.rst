@@ -10,6 +10,9 @@ Welcome to Business Calculus's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   Functions/Functions
+   Limits/Limits
+
 
 
 Indices and tables
