@@ -1,0 +1,869 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Limits and Continuity &#8212; Business Calculus</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Limit Definition of the Derivative" href="limitDerivative.html" />
+    <link rel="prev" title="Limit Examples" href="limitExamples.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Business Calculus</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Functions/Functions.html">
+   Review of Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Limits.html">
+   Limits
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="limitExamples.html">
+   Limit Examples
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Limits and Continuity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="limitDerivative.html">
+   Limit Definition of the Derivative
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Limits/limitCont.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recall-function">
+   Recall (Function):
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition">
+     Definition:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#domain-range-of-functions">
+     Domain/Range of Functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combination-of-functions">
+     Combination of Functions:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monotonicity-of-functions">
+     Monotonicity of Functions:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recall-limits">
+   Recall (Limits):
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#continuity-of-functions">
+   Continuity of Functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-three-steps-to-continuity">
+     Definition (Three steps to continuity):
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#properties-of-continuous-functions">
+     Properties of Continuous Functions:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limits-and-continuous-functions">
+     Limits and Continuous Functions:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intermediate-value-theorem-ivt">
+     Intermediate Value Theorem (IVT)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Definition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem">
+     Theorem
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#corollary">
+     Corollary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Corollary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     Example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise">
+     Exercise:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Exercise
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Limits and Continuity</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recall-function">
+   Recall (Function):
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition">
+     Definition:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#domain-range-of-functions">
+     Domain/Range of Functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combination-of-functions">
+     Combination of Functions:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monotonicity-of-functions">
+     Monotonicity of Functions:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recall-limits">
+   Recall (Limits):
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#continuity-of-functions">
+   Continuity of Functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-three-steps-to-continuity">
+     Definition (Three steps to continuity):
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#properties-of-continuous-functions">
+     Properties of Continuous Functions:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#limits-and-continuous-functions">
+     Limits and Continuous Functions:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intermediate-value-theorem-ivt">
+     Intermediate Value Theorem (IVT)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Definition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#theorem">
+     Theorem
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#corollary">
+     Corollary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Corollary
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     Example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise">
+     Exercise:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Exercise
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="limits-and-continuity">
+<h1>Limits and Continuity<a class="headerlink" href="#limits-and-continuity" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<div class="section" id="recall-function">
+<h2>Recall (Function):<a class="headerlink" href="#recall-function" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="definition">
+<h3>Definition:<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
+<p>A function <span class="math notranslate nohighlight">\(f\)</span> is a rule of correspondence that associates with each element <span class="math notranslate nohighlight">\(x\)</span> in one set <span class="math notranslate nohighlight">\(D\)</span>, called the domain, a single value of <span class="math notranslate nohighlight">\(f(x)\)</span> from a second set, <span class="math notranslate nohighlight">\(R\)</span>. The set of all values obtained is called the range of the function.</p>
+</div>
+<div class="section" id="domain-range-of-functions">
+<h3>Domain/Range of Functions<a class="headerlink" href="#domain-range-of-functions" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(y=f(x)\)</span>.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-left head"><p>Name</p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(f(x)\)</span></p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(n\in \mathbb{Z}\)</span></p></th>
+<th class="text-center head"><p><span class="math notranslate nohighlight">\(a\in \mathbb{R}\)</span></p></th>
+<th class="text-center head"><p>Domain</p></th>
+<th class="text-center head"><p>Range</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Polynomials</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(f(x)=a_{n}x^{n}+\cdots+a_{1}x+a_{0}\)</span></p></td>
+<td class="text-center"><p>n/a</p></td>
+<td class="text-center"><p>n/a</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\{ x | x \in (-\infty,\infty) \}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\{ y | y \in (-\infty,\infty) \}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(f(x)=m x+b\)</span> or <span class="math notranslate nohighlight">\(f(x)=ax^2+bx+c\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Radical</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(f(x)=x^{1/n}=\sqrt[n]{x}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(n\)</span> is even</p></td>
+<td class="text-center"><p>n/a</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\{ x|x\in[0,\infty) \}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\{ y|y\in(-\infty,\infty) \}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(f(x)=\sqrt{x}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Radical</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(f(x)=x^{1/n}=\sqrt[n]{x}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(n\)</span> is odd</p></td>
+<td class="text-center"><p>n/a</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\{ x|x\in(-\infty,\infty) \}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\{ y|y\in(-\infty,\infty) \}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(f(x)=\sqrt[3]{x}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Reciprocal</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(f(x)=x^n\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(n&lt;0\)</span></p></td>
+<td class="text-center"><p>n/a</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\{ x|x\in(-\infty,0)\cup(0,\infty) \}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\{ y|y\in(-\infty,0)\cup(0,\infty) \}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(f(x)=\frac{1}{x}\)</span></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Exponential</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(f(x)=a^x\)</span></p></td>
+<td class="text-center"><p>n/a</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(a&gt;0\)</span> and <span class="math notranslate nohighlight">\(a\ne 1\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\{ x|x\in(-\infty,\infty) \}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\{ y|y\in (0,\infty)\}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(f(x)=e^x\)</span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Logarithmic</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(f(x)=\log_a(x)\)</span></p></td>
+<td class="text-center"><p>n/a</p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(a&gt;0\)</span> and <span class="math notranslate nohighlight">\(a\ne 1\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\{ x|x\in (0,\infty)\}\)</span></p></td>
+<td class="text-center"><p><span class="math notranslate nohighlight">\(\{ y|y\in(-\infty,\infty) \}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(f(x)=\log_e(x)=\ln(x)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="combination-of-functions">
+<h3>Combination of Functions:<a class="headerlink" href="#combination-of-functions" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> be two functions.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\left( f\pm g \right)(x)=f(x)\pm g(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\left( f\cdot g \right)(x)=f(x)\cdot g(x)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\left( \frac{f}{g} \right)(x)=\left(f\div g\right)(x)=f(x)\div g(x)=\dfrac{f(x)}{g(x)}\)</span> where <span class="math notranslate nohighlight">\(g(x)\ne 0\)</span> everywhere.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\left( f\circ g \right)(x)=f(g(x))\)</span> the <span class="math notranslate nohighlight">\(\circ\)</span> is the composition of functions operator.</p></li>
+</ul>
+<p>Notice that <span class="math notranslate nohighlight">\(f\circ g \ne g\circ f\)</span>.</p>
+</div>
+<div class="section" id="monotonicity-of-functions">
+<h3>Monotonicity of Functions:<a class="headerlink" href="#monotonicity-of-functions" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be a function of <span class="math notranslate nohighlight">\(x\)</span> and for every <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_2\)</span>, <span class="math notranslate nohighlight">\(a\le x_1&lt;x_2 \le b\)</span>:</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(f(x_1)&lt;f(x_2)\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> is called an increasing function on the interval <span class="math notranslate nohighlight">\([a,b]\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(x_1)&gt;f(x_2)\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> is called a decreasing function on the interval <span class="math notranslate nohighlight">\([a,b]\)</span>.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="recall-limits">
+<h2>Recall (Limits):<a class="headerlink" href="#recall-limits" title="Permalink to this headline">¶</a></h2>
+<p>Suppose</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to a}f(x)=L\,\,\text{ and }\,\,\lim_{x\to a}g(x)=M
+\]</div>
+<p>Then</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}\left[f(x)\right]}^{r}{\displaystyle =\left[\lim_{x\to a}f(x)\right]^{r}=L^{r}}\)</span>
+where <span class="math notranslate nohighlight">\(r\)</span> is a positive number.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}cf(x)=c\lim_{x\to a}f(x)=cL}\)</span> where
+<span class="math notranslate nohighlight">\(c\)</span> is a real number.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}\left[f(x)\pm g(x)\right]=\lim_{x\to a}f(x)\pm\lim_{x\to a}g(x)=L\pm M}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}\left[f(x)g(x)\right]=\left[\lim_{x\to a}f(x)\right]\left[\lim_{x\to a}g(x)\right]=L\cdot M}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}\frac{f(x)}{g(x)}=\frac{\lim_{x\to a}f(x)}{\lim_{x\to a}g(x)}=\frac{L}{M}}\)</span>
+where <span class="math notranslate nohighlight">\(M\ne0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}x}=a\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}b}=b\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to \infty}\frac{1}{x}}=0\)</span> (thm. 5)</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(x)=g(x)\)</span> for all <span class="math notranslate nohighlight">\(x\ne a\)</span>, then <span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}f(x)=\lim_{x\to a}g(x)}\)</span>. (cor. 1)</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\lim_{x\to a^{+}}f(x)\ne\lim_{x\to a^{-}}f(x)\)</span>, then we say <span class="math notranslate nohighlight">\(\lim_{x\to a}f(x)\)</span> does not exists. (cor. 2)</p></li>
+</ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="continuity-of-functions">
+<h2>Continuity of Functions<a class="headerlink" href="#continuity-of-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="definition-three-steps-to-continuity">
+<h3>Definition (Three steps to continuity):<a class="headerlink" href="#definition-three-steps-to-continuity" title="Permalink to this headline">¶</a></h3>
+<p>A function <span class="math notranslate nohighlight">\(f\)</span> is continuous at a number <span class="math notranslate nohighlight">\(x=a\)</span> if the following
+conditions are satisfied.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(f(x)\)</span> is defined</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}f(x)}\)</span> exists</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}f(x)=f(a)}\)</span></p></li>
+</ol>
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is not continuous at <span class="math notranslate nohighlight">\(x=a\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> is said to be discontinuous at <span class="math notranslate nohighlight">\(x=a\)</span>.</p>
+</div>
+<div class="section" id="properties-of-continuous-functions">
+<h3>Properties of Continuous Functions:<a class="headerlink" href="#properties-of-continuous-functions" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>The constant function <span class="math notranslate nohighlight">\(f(x)=c\)</span> is continuous everywhere.</p></li>
+<li><p>The identity function <span class="math notranslate nohighlight">\(f(x)=x\)</span> is continuous everywhere.</p></li>
+</ol>
+<p>If <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are continuous at <span class="math notranslate nohighlight">\(x=a\)</span>, then</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(f\pm g\)</span> is continuous at <span class="math notranslate nohighlight">\(x=a\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(fg\)</span> is continuous at <span class="math notranslate nohighlight">\(x=a\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{f}{g}\)</span> is continuous at <span class="math notranslate nohighlight">\(x=a\)</span> provided that <span class="math notranslate nohighlight">\(g(a)\ne0\)</span>.</p></li>
+</ol>
+<p>Let <span class="math notranslate nohighlight">\(P\)</span> be a polynomial function and <span class="math notranslate nohighlight">\(R\)</span> be a rational function
+(<span class="math notranslate nohighlight">\(R(x)=\frac{p(x)}{q(x)}\)</span> where <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(q\)</span> are polynomials), then</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(P\)</span> is continuous everywhere.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R\)</span> is continuous everywhere except when <span class="math notranslate nohighlight">\(q(x)=0.\)</span></p></li>
+</ol>
+</div>
+<div class="section" id="limits-and-continuous-functions">
+<h3>Limits and Continuous Functions:<a class="headerlink" href="#limits-and-continuous-functions" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(p(x)\)</span> and <span class="math notranslate nohighlight">\(q(x)\)</span> be polynomial functions. Let <span class="math notranslate nohighlight">\(a\)</span> be a real
+number. Then:
+1.</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to a}p(x)=p(a)
+\]</div>
+<ol class="arabic simple">
+<li></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to a}\frac{p(x)}{q(x)}=\frac{p(a)}{q(a)}\text{ when } q(a)\ne0
+\]</div>
+<ol class="arabic simple">
+<li></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to a}e^{p(x)}=e^{p(a)}
+\]</div>
+<ol class="arabic simple">
+<li></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to a}\ln(p(x))=p(a)\text{ when } p(a)&gt;0
+\]</div>
+</div>
+<div class="section" id="intermediate-value-theorem-ivt">
+<h3>Intermediate Value Theorem (IVT)<a class="headerlink" href="#intermediate-value-theorem-ivt" title="Permalink to this headline">¶</a></h3>
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is a continuous function on a closed interval <span class="math notranslate nohighlight">\([a,b]\)</span>, and
+if <span class="math notranslate nohighlight">\(y_{0}\)</span> is any value between <span class="math notranslate nohighlight">\(f(a)\)</span> and <span class="math notranslate nohighlight">\(f(b)\)</span>, then <span class="math notranslate nohighlight">\(y_{0}=f(c)\)</span>
+for some <span class="math notranslate nohighlight">\(c\)</span> in <span class="math notranslate nohighlight">\([a,b]\)</span>.</p>
+<p><img alt="ivtGraph1.svg" src="Limits/attachment:ivtGraph1.svg" /></p>
+</div>
+<div class="section" id="id1">
+<h3>Definition<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>We say the solution of th equation <span class="math notranslate nohighlight">\(f(x)=0\)</span> is a root of the equation or the zero of the function <span class="math notranslate nohighlight">\(f\)</span>.</p>
+</div>
+<div class="section" id="theorem">
+<h3>Theorem<a class="headerlink" href="#theorem" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be continuous on the interval <span class="math notranslate nohighlight">\([a,b]\)</span>. Then the following are true:</p>
+<ol class="arabic simple">
+<li><p>If <span class="math notranslate nohighlight">\(f(x)&gt;0\)</span> for all <span class="math notranslate nohighlight">\(x\in[a,b]\)</span> then <span class="math notranslate nohighlight">\(f\)</span> has no roots for all <span class="math notranslate nohighlight">\(x\in[a,b]\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(x)&lt;0\)</span> for all <span class="math notranslate nohighlight">\(x\in[a,b]\)</span> then <span class="math notranslate nohighlight">\(f\)</span> has no roots for all <span class="math notranslate nohighlight">\(x\in[a,b]\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="corollary">
+<h3>Corollary<a class="headerlink" href="#corollary" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be continuous on the interval <span class="math notranslate nohighlight">\([a,b]\)</span>. Then the following are true:</p>
+<ol class="arabic simple">
+<li><p>If there exists a <span class="math notranslate nohighlight">\(c\in(a,b)\)</span> such that <span class="math notranslate nohighlight">\(f(c)=0\)</span> and <span class="math notranslate nohighlight">\(f(a)&lt;0\)</span>, then <span class="math notranslate nohighlight">\(f(b)&gt;0\)</span>.</p></li>
+<li><p>If there exists a <span class="math notranslate nohighlight">\(c\in(a,b)\)</span> such that <span class="math notranslate nohighlight">\(f(c)=0\)</span> and <span class="math notranslate nohighlight">\(f(a)&gt;0\)</span>, then <span class="math notranslate nohighlight">\(f(b)&lt;0\)</span>.</p></li>
+</ol>
+</div>
+<div class="section" id="id2">
+<h3>Corollary<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be continuous on the interval <span class="math notranslate nohighlight">\((a,b)\)</span>. Let <span class="math notranslate nohighlight">\(a&lt;x_1&lt;c&lt;x_2&lt;b\)</span> and <span class="math notranslate nohighlight">\(f(c)=0\)</span>. Then the following are true:</p>
+<ol class="arabic simple">
+<li><p>If <span class="math notranslate nohighlight">\(f(x_1)&lt;0\)</span>, then <span class="math notranslate nohighlight">\(f(x)\le 0\)</span> for all <span class="math notranslate nohighlight">\(x\in(a,c]\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(x_1)&gt;0\)</span>, then <span class="math notranslate nohighlight">\(f(x)\ge 0\)</span> for all <span class="math notranslate nohighlight">\(x\in(a,c]\)</span>.</p></li>
+</ol>
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is continuous on the interval <span class="math notranslate nohighlight">\((a,b)\)</span>, there exists a <span class="math notranslate nohighlight">\(c\in(a,b)\)</span> such that <span class="math notranslate nohighlight">\(a&lt;x_1&lt;c&lt;x_2&lt;b\)</span> and <span class="math notranslate nohighlight">\(f(c)=0\)</span>, and <span class="math notranslate nohighlight">\(f(x_2)&gt;0\)</span>, then what can be said about all <span class="math notranslate nohighlight">\(x\in[c,b)\)</span>?</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f(x)=x^2-1\)</span>. Where is <span class="math notranslate nohighlight">\(f(x)\)</span> positive and where is <span class="math notranslate nohighlight">\(f(x)\)</span> negative.</p>
+<p>SOLUTION:</p>
+<p>Notice that <span class="math notranslate nohighlight">\(f(1)=0\)</span>, <span class="math notranslate nohighlight">\(f(-1)=0\)</span>, and <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\((-\infty,\infty)\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Choose <span class="math notranslate nohighlight">\(x_1=-2&lt;-1\)</span>. Since <span class="math notranslate nohighlight">\(f(-2)=3\)</span> we have by Corollary that <span class="math notranslate nohighlight">\(f(x)&gt;0\)</span> for all <span class="math notranslate nohighlight">\(x\in(-\infty,-1)\)</span>.</p></li>
+<li><p>Choose <span class="math notranslate nohighlight">\(x_1=0&lt;1\)</span>. Since <span class="math notranslate nohighlight">\(f(0)=-1\)</span> we have by Corollary that <span class="math notranslate nohighlight">\(f(x)&lt;0\)</span> for all <span class="math notranslate nohighlight">\(x\in(-1,1)\)</span>.</p></li>
+<li><p>Choose <span class="math notranslate nohighlight">\(x_1=2&gt;1\)</span>. Since <span class="math notranslate nohighlight">\(f(2)=3\)</span> we have by Corollary that <span class="math notranslate nohighlight">\(f(x)&gt;0\)</span> for all <span class="math notranslate nohighlight">\(x\in(1,\infty)\)</span>.</p></li>
+</ol>
+<p>Finally, we conclude that</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(f(x)&gt;0\)</span> for all <span class="math notranslate nohighlight">\(x\in(-\infty,-1)\cup(1,\infty)\)</span> and</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x)&lt;0\)</span> for all <span class="math notranslate nohighlight">\(x\in(-1,1)\)</span>.</p></li>
+</ol>
+<p>Consider the graph:</p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>plot2d(x^2-1,[x,-3,3]);
+</pre></div>
+</div>
+<p><img alt="svg" src="Limits/md/limitCont_files/md/limitCont_6_0.svg" /></p>
+</div>
+<div class="section" id="exercise">
+<h3>Exercise:<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
+<p>Let <span class="math notranslate nohighlight">\(f(x)=\frac{x^3}{3}-4 x\)</span>. Find where <span class="math notranslate nohighlight">\(f\)</span> is positive or negative using the same reasoning above. The solution should follow the image below:</p>
+<p>[HINT</p>
+<ol class="arabic simple">
+<li><p>Solve <span class="math notranslate nohighlight">\(f(x)=0\)</span>.</p></li>
+<li><p>Create 4 subintervals.</p></li>
+<li><p>Choose <span class="math notranslate nohighlight">\(x_1\)</span> in each of the subintervals.</p></li>
+<li><p>Make observations based on the Corollary.]</p></li>
+</ol>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>plot2d(x^3/3-4*x,[x,-5,5]);
+</pre></div>
+</div>
+<p><img alt="svg" src="Limits/md/limitCont_files/md/limitCont_8_0.svg" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id3">
+<h3>Example<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(x)=\begin{cases}
+x^2+1 &amp; x\ne 1\\
+k &amp; x = 1
+\end{cases}
+\end{split}\]</div>
+<p>Find <span class="math notranslate nohighlight">\(k\)</span> such that <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x=1\)</span>.</p>
+<p>SOLUTION:</p>
+<p>Need to find <span class="math notranslate nohighlight">\(k\)</span> such that:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to 1}f(x)\)</span> exists.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(1)\)</span> exists.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to1}f(x)=f(1)\)</span>.</p></li>
+</ol>
+<p>First notice:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(x)=\begin{cases}
+x^{2}+1 &amp; x\ne1\\
+k &amp; x=1
+\end{cases}=\begin{cases}
+x^{2}+1 &amp; x&lt;1\\
+k &amp; x=1\\
+x^{2}+1 &amp; x&gt;1
+\end{cases}
+\end{split}\]</div>
+<p>(1) Evaluate</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\lim_{x\to1}f(x)=\begin{aligned}\lim_{x\to1^{-}}f(x)=\lim_{x\to1^{-}}\left(x^{2}+1\right)=(1)^{2}+1=2\\
+\lim_{x\to1^{+}}f(x)=\lim_{x\to1^{+}}\left(x^{2}+1\right)=(1)^{2}+1=2
+\end{aligned}
+=2=\lim_{x\to1}f(x)
+\end{split}\]</div>
+<p>which means <span class="math notranslate nohighlight">\(\lim_{x\to1}f(x)\)</span> exists.</p>
+<p>(2) Evaluate</p>
+<div class="math notranslate nohighlight">
+\[
+f(1)=k
+\]</div>
+<p>which means <span class="math notranslate nohighlight">\(f(1)\)</span> exists.</p>
+<p>(3) In order for <span class="math notranslate nohighlight">\(\lim_{x\to1}f(x)=f(1)\)</span> we must set <span class="math notranslate nohighlight">\(k=2\)</span>. If <span class="math notranslate nohighlight">\(k=2\)</span>,
+then</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to1}f(x)=2=k=f(1).
+\]</div>
+<p>That is, in order for <span class="math notranslate nohighlight">\(f\)</span> to be continuous at <span class="math notranslate nohighlight">\(x=1\)</span>, <span class="math notranslate nohighlight">\(k\)</span> must be
+<span class="math notranslate nohighlight">\(2\)</span>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="id4">
+<h3>Example<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(x)=\begin{cases}
+\frac{x^2-a^2}{x-a} &amp; x\ne a\\
+k &amp; x=a
+\end{cases}
+\end{split}\]</div>
+<p>Find <span class="math notranslate nohighlight">\(k\)</span> such that <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x=a\)</span>.</p>
+<p>SOLUTION:</p>
+<p>Need to find <span class="math notranslate nohighlight">\(k\)</span> such that:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to a}f(x)\)</span> exists.</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(a)\)</span> exists.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\lim_{x\to a}f(x)=f(a)\)</span>.</p></li>
+</ol>
+<p>First notice:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(x)=\begin{cases}
+\frac{x^{2}-a^{2}}{x-a} &amp; x\ne1\\
+k &amp; x=1
+\end{cases}=\begin{cases}
+\frac{x^{2}-a^{2}}{x-a} &amp; x&lt;a\\
+k &amp; x=a\\
+\frac{x^{2}-a^{2}}{x-a} &amp; x&gt;a
+\end{cases}
+\end{split}\]</div>
+<p>(1) First, simplify</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\frac{x^{2}-a^{2}}{x-a} &amp; =\dfrac{(x-a)(x+a)}{x-a)}\\
+ &amp; =x+a
+\end{align*}
+\end{split}\]</div>
+<p>Evaluate</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\lim_{x\to a}f(x)=\begin{aligned}\lim_{x\to a^{-}}f(x)=\lim_{x\to1^{-}}\frac{x^{2}-a^{2}}{x-a}=x+a=a+a=2a\\
+\lim_{x\to a^{+}}f(x)=\lim_{x\to1^{+}}\frac{x^{2}-a^{2}}{x-a}=x+a=a+a=2a
+\end{aligned}
+=2a=\lim_{x\to a}f(x)
+\end{split}\]</div>
+<p>which means <span class="math notranslate nohighlight">\(\lim_{x\to a}f(x)\)</span> exists.</p>
+<p>(2) Evaluate</p>
+<div class="math notranslate nohighlight">
+\[
+f(a)=k
+\]</div>
+<p>which means <span class="math notranslate nohighlight">\(f(a)\)</span> exists.</p>
+<p>(3) In order for <span class="math notranslate nohighlight">\(\lim_{x\to a}f(x)=f(a)\)</span> we must set <span class="math notranslate nohighlight">\(k=2a\)</span>. If
+<span class="math notranslate nohighlight">\(k=2a\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to1}f(x)=2a=k=f(1).
+\]</div>
+<p>That is, in order for <span class="math notranslate nohighlight">\(f\)</span> to be continuous at <span class="math notranslate nohighlight">\(x=a\)</span>, <span class="math notranslate nohighlight">\(k\)</span> must be
+<span class="math notranslate nohighlight">\(2a\)</span>.</p>
+</div>
+<div class="section" id="id5">
+<h3>Exercise<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>Recall that the average rate of change of a function <span class="math notranslate nohighlight">\(f\)</span> is</p>
+<div class="math notranslate nohighlight">
+\[
+\dfrac{f(x_2)-f(x_1)}{x_2-x_1}
+\]</div>
+<p>Let <span class="math notranslate nohighlight">\(f(x)=x^2\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Find the average rate of change of the function <span class="math notranslate nohighlight">\(f\)</span> as <span class="math notranslate nohighlight">\(x\)</span> goes from <span class="math notranslate nohighlight">\(1\)</span> to <span class="math notranslate nohighlight">\(2\)</span>.</p></li>
+<li><p>Find the average rate of change of the function <span class="math notranslate nohighlight">\(f\)</span> as <span class="math notranslate nohighlight">\(x\)</span> goes from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
+<li><p>Find the average rate of change of the function <span class="math notranslate nohighlight">\(f\)</span> as <span class="math notranslate nohighlight">\(x\)</span> goes from <span class="math notranslate nohighlight">\(0.5\)</span> to <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
+<li><p>Find the average rate of change of the function <span class="math notranslate nohighlight">\(f\)</span> as <span class="math notranslate nohighlight">\(x\)</span> goes from <span class="math notranslate nohighlight">\(1\)</span> to <span class="math notranslate nohighlight">\(1.5\)</span>.</p></li>
+<li><p>Attempt to find the instantaneous rate of change of the function <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x=1\)</span>.</p></li>
+</ol>
+<p>(For (5.) use the method worked out from the previous example; here is the solutions to each part.)</p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>f(x):=x^2$
+m(x1,x2):=(f(x2)-f(x1))/(x2-x1)$
+m(2,1);
+m(0,1);
+m(0.5,1); m(1,1.5);
+limit(m(x,1),x,1);
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{48}$}3\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{49}$}1\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{50}$}1.5\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{51}$}2.5\]</div>
+<div class="math notranslate nohighlight">
+\[\tag{${\it \%o}_{52}$}2\]</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="limitExamples.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Limit Examples</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="limitDerivative.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Limit Definition of the Derivative</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Michael McCabe<br/>
+    
+        &copy; Copyright 2022, Michael McCabe.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Limit Examples &#8212; Business Calculus</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Limits and Continuity" href="limitCont.html" />
+    <link rel="prev" title="Review of Functions" href="../Functions/Functions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Business Calculus</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Functions/Functions.html">
+   Review of Functions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Limit Examples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="limitCont.html">
+   Limits and Continuity
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Limits/limitExamples.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recall">
+   Recall:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-1">
+     Example 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2">
+     Example 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-3">
+     Example 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4">
+     Example 4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5">
+     Example 5
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Limit Examples</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#recall">
+   Recall:
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-1">
+     Example 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-2">
+     Example 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-3">
+     Example 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-4">
+     Example 4
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-5">
+     Example 5
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="limit-examples">
+<h1>Limit Examples<a class="headerlink" href="#limit-examples" title="Permalink to this headline">¶</a></h1>
+<p>Here we will look at specific examples using the limit.</p>
+<div class="section" id="recall">
+<h2>Recall:<a class="headerlink" href="#recall" title="Permalink to this headline">¶</a></h2>
+<p>Suppose</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to a}f(x)=L\,\,\text{ and }\,\,\lim_{x\to a}g(x)=M
+\]</div>
+<p>Then</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}\left[f(x)\right]}^{r}{\displaystyle =\left[\lim_{x\to a}f(x)\right]^{r}=L^{r}}\)</span>
+where <span class="math notranslate nohighlight">\(r\)</span> is a positive number.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}cf(x)=c\lim_{x\to a}f(x)=cL}\)</span> where
+<span class="math notranslate nohighlight">\(c\)</span> is a real number.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}\left[f(x)\pm g(x)\right]=\lim_{x\to a}f(x)\pm\lim_{x\to a}g(x)=L\pm M}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}\left[f(x)g(x)\right]=\left[\lim_{x\to a}f(x)\right]\left[\lim_{x\to a}g(x)\right]=L\cdot M}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}\frac{f(x)}{g(x)}=\frac{\lim_{x\to a}f(x)}{\lim_{x\to a}g(x)}=\frac{L}{M}}\)</span>
+where <span class="math notranslate nohighlight">\(M\ne0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}x}=a\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}b}=b\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to \infty}\frac{1}{x}}=0\)</span> (thm. 5)</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(f(x)=g(x)\)</span> for all <span class="math notranslate nohighlight">\(x\ne a\)</span>, then <span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to a}f(x)=\lim_{x\to a}g(x)}\)</span>. (cor. 1)</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(\lim_{x\to a^{+}}f(x)\ne\lim_{x\to a^{-}}f(x)\)</span>, then we say <span class="math notranslate nohighlight">\(\lim_{x\to a}f(x)\)</span> does not exists. (cor. 2)</p></li>
+</ol>
+<hr class="docutils" />
+<div class="section" id="example-1">
+<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
+<p>Evaluate the limit:</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to3}\dfrac{x^{2}+3x+4}{x^{2}+7}
+\]</div>
+<p>SOLUTION:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lim_{x\to3}\dfrac{x^{2}+3x+4}{x^{2}+7} &amp; =\dfrac{\lim_{x\to3}x^{2}+\lim_{x\to3}3x+\lim_{x\to3}4}{\lim_{x\to3}x^{2}+\lim_{x\to3}7}\\
+ &amp; =\dfrac{\left(\lim_{x\to3}x\right)^{2}+3\lim_{x\to3}x+4}{\left(\lim_{x\to3}x\right)^{2}+7}\\
+ &amp; =\dfrac{\left(3\right)^{2}+3\cdot3+4}{\left(3\right)^{2}+7}\\
+ &amp; =\frac{11}{8}
+\end{align*}
+\end{split}\]</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="example-2">
+<h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
+<p>Evaluate the limit:</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{x\to64}\dfrac{\sqrt{x}-8}{x-64}
+\]</div>
+<p>SOLUTION:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\lim_{x\to64}\dfrac{\sqrt{x}-8}{x-64} &amp; =\lim_{x\to64}\dfrac{\sqrt{x}-8}{x-64}\cdot\left(\dfrac{\sqrt{x}+8}{\sqrt{x}+8}\right)\\
+ &amp; =\lim_{x\to64}\dfrac{x-64}{(x-64)\cdot(\sqrt{x}+8)}\\
+ &amp; =\lim_{x\to64}\dfrac{1}{\sqrt{x}+8}\\
+ &amp; =\dfrac{\lim_{x\to64}1}{\lim_{x\to64}\sqrt{x}+\lim_{x\to64}8}\\
+ &amp; =\dfrac{1}{\sqrt{\lim_{x\to64}x}+8}\\
+ &amp; =\dfrac{1}{\sqrt{64}+8}\\
+ &amp; =\dfrac{1}{8+8}\\
+ &amp; =\dfrac{1}{16}
+\end{align*}
+\end{split}\]</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="example-3">
+<h3>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+f(x)=\begin{cases}
+x^{2}+1 &amp; x\le1\\
+3x-2 &amp; x&gt;1
+\end{cases}
+\end{split}\]</div>
+<p>Evaluate:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(f(1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\({\displaystyle \lim_{x\to1}f(x)}\)</span></p></li>
+</ol>
+<p>SOLUTION:</p>
+<ol class="arabic simple">
+<li><p>Evaluate <span class="math notranslate nohighlight">\(f(1)\)</span> means to evaluate <span class="math notranslate nohighlight">\(f\)</span> exactly when <span class="math notranslate nohighlight">\(x=1\)</span>. According
+to the definition of the piecewise function we have</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+f(1)=1^{2}+1=2.
+\]</div>
+<ol class="arabic simple">
+<li><p>In order to evaluate this piecewise function we must first evaluate
+<span class="math notranslate nohighlight">\(\lim_{x\to1^{-}}f(x)\)</span> and <span class="math notranslate nohighlight">\(\lim_{x\to1^{+}}f(x)\)</span>. If the two are
+equal <span class="math notranslate nohighlight">\(L\)</span> then we say <span class="math notranslate nohighlight">\(\lim_{x\to1}f(x)=L\)</span>; however, if the two
+are not equal we say <span class="math notranslate nohighlight">\(\lim_{x\to1}f(x)\)</span> does not exist.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}\lim_{x\to1^{-}}f(x) &amp; =\lim_{x\to1^{-}}\left(x^{2}+1\right)=1^{2}+1=2\\
+\lim_{x\to1^{+}}f(x) &amp; =\lim_{x\to1^{+}}\left(3x-2\right)=3(1)-2=1
+\end{aligned}
+\end{split}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\lim_{x\to1^{-}}f(x)\ne\lim_{x\to1^{+}}f(x)\)</span> we say <span class="math notranslate nohighlight">\(\lim_{x\to1}f(x)\)</span>
+does not exist.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="example-4">
+<h3>Example 4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
+<p>Evaluate the limit:</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{h\to0}\dfrac{\frac{1}{x+h}-\frac{1}{x}}{h}
+\]</div>
+<p>SOLUTION:</p>
+<p>First, we will simplify <span class="math notranslate nohighlight">\(\dfrac{\frac{1}{x+h}-\frac{1}{x}}{h}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\dfrac{\frac{1}{x+h}-\frac{1}{x}}{h} &amp; =\dfrac{\left(\frac{x}{x}\right)\cdot\frac{1}{x+h}-\frac{1}{x}\cdot\left(\frac{x+h}{x+h}\right)}{h}\\
+ &amp; =\dfrac{\frac{x-(x+h)}{x(x+h)}}{h}\\
+ &amp; =\dfrac{\frac{-h}{x(x+h)}}{h}\\
+ &amp; =\dfrac{1}{h}\cdot\left(\dfrac{-h}{x(x+h)}\right)\\
+ &amp; =-\dfrac{1}{x(x+h)}
+\end{align*}
+\end{split}\]</div>
+<p>Next, we notice that <span class="math notranslate nohighlight">\(\dfrac{\frac{1}{x+h}-\frac{1}{x}}{h}=-\dfrac{1}{x(x+h)}\)</span>
+for all <span class="math notranslate nohighlight">\(h\ne0\)</span>. Thus, by Corollary 1 we have</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{h\to0}\dfrac{\frac{1}{x+h}-\frac{1}{x}}{h}=\lim_{h\to0}\dfrac{-1}{x(x+h)}=-\dfrac{1}{x(x+0)}=-\dfrac{1}{x^{2}}.
+\]</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="example-5">
+<h3>Example 5<a class="headerlink" href="#example-5" title="Permalink to this headline">¶</a></h3>
+<p>Evaluate the limit:</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{h\to0}\dfrac{\sqrt{x+h}-\sqrt{x}}{h}
+\]</div>
+<p>SOLUTION:</p>
+<p>First, we simplify <span class="math notranslate nohighlight">\(\dfrac{\sqrt{x+h}-\sqrt{x}}{h}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
+\dfrac{\sqrt{x+h}-\sqrt{x}}{h} &amp; =\dfrac{\sqrt{x+h}-\sqrt{x}}{h}\cdot\left(\dfrac{\sqrt{x+h}+\sqrt{x}}{\sqrt{x+h}+\sqrt{x}}\right)\\
+ &amp; =\dfrac{(x+h)-(x)}{h\left(\sqrt{x+h}+\sqrt{x}\right)}\\
+ &amp; =\dfrac{h}{h\left(\sqrt{x+h}+\sqrt{x}\right)}\\
+ &amp; =\dfrac{1}{\sqrt{x+h}+\sqrt{x}}
+\end{align*}
+\end{split}\]</div>
+<p>Next, notice <span class="math notranslate nohighlight">\(\dfrac{\sqrt{x+h}-\sqrt{x}}{h}=\dfrac{1}{\sqrt{x+h}+\sqrt{x}}\)</span>
+for all <span class="math notranslate nohighlight">\(h\ne0\)</span>. Thus, by Corollary 1 we have</p>
+<div class="math notranslate nohighlight">
+\[
+\lim_{h\to0}\dfrac{\sqrt{x+h}-\sqrt{x}}{h}=\lim_{h\to0}\dfrac{1}{\sqrt{x+h}+\sqrt{x}}=\dfrac{1}{\sqrt{x+0}+\sqrt{x}}=\dfrac{1}{2\sqrt{x}}
+\]</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../Functions/Functions.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Review of Functions</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="limitCont.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Limits and Continuity</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Michael McCabe<br/>
+    
+        &copy; Copyright 2022, Michael McCabe.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

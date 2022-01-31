@@ -1,0 +1,427 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review of Functions &#8212; Business Calculus</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Limits" href="../Limits/Limits.html" />
+    <link rel="prev" title="Welcome to Buisness Calculus’s documentation!" href="../index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Business Calculus</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Review of Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Limits/Limits.html">
+   Limits
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Limits/limitExamples.html">
+   Limit Examples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Limits/limitCont.html">
+   Limits and Continuity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Limits/limitDerivative.html">
+   Limit Definition of the Derivative
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Functions/Functions.md.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions">
+   Functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-function">
+     Definition of Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-function">
+     Linear Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-polynomials">
+     Definition of Polynomials
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#power-function">
+     Power Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#absolute-value-function">
+     Absolute Value Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#expoential-function">
+     Expoential Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logarithmic-function">
+     Logarithmic Function
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Review of Functions</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions">
+   Functions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-function">
+     Definition of Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-function">
+     Linear Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-polynomials">
+     Definition of Polynomials
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#power-function">
+     Power Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#absolute-value-function">
+     Absolute Value Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#expoential-function">
+     Expoential Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logarithmic-function">
+     Logarithmic Function
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="review-of-functions">
+<h1>Review of Functions<a class="headerlink" href="#review-of-functions" title="Permalink to this headline">¶</a></h1>
+<p>This is a quick run through of functions.</p>
+<hr class="docutils" />
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="definition-of-function">
+<h3>Definition of Function<a class="headerlink" href="#definition-of-function" title="Permalink to this headline">¶</a></h3>
+<p>A function <span class="math notranslate nohighlight">\(f\)</span> is a rule of correspondence that associates with each element <span class="math notranslate nohighlight">\(x\)</span> in one set <span class="math notranslate nohighlight">\(D\)</span>, called the domain, a single value of <span class="math notranslate nohighlight">\(f(x)\)</span> from a second set, <span class="math notranslate nohighlight">\(R\)</span>. The set of all values obtained is called the range of the function.</p>
+</div>
+<div class="section" id="linear-function">
+<h3>Linear Function<a class="headerlink" href="#linear-function" title="Permalink to this headline">¶</a></h3>
+<p>A function whose graph is described as a line is called a linear function. Algebratically denoted</p>
+<div class="math notranslate nohighlight">
+\[f(x)=mx+b=a_1 x + a_0\]</div>
+<p>To expand from the previous definition we recall the following important definition.</p>
+</div>
+<div class="section" id="definition-of-polynomials">
+<h3>Definition of Polynomials<a class="headerlink" href="#definition-of-polynomials" title="Permalink to this headline">¶</a></h3>
+<p>A function <span class="math notranslate nohighlight">\(P\)</span> is called a polynomial if</p>
+<div class="math notranslate nohighlight">
+\[
+P(x)=a_{n}x^{n}+a_{n-1}x^{n-1}+\cdots+a_{2}x^{2}+a_{1}x+a_{0}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(n\)</span> is a non-negative integer and the numbers <span class="math notranslate nohighlight">\(a_{0},a_{1},...,a_{n}\)</span>
+are constants called the coefficients of the polynomial.
+The domain of any polynomial is <span class="math notranslate nohighlight">\(\mathbb{R}=\left\{ x\,|\,x\in(-\infty,\infty)\right\} \)</span>.
+If the leading coefficient <span class="math notranslate nohighlight">\(a_{n}\ne0\)</span>, then the degree of the polynomial
+is <span class="math notranslate nohighlight">\(n\)</span>.</p>
+</div>
+<div class="section" id="power-function">
+<h3>Power Function<a class="headerlink" href="#power-function" title="Permalink to this headline">¶</a></h3>
+<p>A function of the form</p>
+<div class="math notranslate nohighlight">
+\[f(x)=x^a\]</div>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is a real number is called a power funciton.</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(a=1,2,3,...\)</span> we have a polynomial.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(a=\frac{1}{n}\)</span> where <span class="math notranslate nohighlight">\(n=1,2,3,...\)</span>, then we say</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f(x)=x^{\frac{1}{n}}=\sqrt[n]{x}\]</div>
+<p>is a root function.
+* If <span class="math notranslate nohighlight">\(n\)</span> is even then the domain of <span class="math notranslate nohighlight">\(f\)</span> is <span class="math notranslate nohighlight">\(\{x|x\in[0,\infty)\}\)</span>.
+* If <span class="math notranslate nohighlight">\(n\)</span> is odd then the domain of <span class="math notranslate nohighlight">\(f\)</span> is <span class="math notranslate nohighlight">\(\{x|x\in(-\infty,\infty)\}\)</span>.</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(a=-1,-2,-3,...\)</span>, then we say</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f(x)=x^a=\frac{1}{x^{-a}}\]</div>
+<p>is the reciprocal function.
+* If <span class="math notranslate nohighlight">\(a=-1\)</span>, then we have</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$$f(x)=x^{-1}=\frac{1}{x^{-(-1)}}=\frac{1}{x^1}=\frac{1}{x}$$
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(a=0\)</span>, then we say</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f(x)=x^0=1\]</div>
+<p>is the constant function.</p>
+</div>
+<div class="section" id="absolute-value-function">
+<h3>Absolute Value Function<a class="headerlink" href="#absolute-value-function" title="Permalink to this headline">¶</a></h3>
+<p>The absolute value function is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+|x|=\begin{cases}
+x &amp; \text{if} x\ge 0\\
+-x &amp; \text{if} x&lt;0
+\end{cases} = \sqrt[2]{x^2}
+\end{split}\]</div>
+</div>
+<div class="section" id="expoential-function">
+<h3>Expoential Function<a class="headerlink" href="#expoential-function" title="Permalink to this headline">¶</a></h3>
+<p>A function of the form <span class="math notranslate nohighlight">\(f(x)a^x\)</span>, where <span class="math notranslate nohighlight">\(a&gt;0\)</span> and <span class="math notranslate nohighlight">\(a\ne 1\)</span>, is called an exponential function with base <span class="math notranslate nohighlight">\(a\)</span>. The domain of the exponential function is <span class="math notranslate nohighlight">\(\{ x | x\in (-\infty,\infty) \}\)</span> and the range is <span class="math notranslate nohighlight">\(\{ y | y\in (0,\infty) \}\)</span>.</p>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>plot2d([exp(x),exp(-x)],[x,-5,5],[y,-1,5],[legend,&quot;f(x)=e^x&quot;,&quot;f(x)=e^{-x}&quot;]);
+</pre></div>
+</div>
+<p><img alt="svg" src="Functions/md/Functions_files/md/Functions_2_0.svg" /></p>
+</div>
+<div class="section" id="logarithmic-function">
+<h3>Logarithmic Function<a class="headerlink" href="#logarithmic-function" title="Permalink to this headline">¶</a></h3>
+<p>A function of the form <span class="math notranslate nohighlight">\(f(x)=\log_{a}(x)\)</span>, where <span class="math notranslate nohighlight">\(a\ne1\)</span> and <span class="math notranslate nohighlight">\(a&gt;0\)</span>, is called a logarithmic function “log base a of x”. The domain of the logarithmic function is <span class="math notranslate nohighlight">\(\{ x | x\in (0,\infty) \}\)</span> and the range of <span class="math notranslate nohighlight">\(\{ y | y\in(-\infty,\infty) \}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[y=a^x \iff x=\log_a(y)\]</div>
+<div class="highlight-maxima notranslate"><div class="highlight"><pre><span></span>plot2d([log(x),log(-x)],[x,-5,5],[y,-5,5],[legend,&quot;y=ln(x)&quot;,&quot;y=ln(-x)&quot;]);
+</pre></div>
+</div>
+<p><img alt="svg" src="Functions/md/Functions_files/md/Functions_4_1.svg" /></p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to Buisness Calculus’s documentation!</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../Limits/Limits.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Limits</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Michael McCabe<br/>
+    
+        &copy; Copyright 2022, Michael McCabe.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
