@@ -14,12 +14,9 @@ release = '2023'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ['sphinx_panels',
-              'sphinxcontrib.bibtex',
-              'sphinx_jinja',
-              'ablog',
-              'sphinx.ext.intersphinx',
-             ]
+extensions = [
+    "nbsphinx",
+]
 
 templates_path = ['_templates']
 exclude_patterns = []

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Functions &#8212; Business Calculus 2023 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b3523f8e" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=039e1c02" />
+    <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=dca6b923"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="Functions">
+<h1>Functions<a class="headerlink" href="#Functions" title="Permalink to this heading">¶</a></h1>
+<p>In this “chapter” I will attempt to run through some required function knowledge for calculus.</p>
+<section id="What-is-a-function?">
+<h2>What is a function?<a class="headerlink" href="#What-is-a-function?" title="Permalink to this heading">¶</a></h2>
+<p>The natural world is full of relationships between quantities that change. When we see these relationships, it is natural for us to ask “If I know one quantity, can I then determine the other?” This establishes the idea of an input quantity, or independent variable, and a corresponding output quantity, or dependent variable. From this we get the notion of a functional relationship in which the output can be determined from the input.</p>
+<p>For some quantities, like height and age, there are certainly relationships between these quantities. Given a specific person and any age, it is easy enough to determine their height, but if we tried to reverse that relationship and determine height from a given age, that would be problematic, since most people maintain the same height for many years.</p>
+<blockquote>
+<div><p>Definition of a Function</p>
+<p>A <strong>function</strong> is rule for a relationship between an input, or independent, quantity and an output, or dependent, quantity in which each input value uniquely determines one output value. We say “the output is a function of the input.”</p>
+</div></blockquote>
+<p>Following are some things to consider: * In the height and age example above, is height a function of age? Is age a function of height? * In the height and age example above, it would be correct to say that height is a function of age, since each age uniquely determines a height. For example, on my 18th birthday, I had exactly one height of 69 inches. * However, age is not a function of height, since one height input might correspond with more than one output age. For example, for an input
+height of 70 inches, there is more than one output of age since I was 70 inches at the age of 20 and 21.</p>
+</section>
+<section id="Function-Notation">
+<h2>Function Notation<a class="headerlink" href="#Function-Notation" title="Permalink to this heading">¶</a></h2>
+<p>To simplify writing out expressions and equations involving functions, a simplified notation is often used. We also use descriptive variables to help us remember the meaning of the quantities in the problem.</p>
+<p>Rather than write “height is a function of age,” we could use the descriptive variable h to represent height and we could use the descriptive variable a to represent age.</p>
+<hr class="docutils" />
+<p><strong>Example</strong></p>
+<p>“Height is a function of age”. If we name the function <span class="math notranslate nohighlight">\(f\)</span> we write</p>
+<div class="math notranslate nohighlight">
+\[&quot;h\text{ is }f\text{ of }a&quot;\]</div>
+<p>or more simply</p>
+<div class="math notranslate nohighlight">
+\[h=f(a)\]</div>
+<p>we could instead name the function <span class="math notranslate nohighlight">\(h\)</span> and write</p>
+<div class="math notranslate nohighlight">
+\[h(a)\]</div>
+<p>which is read “<span class="math notranslate nohighlight">\(h\)</span> of <span class="math notranslate nohighlight">\(a\)</span>”.</p>
+<hr class="docutils" />
+<p>Remember we can use any variable to name the function; the notation <span class="math notranslate nohighlight">\(h(a)\)</span> shows us that <span class="math notranslate nohighlight">\(h\)</span> depends on <span class="math notranslate nohighlight">\(a\)</span>. The value “<span class="math notranslate nohighlight">\(a\)</span>” must be put into the function “<span class="math notranslate nohighlight">\(h\)</span>” to get a result. Be careful – the parentheses indicate that age is input into the function (Note: do not confuse these parentheses with multiplication!).</p>
+<blockquote>
+<div><p>The notation output = <span class="math notranslate nohighlight">\(f(\text{input})\)</span> defines a function name <span class="math notranslate nohighlight">\(f\)</span>. This would be read “output is <span class="math notranslate nohighlight">\(f\)</span> of input”.</p>
+</div></blockquote>
+<hr class="docutils" />
+<p><strong>Example</strong></p>
+<p>A function <span class="math notranslate nohighlight">\(N=f(y)\)</span> give the number of police officers, <span class="math notranslate nohighlight">\(N\)</span>, in a town for year <span class="math notranslate nohighlight">\(y\)</span>. what does <span class="math notranslate nohighlight">\(f(2022)=300\)</span> tell us?</p>
+<p><strong>Solution</strong></p>
+<p>When we read <span class="math notranslate nohighlight">\(f(2022)=300\)</span>, we see the input quantity is <span class="math notranslate nohighlight">\(2022\)</span>, which is a value for the input quantity of the function, the year, <span class="math notranslate nohighlight">\(y\)</span>. The output value is <span class="math notranslate nohighlight">\(300\)</span>, the number of police officers, <span class="math notranslate nohighlight">\(N\)</span>, a value for the output quantity. Remember <span class="math notranslate nohighlight">\(N=f(y)\)</span>. So this tells us that in the year <span class="math notranslate nohighlight">\(2022\)</span> there were <span class="math notranslate nohighlight">\(300\)</span> police officers in the town.</p>
+</section>
+<hr class="docutils" />
+<section id="Table-of-Values">
+<h2>Table of Values<a class="headerlink" href="#Table-of-Values" title="Permalink to this heading">¶</a></h2>
+<p>Functions can be represented in many ways: Words (as we did in the last few examples), tables of values, graphs, or formulas. Represented as a table, we are presented with a list of input and output values.</p>
+<p>This table represents the age of children in years and their corresponding heights. While some tables show all the information we know about a function, this particular table represents just some of the data available for height and ages of children.</p>
+<figure><table><thead><tr><th><p>Input</p>
+</th><th><p>Output</p>
+</th></tr></thead><tbody><tr><td><p>2</p>
+</td><td><p>1</p>
+</td></tr><tr><td><p>5</p>
+</td><td><p>3</p>
+</td></tr><tr><td><p>8</p>
+</td><td><p>6</p>
+</td></tr></tbody></table><figcaption style="text-align: center;"><p>Table A</p>
+</figcaption></figure><div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Business Calculus</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Michael McCabe.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="../_sources/Function/Introduction.ipynb.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
