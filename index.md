@@ -1,14 +1,9 @@
-# Brian Rose's climate dynamics and modeling group
+# Michael McCabe's Website
 
-Welcome to the homepage for the Climate Dynamics and Modeling research group
-housed in the [Department of Atmospheric & Environmental Sciences](https://www.albany.edu/daes)
-at the [University at Albany](https://www.albany.edu)!
+Welcome to the homepage for Michael McCabe.
 
-Here you'll find information and links [about our group](people) and all our activities
-in [research](research), [teaching](teaching), [outreach](miscellany),
-and [open-source software](climlab).
+Here you'll find open sourced material for several math topics. add links here...
 
-If you're looking for Brian's complete CV, find it [here on github](https://github.com/brian-rose/CV/blob/master/Rose_CV.pdf).
 
 ## Recent news
 
@@ -26,11 +21,4 @@ See the [news archives](blog) for a more complete list.
 :maxdepth: 2
 
 people
-research
-teaching
-publications
-climlab
-climategroup
-blog
-miscellany
 ```

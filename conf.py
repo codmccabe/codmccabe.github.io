@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Rose Group Home'
-copyright = '2021, Brian E. J. Rose'
-author = 'Brian E. J. Rose'
+project = 'Michael McCabe'
+copyright = '2023, Michael McCabe'
+author = 'Michael McCabe'
 
 
 # -- General configuration ---------------------------------------------------
@@ -81,10 +81,10 @@ html_sidebars = {
     "blog/**": ['postcard.html', 'recentposts.html', 'archives.html']
 }
 #blog_baseurl = "https://predictablynoisy.com"
-blog_title = "Rose group news"
+blog_title = "Michael Mccabe"
 blog_path = "blog"
-blog_authors = {'Brian': ('Brian E. J. Rose', 'http://www.atmos.albany.edu/facstaff/brose')}
-blog_default_author = "Brian"
+blog_authors = {'Michael': ('Michael McCabe', 'https://www.cod.edu/faculty/websites/mccabem85/')}
+blog_default_author = "Michael"
 fontawesome_included = True
 blog_post_pattern = "posts/*/*"
 post_redirect_refresh = 1

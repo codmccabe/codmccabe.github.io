@@ -1,10 +1,5 @@
-# Rose Research Group Website
+# Michael McCabe's Website
 
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/brian-rose/brian-rose.github.io/deploy-site/main?logo=github&style=for-the-badge)
-
-Sphinx source for the website currently deployed simultaneously in two different places:
--  <http://www.atmos.albany.edu/facstaff/brose/>
-- <https://brian-rose.github.io>
 
 ## How it works
 
@@ -16,9 +11,7 @@ for your repo (Setting --> Options --> GitHub Pages).
 
 ## How to make changes to the site
 
-Rose group members and collaborators are welcome to open Pull Requests with proposed changes. PRs are automatically rendered on readthedocs.org for viewing changes. Select the `Show all checks` link in the PR discussion to reveal the link to `readthedocs.org`. If something doesn't look right, make changes and push to the same branch from where you opened the PR and they will be re-rendered.
-
-Note that the [people page](https://brian-rose.github.io/people.html) is generated at build time from data in the file [_data/people.yml](https://github.com/brian-rose/brian-rose.github.io/blob/main/_data/people.yml). Add yourself and edit your details through this file. Add your headshot image to [_static/images](https://github.com/brian-rose/brian-rose.github.io/tree/main/_static/images). I also encourage everyone to add their preferred pronouns.
+Not sure how yet.
 
 
 ## How to build the site locally

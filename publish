@@ -4,6 +4,3 @@ echo 'Using sphinx to rebuild the site'
 make clean
 make html
 echo ' '
-echo 'Using rsync to update the www folder on reed.'
-rsync -r _build/html/ br546577@reed.atmos.albany.edu:/nfs/home11/staff/brose/www/
-echo 'Publishing complete.'
