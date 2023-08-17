@@ -10,7 +10,7 @@ Welcome to Business Calculus's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   Function/Introduction
+   Test
 
 
 
