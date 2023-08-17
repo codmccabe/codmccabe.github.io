@@ -1,0 +1,6 @@
+#!/bin/bash
+#  a script to automate building and publishing changes to my website
+echo 'Using sphinx to rebuild the site'
+make clean
+make html
+echo ' '
