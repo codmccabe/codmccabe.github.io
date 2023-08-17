@@ -9,6 +9,7 @@ Welcome to Business Calculus's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   Function/Introduction
 
 
 
