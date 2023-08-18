@@ -279,6 +279,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Function-Notation">Function Notation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Table-of-Values">Table of Values</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Solving-and-Evaluating-Functions">Solving and Evaluating Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Functions-and-Graphs">Functions and Graphs</a></li>
 </ul>
             </nav>
         </div>
@@ -347,9 +348,137 @@ height of 70 inches, there is more than one output of age since I was 70 inches 
 </td><td><p>6</p>
 </td></tr><tr><td><p>5</p>
 </td><td><p>8</p>
-</td></tr></tbody></table><figcaption style="text-align: center;"><p>Table of values for Q.</p>
-</figcaption></figure><hr class="docutils" />
-<div class="nbinput nblast docutils container">
+</td></tr></tbody></table><figcaption style="text-align: center;"><p>Table of values for <span class="math notranslate nohighlight">\(Q=g(n)\)</span>.</p>
+</figcaption></figure><ol class="arabic simple">
+<li><p>Evaluate <span class="math notranslate nohighlight">\(g(3)\)</span>.</p></li>
+<li><p>Solve <span class="math notranslate nohighlight">\(g(n)=6\)</span>.</p></li>
+</ol>
+<details><p>Solution</p>
+<p>For (a) it is important to realize we want to input <span class="math notranslate nohighlight">\(3\)</span> into the function <span class="math notranslate nohighlight">\(g\)</span> to find the output. Whereas for (b) we want to find the input such that the output is <span class="math notranslate nohighlight">\(6\)</span>. These are important distinctions for future conversations.</p>
+<ol class="loweralpha simple">
+<li><p>Evaluate <span class="math notranslate nohighlight">\(g(3)\)</span>: Evaluating <span class="math notranslate nohighlight">\(g(3)\)</span> (read: “ g of 3” ) means that we need to determine the output value, <span class="math notranslate nohighlight">\(Q\)</span>, of the function <span class="math notranslate nohighlight">\(g\)</span> given the input value of <span class="math notranslate nohighlight">\(n=3\)</span>. Looking at the table, we see the output corresponding to <span class="math notranslate nohighlight">\(n=3\)</span> is <span class="math notranslate nohighlight">\(Q=7\)</span>, allowing us to conclude <span class="math notranslate nohighlight">\(g(3)=7\)</span>..</p></li>
+<li><p>Solve <span class="math notranslate nohighlight">\(g(n)=6\)</span>: Solving <span class="math notranslate nohighlight">\(g(n)=6\)</span> means we need to determine what input values, <span class="math notranslate nohighlight">\(n\)</span>, produce an output value of <span class="math notranslate nohighlight">\(6\)</span>. Looking at the table we see there are two solutions: <span class="math notranslate nohighlight">\(n=2\)</span> and <span class="math notranslate nohighlight">\(n=4\)</span>. When we input <span class="math notranslate nohighlight">\(2\)</span> into the function <span class="math notranslate nohighlight">\(g\)</span>, our output is <span class="math notranslate nohighlight">\(Q=6\)</span>. When we input <span class="math notranslate nohighlight">\(4\)</span> into the function <span class="math notranslate nohighlight">\(g\)</span>, our output is also <span class="math notranslate nohighlight">\(Q=6\)</span>.</p></li>
+</ol>
+</details></section>
+<hr class="docutils" />
+<section id="Functions-and-Graphs">
+<h2>Functions and Graphs<a class="headerlink" href="#Functions-and-Graphs" title="Permalink to this heading">#</a></h2>
+<p>Oftentimes a graph of a relationship can be used to define a function. By convention, graphs are typically created with the input quantity along the horizontal axis and the output quantity along the vertical.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.linspace(-5, 5, 400)
+y = x**2
+
+plt.figure()
+plt.plot(x, y)
+plt.title(&#39;Parabola&#39;)
+plt.xlabel(&#39;x&#39;)
+plt.ylabel(&#39;y = x^2&#39;)
+plt.grid()
+plt.axhline(0, color=&#39;black&#39;, linewidth=0.8)  # Add horizontal axis
+plt.axvline(0, color=&#39;black&#39;, linewidth=0.8)  # Add vertical axis
+plt.show()
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/Function_Introduction_1_0.png" src="../_images/Function_Introduction_1_0.png" />
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>theta = np.linspace(0, 2*np.pi, 400)
+r = 2
+
+x = r * np.cos(theta)
+y = r * np.sin(theta)
+
+plt.figure()
+plt.plot(x, y)
+plt.title(&#39;Circle&#39;)
+plt.xlabel(&#39;x&#39;)
+plt.ylabel(&#39;y&#39;)
+plt.grid()
+plt.axhline(0, color=&#39;black&#39;, linewidth=0.8)  # Add horizontal axis
+plt.axvline(0, color=&#39;black&#39;, linewidth=0.8)  # Add vertical axis
+plt.show()
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/Function_Introduction_2_0.png" src="../_images/Function_Introduction_2_0.png" />
+</div>
+</div>
+<p>Looking at the two graphs above, the first define a function <span class="math notranslate nohighlight">\(y=f(x)\)</span>, since for each input value along the horizontal axis there is exactly one output value corresponding, determined by the y-value of the graph. The second graph does not define a function <span class="math notranslate nohighlight">\(y=f(x)\)</span> since some input values, such as <span class="math notranslate nohighlight">\(x=1\)</span>, correspond with more than one output value.</p>
+<p>The <strong>vertical line test</strong> is a handy way to think about whether a graph defines the vertical output as a function of the horizontal input. Imagine drawing vertical lines through the graph. If any vertical line would cross the graph more than once, then the graph does not define only one vertical output for each horizontal input.</p>
+<p>Evaluating a function using a graph requires taking the given input and using the graph to look up the corresponding output. Solving a function equation using a graph requires taking the given output and looking on the graph to determine the corresponding input.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import numpy as np
+import matplotlib.pyplot as plt
+
+# Define the equation
+def equation(x):
+    return (x - 1)**2
+
+# Generate x values
+x = np.linspace(-1.23606797749979,3.23606797749979, 400)
+
+# Calculate y values using the equation
+y = equation(x)
+
+# Set up the figure and plot
+plt.figure()
+plt.plot(x, y, label=&#39;$y = (x - 1)^2$&#39;)
+plt.title(&#39;Plot of $y = (x - 1)^2$&#39;)
+plt.xlabel(&#39;x&#39;)
+plt.ylabel(&#39;y&#39;)
+plt.grid(True, linestyle=&#39;--&#39;, linewidth=0.8)
+plt.axhline(0, color=&#39;black&#39;, linewidth=0.8)
+plt.axvline(0, color=&#39;black&#39;, linewidth=0.8)
+
+# Set custom grid intervals
+x_grid = np.arange(-5, 6)
+y_grid = np.arange(-5, 6)
+plt.xticks(x_grid)
+plt.yticks(y_grid)
+
+plt.legend()
+plt.show()
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../_images/Function_Introduction_4_0.png" src="../_images/Function_Introduction_4_0.png" />
+</div>
+</div>
+<p><strong>Example</strong></p>
+<p>From the plot above: 1. Evaluate <span class="math notranslate nohighlight">\(f(2)\)</span>. 2. Solve <span class="math notranslate nohighlight">\(f(x)=4\)</span>.</p>
+<p>Do this by only looking at the graph and they try doing it algebraically.</p>
+<details><p>Solution</p>
+<ol class="loweralpha simple">
+<li><p>To evaluate <span class="math notranslate nohighlight">\(f(2)\)</span>, we find the input of <span class="math notranslate nohighlight">\(x=2\)</span> on the horizontal axis. Moving up to the graph gives the point <span class="math notranslate nohighlight">\((2,1)\)</span>, giving an output of <span class="math notranslate nohighlight">\(y=1\)</span>. So <span class="math notranslate nohighlight">\(f(2)=1\)</span>.</p></li>
+<li><p>To solve <span class="math notranslate nohighlight">\(f(x)=4\)</span>, we find the value <span class="math notranslate nohighlight">\(4\)</span> on the vertical axis because if <span class="math notranslate nohighlight">\(f(x)=4\)</span> then <span class="math notranslate nohighlight">\(4\)</span> is the output. Moving horizontally across the graph gives two points with the output of <span class="math notranslate nohighlight">\(4\)</span>: <span class="math notranslate nohighlight">\((-1,4)\)</span> and <span class="math notranslate nohighlight">\((3,4)\)</span>. These give the two solutions to <span class="math notranslate nohighlight">\(f(x)=4\)</span>: <span class="math notranslate nohighlight">\(x=-1\)</span> or <span class="math notranslate nohighlight">\(x=3\)</span>. This means <span class="math notranslate nohighlight">\(f(-1)=4\)</span> and <span class="math notranslate nohighlight">\(f(3)=4\)</span>, or when the input is <span class="math notranslate nohighlight">\(-1\)</span> or <span class="math notranslate nohighlight">\(3\)</span>, the output is <span class="math notranslate nohighlight">\(4\)</span>.</p></li>
+</ol>
+</details><div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
@@ -412,6 +541,7 @@ height of 70 inches, there is more than one output of age since I was 70 inches 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Function-Notation">Function Notation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Table-of-Values">Table of Values</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Solving-and-Evaluating-Functions">Solving and Evaluating Functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Functions-and-Graphs">Functions and Graphs</a></li>
 </ul>
   </nav></div>
 
