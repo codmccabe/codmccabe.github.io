@@ -58,7 +58,7 @@ x & >350
 :::
 Interpret the results.
 :::{dropdown} Solution:
-This means we expect to maintain positive profits when more than 350 units are produced and sold. (Why?)
+We expect to maintain positive profits when more than 350 units are produced and sold. (Why?)
 :::
 ::::
 ## Quadratic Inequality
@@ -135,7 +135,7 @@ Third, $$\begin{aligned}
 2*(0)^{2}+5*(0)-12 & =-12\\
 2*(2)^{2}+5*(2)-12 & =6\end{aligned}$$ From the test values we see the solution set is: $$\{x\,|\,x\le-4\lor\frac{3}{2}\le x\}=(-\infty,-4]\cup[\frac{3}{2},\infty)$$
 :::{tikz}
-    \draw(0,-1)--(0,1);
+    \draw[white](0,-1)--(0,1);
     \draw[<->](-4,0)--(4,0)node[below right]{$x$};
 	\draw[latex-{]},thick,blue](-4,0)--(-1,0)node[below]{$-4$};
 	\draw[{[}-latex,thick,blue](1,0)node[below]{$\frac{3}{2}$}--(4,0);
@@ -220,6 +220,8 @@ Test $x=-10$ $$-3\le\dfrac{3(-10)-4}{-5}<4$$ $$-3\le\frac{34}{5}\nless4$$ This m
 Test $x=0$ $$-3\le\dfrac{3(0)-4}{-5}<4$$ $$-3\le\frac{4}{5}<4$$ This means $[-\frac{16}{3},\frac{19}{3})$ is part of the solution set.
 
 Test $x=10$ $$-3\le\dfrac{3(10)-4}{-5}<4$$ $$-3\nleq-\frac{26}{5}<4$$ This means that $[\frac{19}{3},\infty)$ is not part of the solution set.
+:::
+::::
 
 Solve the following rational inequality. $$\dfrac{1-x}{x+2}<-1$$
 
