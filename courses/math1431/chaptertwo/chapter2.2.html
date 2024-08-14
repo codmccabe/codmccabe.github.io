@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Section 2.2 - Circles &#8212; Math 1431 0.2 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b029709b"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chaptertwo/chapter2.2';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Section 2.3 - Functions" href="chapter2.3.html" />
+    <link rel="prev" title="Section 2.1 - Rectangular Coordinates and Graphs" href="chapter2.1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Math 1431 0.2 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../welcome.html">Welcome!</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter One:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapterone/chapter1.0.html">Equations and Inequalities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapterone/chapter1.6.html">Section 1.6 - Other Types of Equations and Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapterone/chapter1.7.html">Section 1.7 - Inequalities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapterone/chapter1.8.html">Section 1.8 - Absolute Value Function</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Two:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapter2.0.html">Graphs and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.1.html">Section 2.1 - Rectangular Coordinates and Graphs</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Section 2.2 - Circles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.3.html">Section 2.3 - Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.4.html">Section 2.4 - Linear Functions</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chaptertwo/chapter2.2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Section 2.2 - Circles</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="section-2-2-circles">
+<h1>Section 2.2 - Circles<a class="headerlink" href="#section-2-2-circles" title="Permalink to this heading">#</a></h1>
+<div class="proof definition admonition" id="circle">
+<p class="admonition-title"><span class="caption-number">Definition 5 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A circle is the set of all points in a plane that lie a given distance from a given point. The given distance is called the circle’s radius, denoted <span class="math notranslate nohighlight">\(r\)</span>, and the given point is called the center, denoted <span class="math notranslate nohighlight">\((h,k)\)</span>. The equation that satisfies this definition is <div class="math notranslate nohighlight">
+\[(x-h)^{2}+(y-k)^{2}=r^{2}.\]</div>
+</p>
+<p>The equation <span class="math notranslate nohighlight">\(x^{2}+y^{2}=1\)</span> defines the unit circle (since the radius of the circle is <span class="math notranslate nohighlight">\(1\)</span> and is centered at <span class="math notranslate nohighlight">\((0,0)\)</span>).</p>
+</section>
+</div><p>Consider:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+(x-h)^{2}+(y-k)^{2} &amp; =c\iff\\
+(x-h)^{2}+(y-k)^{2}-c &amp; =0\iff\\
+y^{2}-2\,k\,y+x^{2}-2\,h\,x+k^{2}+h^{2}-c &amp; =0\iff\\
+x^{2}+y^{2}+(-2h)x+(-2k)y+\left(k^{2}+h^{2}-c\right) &amp; =0\iff\\
+x^{2}+y^{2}+Dx+Ey+F &amp; =0\end{aligned}\end{split}\]</div>
+<div class="proof definition admonition" id="generalCircleEQ">
+<p class="admonition-title"><span class="caption-number">Definition 6 </span> (General Form of the Equation of a Circle)</p>
+<section class="definition-content" id="proof-content">
+<p>From some real number <span class="math notranslate nohighlight">\(D,\)</span><span class="math notranslate nohighlight">\(E\)</span>, and <span class="math notranslate nohighlight">\(F\)</span>, the equation <div class="math notranslate nohighlight">
+\[x^{2}+y^{2}+Dx+Ey+F=0\]</div>
+ can have a graph that is a circle or a point or is nonexistent.</p>
+</section>
+</div><div class="proof corollary admonition" id="circleEQConditions">
+<p class="admonition-title"><span class="caption-number">Corollary 1 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>Given <div class="math notranslate nohighlight">
+\[(x-h)^{2}+(y-k)^{2}=c\]</div>
+ for any number <span class="math notranslate nohighlight">\(c\)</span>.</p>
+<ol class="arabic simple">
+<li><p>If <span class="math notranslate nohighlight">\(c&gt;0\)</span>, then <span class="math notranslate nohighlight">\(r^{2}=c\)</span>, and the graph of the equation is a circle with radius <span class="math notranslate nohighlight">\(\sqrt{c}\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(c=0\)</span>, then the graph of the equation is the single point <span class="math notranslate nohighlight">\((h,k)\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(c&lt;0\)</span>, then no points satisfy the equation, and the graph is nonexistent.</p></li>
+</ol>
+</section>
+</div><div class="proof example admonition" id="solveCompletingSquare1">
+<p class="admonition-title"><span class="caption-number">Example 26 </span></p>
+<section class="example-content" id="proof-content">
+<p>Solve by completing the square <div class="math notranslate nohighlight">
+\[6x^{2}+13x+5=0\]</div>
+</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">First, divide by <span class="math notranslate nohighlight">\(6\)</span> to get the leading coefficient equal to one. <div class="math notranslate nohighlight">
+\[x^{2}+\frac{13}{6}x+\frac{5}{6}=0.\]</div>
+ Second, subtract <span class="math notranslate nohighlight">\(\frac{5}{6}\)</span> from both sides and leave space to “complete the square”. <div class="math notranslate nohighlight">
+\[x^{2}+\frac{13}{6}x+\underline{\,\,\,\,}=-\frac{5}{6}+\underline{\,\,\,\,}.\]</div>
+ Third, complete the square by adding <span class="math notranslate nohighlight">\(\left(\dfrac{\frac{13}{6}}{2}\right)^{2}=\left(\dfrac{13}{12}\right)^{2}=\dfrac{169}{144}\)</span> to both sides <div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+x^{2}+\frac{13}{6}x+\frac{169}{144} &amp; =-\frac{5}{6}+\frac{169}{144}\\
+\left(x+\frac{13}{12}\right)^{2} &amp; =\frac{49}{144}\\
+x+\frac{13}{12} &amp; =\pm\sqrt{\frac{49}{144}}\\
+x &amp; =-\frac{13}{12}\pm\frac{7}{12}=\begin{cases}
+-\frac{13}{12}+\frac{7}{12} &amp; =-\frac{6}{12}=-\frac{1}{2}\\
+-\frac{13}{12}-\frac{7}{12} &amp; =-\frac{20}{12}=-\frac{5}{3}
+\end{cases}\end{aligned}\end{split}\]</div>
+</p>
+<p class="sd-card-text">The solution <span class="math notranslate nohighlight">\(x=\{-\frac{1}{2},-\frac{5}{3}\}\)</span>.</p>
+</div>
+</details></section>
+</div><div class="proof example admonition" id="centerradiusCircleprom1">
+<p class="admonition-title"><span class="caption-number">Example 27 </span></p>
+<section class="example-content" id="proof-content">
+<p>Give the center center and radius of the circle with equation <div class="math notranslate nohighlight">
+\[2x^{2}+2y^{2}+2x-6y=45\]</div>
+</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">First, we will divide both sides by <span class="math notranslate nohighlight">\(2\)</span> to get <span class="math notranslate nohighlight">\(x^{2}\)</span> and <span class="math notranslate nohighlight">\(y^{2}\)</span> to have coefficients of one (in preparation of completing the square). <div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+2x^{2}+2y^{2}+2x-6y &amp; =45\\
+x^{2}+y^{2}+x-3y &amp; =\frac{45}{2}\end{aligned}\end{split}\]</div>
+ Second, we group up the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> variable terms. Third, find the completing the square term by computing <span class="math notranslate nohighlight">\(\left(\frac{b}{2}\right)^{2}\)</span>. For <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(b=1\)</span>. For <span class="math notranslate nohighlight">\(y\)</span>, <span class="math notranslate nohighlight">\(b=-3\)</span>. <div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+\left(x^{2}+x+\underline{\,\,\,}_{1}\right)+\left(y^{2}-3x+\underline{\,\,\,}_{2}\right) &amp; =\frac{45}{2}+\underline{\,\,\,}_{1}+\underline{\,\,\,}_{2}\\
+\underline{\,\,\,}_{1} &amp; =\left(\frac{1}{2}\right)^{2}=\frac{1}{4}\\
+\underline{\,\,\,}_{2} &amp; =\left(\frac{-3}{2}\right)^{2}=\frac{9}{4}\\
+\left(x^{2}+x+\frac{1}{4}\right)+\left(y^{2}-3x+\frac{9}{4}\right) &amp; =\frac{45}{2}+\frac{1}{4}+\frac{9}{4}\\
+\left(x+\frac{1}{2}\right)^{2}+\left(y-\frac{3}{2}\right)^{2} &amp; =25\\
+\left(x-\left(-\frac{1}{2}\right)\right)^{2}+\left(y-\frac{3}{2}\right)^{2} &amp; =5^{2}\end{aligned}\end{split}\]</div>
+</p>
+<p class="sd-card-text">This means, the implicit equation <span class="math notranslate nohighlight">\(2x^{2}+2y^{2}+2x-6y=45\)</span> can be rewritten as <span class="math notranslate nohighlight">\(\left(x+\frac{1}{2}\right)^{2}+\left(y-\frac{3}{2}\right)^{2}=25\)</span>. From the second equation we notice <div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+(h,k) &amp; =(-\frac{1}{2},\frac{3}{2})\\
+r^{2} &amp; =25\implies r=\sqrt{25}=5.\end{aligned}\end{split}\]</div>
+ Therefore, the center for the circle is <span class="math notranslate nohighlight">\((-\frac{1}{2},\frac{3}{2})\)</span> and <span class="math notranslate nohighlight">\(r=5\)</span>.</p>
+</div>
+</details></section>
+</div><div class="proof example admonition" id="centeradiusCircleProm2">
+<p class="admonition-title"><span class="caption-number">Example 28 </span></p>
+<section class="example-content" id="proof-content">
+<p>Give the center and radius of the circle represented by the equation <div class="math notranslate nohighlight">
+\[x^{2}+y^{2}+6x+8y+9=0.\]</div>
+</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M6 12a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 11-4 0 2 2 0 014 0zm6 2a2 2 0 100-4 2 2 0 000 4z"></path></svg><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+x^{2}+y^{2}+6x+8y &amp; =-9\\
+\left(x^{2}+6x+c_{1}\right)+\left(y^{2}+8y+c_{2}\right) &amp; =-9+c_{1}+c_{2}\\
+c_{1} &amp; =\left(\frac{6}{2}\right)^{2}=\left(3\right)^{2}=9\\
+c_{2} &amp; =\left(\frac{8}{2}\right)^{2}=\left(4\right)^{2}=16\\
+\left(x^{2}+6x+9\right)+\left(y^{2}+8y+16\right) &amp; =-9+9+16\\
+(x+3)^{2}+(y+4)^{2} &amp; =16\\
+(x-(-3))^{2}+(y-(-4))^{2} &amp; =4^{2}\\
+(h,k) &amp; =(-3,-4)\\
+r &amp; =4\end{aligned}\end{split}\]</div>
+</p>
+</div>
+</details></section>
+</div></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chaptertwo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter2.1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Section 2.1 - Rectangular Coordinates and Graphs</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chapter2.3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Section 2.3 - Functions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael McCabe
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Michael McCabe.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

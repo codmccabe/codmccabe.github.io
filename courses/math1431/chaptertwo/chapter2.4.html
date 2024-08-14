@@ -1,0 +1,507 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Section 2.4 - Linear Functions &#8212; Math 1431 0.2 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b029709b"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chaptertwo/chapter2.4';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Section 2.3 - Functions" href="chapter2.3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Math 1431 0.2 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../welcome.html">Welcome!</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter One:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../chapterone/chapter1.0.html">Equations and Inequalities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapterone/chapter1.6.html">Section 1.6 - Other Types of Equations and Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapterone/chapter1.7.html">Section 1.7 - Inequalities</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapterone/chapter1.8.html">Section 1.8 - Absolute Value Function</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapter Two:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapter2.0.html">Graphs and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.1.html">Section 2.1 - Rectangular Coordinates and Graphs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.2.html">Section 2.2 - Circles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.3.html">Section 2.3 - Functions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Section 2.4 - Linear Functions</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chaptertwo/chapter2.4.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Section 2.4 - Linear Functions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="section-2-4-linear-functions">
+<h1>Section 2.4 - Linear Functions<a class="headerlink" href="#section-2-4-linear-functions" title="Permalink to this heading">#</a></h1>
+<div class="proof definition admonition" id="linearFunction">
+<p class="admonition-title"><span class="caption-number">Definition 12 </span></p>
+<section class="definition-content" id="proof-content">
+<p>A function <span class="math notranslate nohighlight">\(f\)</span> is a linear function if, for real numbers <span class="math notranslate nohighlight">\(m\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, <div class="math notranslate nohighlight">
+\[f(x)=mx+b.\]</div>
+</p>
+<ul class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(a\ne0\)</span>, then the domain and the range of <span class="math notranslate nohighlight">\(f\)</span> are both <span class="math notranslate nohighlight">\((-\infty,\infty)\)</span>.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(a=0,\)</span>then we say <span class="math notranslate nohighlight">\(f\)</span> is the constant function and the domain is <span class="math notranslate nohighlight">\((-\infty,\infty)\)</span>. The plot of the constant function is described as a horizontal line.</p></li>
+<li><p>The standard form linear equation is <div class="math notranslate nohighlight">
+\[Ax+By=C\]</div>
+ where <span class="math notranslate nohighlight">\(A,B,C\in\mathbb{Z}\)</span> such that <span class="math notranslate nohighlight">\(A\ge0\)</span> and <span class="math notranslate nohighlight">\(\text{gcf}(A,B,C)=1\)</span>.</p></li>
+<li><p>Two or more integers with a greatest common factor of one is called relatively prime. For example, 6 and 25 are not prime individually; however, 6 and 25 are relatively prime when considered together.</p></li>
+<li><p>The slope <span class="math notranslate nohighlight">\(m\)</span> of the line through the point <span class="math notranslate nohighlight">\((x_{1},y_{1})\)</span> and <span class="math notranslate nohighlight">\((x_{2},y_{2})\)</span> is defined as follows <div class="math notranslate nohighlight">
+\[m=\dfrac{\Delta y}{\Delta x}=\dfrac{y_{2}-y_{1}}{x_{2}-x_{1}}\]</div>
+ where <span class="math notranslate nohighlight">\(\Delta x\ne0\)</span>. The slope of the line constructed from <span class="math notranslate nohighlight">\(y=mx+b\)</span> is the change in <span class="math notranslate nohighlight">\(y\)</span> over the change in <span class="math notranslate nohighlight">\(x\)</span>.</p></li>
+<li><p>Whenever <span class="math notranslate nohighlight">\(\Delta x=0\)</span> we say the line is vertical. This means the slope is undefined.</p></li>
+<li><p>Whenever <span class="math notranslate nohighlight">\(\Delta y=0\)</span> while <span class="math notranslate nohighlight">\(\Delta x\ne0\)</span> we say the line is horizontal. The means the slope is zero.</p></li>
+</ul>
+</section>
+</div><div class="proof example admonition" id="linearRelationshipExample1">
+<p class="admonition-title"><span class="caption-number">Example 33 </span></p>
+<section class="example-content" id="proof-content">
+<p>In 2009, the federal government spent $141.1 billion on research and development. In 2017, $118.3 billion was spent. Assuming a linear relationship, and find the average rate of change in the amount of money spend on R&amp;D per year. Graph as a line segment, and interpret the result.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If coordinates given is not obvious consider constructing a table of values. The two coordinates we have are <span class="math notranslate nohighlight">\((x_{1},y_{1})=(2009,141.1)\)</span> and <span class="math notranslate nohighlight">\((x_{2},y_{2})=(2017,118.3)\)</span>. A linear relationship follows the model <div class="math notranslate nohighlight">
+\[f(x)=mx+b\]</div>
+ where <span class="math notranslate nohighlight">\(f(2009)=141.1\)</span>, <span class="math notranslate nohighlight">\(f(2017)=118.3\)</span>, <div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+m &amp; =\dfrac{y_{2}-y_{1}}{x_{2}-x_{1}}\\
+ &amp; =\dfrac{118.3-141.1}{2017-2009}\\
+ &amp; =-2.85\end{aligned}\end{split}\]</div>
+ This means the average rate of change in the amount of money spent on R&amp;D per year is -2.85 billion dollars per year. The plot would look like:</p>
+<div class="figure" style="text-align: center"><p><img  src="../_images/tikz-36dd0c196f784e2207a34ae0f76219c0e3d1f595.svg" alt="Figure made with TikZ" /></p>
+</div></div>
+</details></section>
+</div><p>It can be claimed that the change in R&amp;D funding is not linear. A secant line can be used to approximate the rate of change of the curve over a change in <span class="math notranslate nohighlight">\(x\)</span> (or change in the horizontal axis).</p>
+<div class="proof definition admonition" id="secantLine">
+<p class="admonition-title"><span class="caption-number">Definition 13 </span> (Secant Line)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be a function defined over an interval <span class="math notranslate nohighlight">\(I\)</span> and <span class="math notranslate nohighlight">\(x_{1},x_{2}\in I\)</span>. The average rate of change of a function from <span class="math notranslate nohighlight">\(x_{1}\)</span> to <span class="math notranslate nohighlight">\(x_{2}\)</span> is defined as <div class="math notranslate nohighlight">
+\[m_{ave}:=\dfrac{f(x_{2})-f(x_{1})}{x_{2}-x_{1}}.\]</div>
+ The line through these two points is a secant line where the slope of the line is <span class="math notranslate nohighlight">\(m_{ave}\)</span>.</p>
+</section>
+</div><div class="proof definition admonition" id="businessModels">
+<p class="admonition-title"><span class="caption-number">Definition 14 </span> (Business Models)</p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(p\)</span> be the price variable and <span class="math notranslate nohighlight">\(x\)</span> be the number of units variable. We denote the cost function <span class="math notranslate nohighlight">\(C(x)\)</span>. We define the revenue function as <div class="math notranslate nohighlight">
+\[R(x)=xp\]</div>
+ where sometime <span class="math notranslate nohighlight">\(p\)</span> is a demand function with respect to <span class="math notranslate nohighlight">\(x\)</span>. We define the profit function as <div class="math notranslate nohighlight">
+\[P(x)=R(x)-C(x).\]</div>
+</p>
+</section>
+</div><div class="proof example admonition" id="businessModelExample1">
+<p class="admonition-title"><span class="caption-number">Example 34 </span></p>
+<section class="example-content" id="proof-content">
+<p>Assume that the cost to produce an item is a linear function and that all items produced are sold. The fixed cost is $1500, the variable cost per item is $100, and the item sells for $125.</p>
+<ol class="arabic simple">
+<li><p>Find the cost function.</p></li>
+<li><p>Find the revenue function.</p></li>
+<li><p>Find the profit function.</p></li>
+<li><p>According to the profit function, what happens if zero units are sold, and will the company make a profit?</p></li>
+</ol>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+Solution:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Since it costs $100 to produce each unit and there is a fixed cost of $1500 we can define the cost function as <div class="math notranslate nohighlight">
+\[C(x)=100x+1500.\]</div>
+ Since each unit is sold for $125 we have the revenue function <div class="math notranslate nohighlight">
+\[R(x)=125x.\]</div>
+ All together we have <div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+P(x) &amp; =R(x)-C(x)\\
+ &amp; =125x-(100x+1500)\\
+ &amp; =25x-1500\end{aligned}\end{split}\]</div>
+</p>
+<p class="sd-card-text">Note, that <span class="math notranslate nohighlight">\(P(0)=-1500\)</span> which means that if zero units are sold then the profit would be <span class="math notranslate nohighlight">\(-\$1500\)</span> (a loss of 1500 dollars).</p>
+<p class="sd-card-text">Note, that <span class="math notranslate nohighlight">\(P(x)&gt;0\)</span> is when the company will make a profit. <div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned}
+P(x) &amp; &gt;0\\
+25x-1500 &amp; &gt;0\\
+25x &amp; &gt;1500\\
+x &amp; &gt;\frac{1500}{25}\\
+x &amp; &gt;60\end{aligned}\end{split}\]</div>
+ This means that after 60 units are sold the company will make a profit… Why will the company continue to make a profit?</p>
+</div>
+</details></section>
+</div></section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chaptertwo"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter2.3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Section 2.3 - Functions</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Michael McCabe
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Michael McCabe.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

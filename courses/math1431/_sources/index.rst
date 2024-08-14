@@ -22,10 +22,22 @@ There will be a collection of lecture notes and supplementary information in thi
     chapterone/chapter1.0
     chapterone/chapter1.6
     chapterone/chapter1.7
+    chapterone/chapter1.8
+
+.. toctree::
+    :maxdepth: 4
+    :caption: Chapter Two:
+
+    chaptertwo/chapter2.0
+    chaptertwo/chapter2.1
+    chaptertwo/chapter2.2
+    chaptertwo/chapter2.3
+    chaptertwo/chapter2.4
 
 
-.. Indices and tables
-    ==================
-    
-     * :ref:`genindex`
-     * :ref:`search`
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

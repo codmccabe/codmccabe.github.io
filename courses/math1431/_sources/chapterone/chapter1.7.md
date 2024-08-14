@@ -35,6 +35,7 @@ A linear inequality in one variable is an inequality that can be written in the 
 |$\{x\,\|\,x\in\mathbb{R}\}$|The set of all real numbers|$(-\infty,\infty)$|
 :::
 ::::{prf:example}
+:label: buisnessmodel
 In Business, the Profit function is the difference between the Revenue function and the Cost function, i.e., $$P(x)=R(x)-C(x)$$ where $x$ is the number of units produced and sold.
 
 Ideally business would like Profit to be positive: $$P(x)>0.$$
@@ -222,9 +223,10 @@ Test $x=0$ $$-3\le\dfrac{3(0)-4}{-5}<4$$ $$-3\le\frac{4}{5}<4$$ This means $[-\f
 Test $x=10$ $$-3\le\dfrac{3(10)-4}{-5}<4$$ $$-3\nleq-\frac{26}{5}<4$$ This means that $[\frac{19}{3},\infty)$ is not part of the solution set.
 :::
 ::::
-
+::::{prf:example}
+:label: 17rationalinequality3
 Solve the following rational inequality. $$\dfrac{1-x}{x+2}<-1$$
-
+:::{dropdown} Solution:
 Note that $\dfrac{1-x}{x+2}$ is undefined when $x=-2$.
 
 First, we will solve $$\begin{aligned}
@@ -239,9 +241,12 @@ Test $x=-10$ $$\dfrac{1-(-10)}{(-10)+2}<-1$$ $$-\frac{11}{8}<-1$$ This means $(-
 Test $x=0$ $$\dfrac{1-(0)}{(0)+2}<-1$$ $$\frac{1}{2}\nless-1$$ This means $(-2,\infty)$ is not part of the solution set.
 
 Therefore, the solution set for the inequality is $$(-\infty,-2)$$ or the set of all $x$ such that $x<-2$.
-
+:::
+::::
+::::{prf:example}
+:label: 17rationalInequality4
 Solve the following inequality $$\dfrac{(x^{2}-4)^{2}}{(x-5)(x-3)}<0$$
-
+:::{dropdown} Solution:
 Note,
 
 $\dfrac{(x^{2}-4)^{2}}{(x-5)(x-3)}$ is undefined when $x=5$ and $x=3$.
@@ -261,3 +266,5 @@ Test $x=4$ $$\frac{(x-2)^{2}(x+2)^{2}}{(x-5)(x-3)}\to\dfrac{(+)(+)}{(-)(+)}=(-).
 Test $x=6$ $$\frac{(x-2)^{2}(x+2)^{2}}{(x-5)(x-3)}\to\dfrac{(+)(+)}{(+)(+)}=(+).$$ This means $\dfrac{(x^{2}-4)^{2}}{(x-5)(x-3)}\nless0$ and $(5,\infty)$ is not part of the solution set.
 
 therefore, the solution set is $$(3,5)$$ or the set of all $x$ such that $3<x<5$.
+:::
+::::
