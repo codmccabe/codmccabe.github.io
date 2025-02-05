@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polynomial Practice</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState } = React;
+        
+        const PolynomialPractice = () => {
+            const [polynomial, setPolynomial] = useState({ a: 0, b: 0, c: 0, factors: [0, 0] });
+            const [userFactors, setUserFactors] = useState(['', '']);
+            const [feedback, setFeedback] = useState('');
+            const [isCorrect, setIsCorrect] = useState(false);
+            const [attempts, setAttempts] = useState(0);
+
+            const generatePolynomial = () => {
+                const factor1 = Math.floor(Math.random() * 11) - 5 || 1;
+                const factor2 = Math.floor(Math.random() * 11) - 5 || 1;
+                
+                const a = 1;
+                const b = -(factor1 + factor2);
+                const c = factor1 * factor2;
+                
+                setPolynomial({ a, b, c, factors: [-factor1, -factor2] });
+                setUserFactors(['', '']);
+                setFeedback('');
+                setIsCorrect(false);
+                setAttempts(0);
+            };
+
+            const checkAnswer = () => {
+                const [f1, f2] = userFactors.map(Number);
+                const enteredFactors = new Set([f1, f2]);
+                const correctFactors = new Set(polynomial.factors);
+                
+                if (setsEqual(enteredFactors, correctFactors)) {
+                    setFeedback('Correct! Those are the right factors!');
+                    setIsCorrect(true);
+                } else {
+                    const newAttempts = attempts + 1;
+                    setAttempts(newAttempts);
+                    if (newAttempts >= 2) {
+                        setFeedback(`The factors are: ${polynomial.factors[0]} and ${polynomial.factors[1]}`);
+                    } else {
+                        setFeedback('Try again. Check your factors.');
+                    }
+                }
+            };
+
+            const setsEqual = (set1, set2) => {
+                if (set1.size !== set2.size) return false;
+                for (const item of set1) {
+                    if (!set2.has(item)) return false;
+                }
+                return true;
+            };
+
+            const formatPolynomial = () => {
+                let terms = ['x²'];
+                
+                if (polynomial.b !== 0) {
+                    terms.push(`${polynomial.b > 0 ? '+' : ''} ${polynomial.b}x`);
+                }
+                
+                if (polynomial.c !== 0) {
+                    terms.push(`${polynomial.c > 0 ? '+' : ''} ${polynomial.c}`);
+                }
+                
+                return terms.join(' ');
+            };
+
+            return (
+                <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+                    <h1 className="text-xl font-bold mb-4 text-center">Polynomial Factoring Practice</h1>
+                    
+                    <div className="space-y-4">
+                        <div className="text-center">
+                            <button 
+                                onClick={generatePolynomial}
+                                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                            >
+                                New Polynomial
+                            </button>
+                            
+                            {polynomial.a !== 0 && (
+                                <div className="text-2xl font-semibold my-4">
+                                    {formatPolynomial()}
+                                </div>
+                            )}
+                        </div>
+
+                        <div className="flex items-center gap-2 justify-center">
+                            <div className="text-lg">(x + </div>
+                            <input
+                                type="number"
+                                value={userFactors[0]}
+                                onChange={(e) => setUserFactors([e.target.value, userFactors[1]])}
+                                className="w-20 border rounded p-1"
+                                placeholder="?"
+                            />
+                            <div className="text-lg">)(x + </div>
+                            <input
+                                type="number"
+                                value={userFactors[1]}
+                                onChange={(e) => setUserFactors([userFactors[0], e.target.value])}
+                                className="w-20 border rounded p-1"
+                                placeholder="?"
+                            />
+                            <div className="text-lg">)</div>
+                        </div>
+
+                        <div className="flex justify-center">
+                            <button 
+                                onClick={checkAnswer}
+                                className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 disabled:opacity-50"
+                                disabled={!userFactors[0] || !userFactors[1]}
+                            >
+                                Check Answer
+                            </button>
+                        </div>
+
+                        {feedback && (
+                            <div className={`text-center text-lg ${isCorrect ? 'text-green-600' : 'text-red-600'}`}>
+                                {feedback}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            );
+        };
+
+        ReactDOM.render(<PolynomialPractice />, document.getElementById('root'));
+    </script>
+</body>
+</html>
